@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import type { ReactNode } from "react";
 import "./globals.css";
-
-const manrope = Manrope({
-  subsets: ["latin", "cyrillic"],
-});
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Наумович | Крашеные фасады МДФ",
+  title: "ИП Наумович — производство крашеных фасадов МДФ",
   description:
-    "Производство крашеных фасадов МДФ, мебели и кухонь под заказ.",
+    "Производство крашеных фасадов МДФ под заказ: любые размеры, любые цвета RAL, любые фрезеровки.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ru">
-      <body className={manrope.className}>{children}</body>
+      <body>
+        <Header />
+        <Breadcrumbs />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

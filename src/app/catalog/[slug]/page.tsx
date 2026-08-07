@@ -1,7 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import FacadeCard from "@/components/FacadeCard";
 import { facades, getFacade } from "@/data/facades";
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return facades.map((f) => ({ slug: f.slug }));
@@ -31,7 +34,7 @@ export default async function FacadePage({
   const similar = facades.filter((f) => f.slug !== slug).slice(0, 4);
 
   return (
-    <main className="w-full bg-white pt-20">
+    <main className="w-full bg-white">
       <div className="w-full px-5 py-16 sm:px-8 sm:py-24 lg:px-12 xl:px-16">
         <Link
           href="/catalog"
@@ -42,10 +45,15 @@ export default async function FacadePage({
 
         <div className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Фото */}
-          <div className="relative aspect-[3/4] w-full bg-gray-100">
-            <span className="absolute inset-0 flex items-center justify-center text-8xl font-extralight text-gray-300">
-              {facade.name.charAt(0)}
-            </span>
+          <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
+            <Image
+              src={facade.image}
+              alt={`Фасад МДФ ${facade.name}`}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+              priority
+            />
           </div>
 
           {/* Описание */}

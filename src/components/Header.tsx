@@ -44,10 +44,10 @@ export default function Header() {
 
           {/* Телефон */}
           <a
-            href="tel:+375291234567"
+            href="tel:+375259929001"
             className="hidden text-sm font-semibold text-gray-900 transition-colors duration-200 hover:text-gray-500 lg:block"
           >
-            +375 29 123-45-67
+            +375 25 992-90-01
           </a>
 
           {/* Мобильная кнопка */}
@@ -84,8 +84,8 @@ export default function Header() {
                 </Link>
               ))}
               <div className="mt-4 px-3">
-                <a href="tel:+375291234567" className="block text-base font-semibold text-gray-900">
-                  +375 29 123-45-67
+                <a href="tel:+375259929001" className="block text-base font-semibold text-gray-900">
+                  +375 25 992-90-01
                 </a>
               </div>
             </div>
