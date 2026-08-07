@@ -4,7 +4,6 @@ const categories = [
   { title: "Наши фасады", href: "/catalog" },
   { title: "Все фрезеровки", href: "/frezerovki" },
   { title: "Любые цвета RAL", href: "/catalog" },
-  { title: "Эмаль", href: "/catalog" },
   { title: "Патина", href: "/catalog" },
 ];
 

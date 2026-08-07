@@ -73,7 +73,6 @@ export default async function FacadePage({
                 Исполнение
               </p>
               <ul className="mt-4 space-y-2 text-lg font-light text-gray-600">
-                <li>Эмаль</li>
                 <li>Матовый / глянец</li>
                 <li>Любой цвет RAL</li>
                 <li>Патина — опционально</li>
