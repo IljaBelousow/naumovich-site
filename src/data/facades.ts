@@ -13,7 +13,7 @@ const make = (
   slug: id,
   name,
   description:
-    "Крашеный фасад МДФ. Любой цвет RAL",
+    "Крашеный фасад МДФ. Любой цвет RAL, матовое или глянцевое исполнение.",
   image: `/images/${folder}/${id.replace(`${folder}-`, "")}.png`,
 });
 

@@ -71,20 +71,23 @@ export default function Header() {
 
         {/* Мобильное меню */}
         {mobileMenuOpen && (
-          <div className="lg:hidden">
-            <div className="space-y-1 pb-4 pt-2">
+          <div className="lg:hidden border-t-2 border-gray-300 bg-gray-100">
+            <div className="pb-4 pt-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50"
+                  className="block border-b border-gray-300 px-5 py-3 text-base font-medium text-gray-900 hover:bg-gray-200 active:bg-gray-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="mt-4 px-3">
-                <a href="tel:+375259929001" className="block text-base font-semibold text-gray-900">
+              <div className="px-5 pt-4">
+                <a
+                  href="tel:+375259929001"
+                  className="block text-base font-semibold text-gray-900"
+                >
                   +375 25 992-90-01
                 </a>
               </div>
