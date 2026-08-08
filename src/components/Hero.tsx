@@ -10,8 +10,12 @@ export default function Hero() {
             ИП Наумович
           </p>
           <h1 className="mt-6 text-4xl font-extralight leading-[1.1] tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
-            Производство крашеных фасадов&nbsp;МДФ
+            Мебельные детали из МДФ — крашеные и шпонированные
           </h1>
+          <p className="mt-6 max-w-md text-lg font-light text-gray-600">
+            Собственная мастерская. Мебель на заказ по индивидуальным
+            параметрам.
+          </p>
           <ul className="mt-8 space-y-1 text-lg font-light text-gray-600">
             <li>Любые размеры</li>
             <li>Любые цвета</li>
@@ -31,9 +35,9 @@ export default function Hero() {
         <div className="relative min-h-[420px] lg:min-h-full">
           <div
             className="absolute inset-0 bg-gray-100 bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/hero-kitchen.jpg')" }}
+            style={{ backgroundImage: "url('/images/catalog1/image1.jpg')" }}
             role="img"
-            aria-label="Кухня с крашеными фасадами МДФ"
+            aria-label="Мебель с фасадами из МДФ"
           />
         </div>
       </div>

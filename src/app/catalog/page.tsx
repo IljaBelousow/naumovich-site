@@ -18,8 +18,8 @@ export default function CatalogPage() {
           Фасады МДФ
         </h1>
         <p className="mt-6 max-w-2xl text-lg font-light text-gray-600">
-          Каждый фасад изготавливается под заказ: любой размер, любой цвет
-          RAL, матовое или глянцевое исполнение.
+          Крашеные и шпонированные фасады изготавливаются под заказ: любой
+          размер, любой цвет RAL, матовое или глянцевое исполнение.
         </p>
 
         <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">

@@ -8,7 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "ИП Наумович — производство крашеных фасадов МДФ",
   description:
-    "Производство крашеных фасадов МДФ под заказ: любые размеры, любые цвета RAL, любые фрезеровки.",
+    "Изготовление мебельных деталей из МДФ — крашеных и шпонированных. Мебель на заказ по индивидуальным параметрам.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

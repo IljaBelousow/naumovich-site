@@ -7,7 +7,7 @@ const navigation = [
   { name: "Каталог", href: "/catalog" },
   { name: "Фрезеровки", href: "/frezerovki" },
   { name: "Портфолио", href: "/portfolio" },
-  { name: "Производство", href: "/production" },
+  { name: "Как мы работаем", href: "/production" },
   { name: "О компании", href: "/about" },
   { name: "Контакты", href: "/contacts" },
 ];

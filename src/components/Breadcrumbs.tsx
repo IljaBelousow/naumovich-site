@@ -8,7 +8,7 @@ const names: Record<string, string> = {
   catalog: "Каталог",
   frezerovki: "Фрезеровки",
   portfolio: "Портфолио",
-  production: "Производство",
+  production: "Как мы работаем",
   about: "О компании",
   contacts: "Контакты",
 };

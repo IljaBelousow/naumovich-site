@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Производство — ИП Наумович",
+  title: "Как мы работаем — ИП Наумович",
   description:
     "Полный цикл производства крашеных фасадов МДФ: фрезеровка, подготовка, покраска, сушка и контроль качества.",
 };
@@ -34,13 +34,13 @@ export default function ProductionPage() {
     <main className="w-full bg-white">
       <div className="w-full px-5 py-16 sm:px-8 sm:py-24 lg:px-12 xl:px-16">
         <p className="text-xs font-medium uppercase tracking-[0.35em] text-gray-500">
-          Производство
+          Как мы работаем
         </p>
         <h1 className="mt-4 text-4xl font-extralight tracking-tight text-gray-900 sm:text-5xl">
           Как мы делаем фасады
         </h1>
         <p className="mt-6 max-w-2xl text-lg font-light text-gray-600">
-          Полный цикл на собственном производстве — без посредников. Поэтому
+          Полный цикл в собственной мастерской — без посредников. Поэтому
           мы отвечаем за каждый миллиметр и каждый оттенок.
         </p>
 
@@ -57,7 +57,7 @@ export default function ProductionPage() {
         <div className="mt-20 border-t border-gray-100 pt-12">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-xl text-lg font-light text-gray-600">
-              Хотите посмотреть производство или образцы вживую — приезжайте,
+              Хотите посмотреть мастерскую или образцы вживую — приезжайте,
               покажем и подскажем.
             </p>
             <Link

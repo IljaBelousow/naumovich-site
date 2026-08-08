@@ -25,7 +25,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-5 max-w-xs text-base font-light text-gray-600">
-              Производство крашеных фасадов МДФ под заказ.
+              Мебельные детали из МДФ — крашеные и шпонированные. Мебель на заказ.
             </p>
           </div>
 

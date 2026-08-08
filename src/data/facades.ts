@@ -5,71 +5,21 @@ export type Facade = {
   image: string;
 };
 
-const make = (
-  id: string,
-  folder: "catalog1" | "catalog2",
-  name: string
-): Facade => ({
-  slug: id,
-  name,
+const make = (n: number): Facade => ({
+  slug: `f${n}`,
+  name: `Фасад ${n}`,
   description:
-    "Крашеный фасад МДФ. Любой цвет RAL, матовое или глянцевое исполнение.",
-  image: `/images/${folder}/${id.replace(`${folder}-`, "")}.png`,
+    "Мебельная деталь из МДФ — крашеная или шпонированная. Любой цвет RAL, матовое или глянцевое исполнение.",
+  image: `/images/catalog1/image${n}.jpg`,
 });
 
 export const facades: Facade[] = [
-  // Catalog 1 — 28 моделей
-  make("catalog1-image1",  "catalog1", "Фасад C1-1"),
-  make("catalog1-image2",  "catalog1", "Фасад C1-2"),
-  make("catalog1-image3",  "catalog1", "Фасад C1-3"),
-  make("catalog1-image4",  "catalog1", "Фасад C1-4"),
-  make("catalog1-image5",  "catalog1", "Фасад C1-5"),
-  make("catalog1-image6",  "catalog1", "Фасад C1-6"),
-  make("catalog1-image7",  "catalog1", "Фасад C1-7"),
-  make("catalog1-image8",  "catalog1", "Фасад C1-8"),
-  make("catalog1-image10", "catalog1", "Фасад C1-10"),
-  make("catalog1-image11", "catalog1", "Фасад C1-11"),
-  make("catalog1-image12", "catalog1", "Фасад C1-12"),
-  make("catalog1-image13", "catalog1", "Фасад C1-13"),
-  make("catalog1-image14", "catalog1", "Фасад C1-14"),
-  make("catalog1-image15", "catalog1", "Фасад C1-15"),
-  make("catalog1-image16", "catalog1", "Фасад C1-16"),
-  make("catalog1-image17", "catalog1", "Фасад C1-17"),
-  make("catalog1-image19", "catalog1", "Фасад C1-19"),
-  make("catalog1-image20", "catalog1", "Фасад C1-20"),
-  make("catalog1-image21", "catalog1", "Фасад C1-21"),
-  make("catalog1-image22", "catalog1", "Фасад C1-22"),
-  make("catalog1-image23", "catalog1", "Фасад C1-23"),
-  make("catalog1-image24", "catalog1", "Фасад C1-24"),
-  make("catalog1-image25", "catalog1", "Фасад C1-25"),
-  make("catalog1-image26", "catalog1", "Фасад C1-26"),
-  make("catalog1-image27", "catalog1", "Фасад C1-27"),
-  make("catalog1-image28", "catalog1", "Фасад C1-28"),
-  make("catalog1-image29", "catalog1", "Фасад C1-29"),
-  make("catalog1-image30", "catalog1", "Фасад C1-30"),
-
-  // Catalog 2 — 21 модель
-  make("catalog2-image1",  "catalog2", "Фасад C2-1"),
-  make("catalog2-image2",  "catalog2", "Фасад C2-2"),
-  make("catalog2-image3",  "catalog2", "Фасад C2-3"),
-  make("catalog2-image4",  "catalog2", "Фасад C2-4"),
-  make("catalog2-image8",  "catalog2", "Фасад C2-8"),
-  make("catalog2-image9",  "catalog2", "Фасад C2-9"),
-  make("catalog2-image10", "catalog2", "Фасад C2-10"),
-  make("catalog2-image11", "catalog2", "Фасад C2-11"),
-  make("catalog2-image12", "catalog2", "Фасад C2-12"),
-  make("catalog2-image13", "catalog2", "Фасад C2-13"),
-  make("catalog2-image14", "catalog2", "Фасад C2-14"),
-  make("catalog2-image16", "catalog2", "Фасад C2-16"),
-  make("catalog2-image17", "catalog2", "Фасад C2-17"),
-  make("catalog2-image18", "catalog2", "Фасад C2-18"),
-  make("catalog2-image19", "catalog2", "Фасад C2-19"),
-  make("catalog2-image20", "catalog2", "Фасад C2-20"),
-  make("catalog2-image21", "catalog2", "Фасад C2-21"),
-  make("catalog2-image22", "catalog2", "Фасад C2-22"),
-  make("catalog2-image23", "catalog2", "Фасад C2-23"),
-  make("catalog2-image24", "catalog2", "Фасад C2-24"),
-  make("catalog2-image25", "catalog2", "Фасад C2-25"),
+  make(1), make(2), make(3), make(4), make(5), make(6), make(7), make(8),
+  make(9), make(10), make(11), make(12), make(13), make(14), make(15), make(16),
+  make(17), make(18), make(19), make(20), make(21), make(22), make(23), make(24),
+  make(25), make(26), make(27), make(28), make(29), make(30), make(31), make(32),
+  make(33), make(34), make(35), make(36), make(37), make(38), make(39), make(40),
+  make(41), make(42), make(43), make(44), make(45), make(46), make(47),
 ];
 
 export function getFacade(slug: string) {
