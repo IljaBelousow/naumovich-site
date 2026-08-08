@@ -35,7 +35,7 @@ export default function Hero() {
         <div className="relative min-h-[420px] lg:min-h-full">
           <div
             className="absolute inset-0 bg-gray-100 bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/catalog1/image1.jpg')" }}
+            style={{ backgroundImage: "url('/images/main.jpg')" }}
             role="img"
             aria-label="Мебель с фасадами из МДФ"
           />
