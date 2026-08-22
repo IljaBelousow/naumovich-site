@@ -1,108 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import FacadeCard from "@/components/FacadeCard";
 import { facades, getFacade } from "@/data/facades";
-
-export const dynamicParams = false;
+import CatalogClient from "./CatalogClient";
 
 export function generateStaticParams() {
-  return facades.map((f) => ({ slug: f.slug }));
+  return facades
+    .filter((f) => !f.category.startsWith("work_")) // Только товары каталога
+    .map((f) => ({ slug: f.slug }));
 }
 
-export async function generateMetadata({
+export default async function CatalogItemPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const facade = getFacade(slug);
-  return {
-    title: `${facade?.name ?? "Фасад"} — крашеный фасад МДФ | ИП Наумович`,
-  };
-}
+  const item = getFacade(slug);
 
-export default async function FacadePage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const facade = getFacade(slug);
-  if (!facade) notFound();
+  if (!item) {
+    return notFound();
+  }
 
-  const similar = facades.filter((f) => f.slug !== slug).slice(0, 4);
-
-  return (
-    <main className="w-full bg-white">
-      <div className="w-full px-5 py-16 sm:px-8 sm:py-24 lg:px-12 xl:px-16">
-        <Link
-          href="/catalog"
-          className="text-xs uppercase tracking-[0.25em] text-gray-400 transition-colors hover:text-gray-900"
-        >
-          ← Каталог
-        </Link>
-
-        <div className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
-          {/* Фото */}
-          <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
-            <Image
-              src={facade.image}
-              alt={`Фасад МДФ ${facade.name}`}
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          {/* Описание */}
-          <div className="flex flex-col justify-center">
-            <p className="text-xs font-medium uppercase tracking-[0.35em] text-gray-500">
-              Фасад МДФ
-            </p>
-            <h1 className="mt-4 text-4xl font-extralight tracking-tight text-gray-900 sm:text-5xl">
-              {facade.name}
-            </h1>
-            <p className="mt-6 text-lg font-light text-gray-600">
-              {facade.description}
-            </p>
-
-            <div className="mt-10">
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-900">
-                Исполнение
-              </p>
-              <ul className="mt-4 space-y-2 text-lg font-light text-gray-600">
-                <li>Матовый / глянец</li>
-                <li>Любой цвет RAL</li>
-                <li>Шпонирование</li>
-                <li>Патина — опционально</li>
-              </ul>
-            </div>
-
-            <div className="mt-12">
-              <Link
-                href="/contacts"
-                className="inline-block border border-gray-900 px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-gray-900 hover:text-white"
-              >
-                Запросить расчёт
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Похожие фасады */}
-        <div className="mt-24 border-t border-gray-100 pt-14">
-          <h2 className="text-2xl font-extralight tracking-tight text-gray-900 sm:text-3xl">
-            Похожие фасады
-          </h2>
-          <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
-            {similar.map((f) => (
-              <FacadeCard key={f.slug} facade={f} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </main>
-  );
+  return <CatalogClient item={item} allFacades={facades} />;
 }

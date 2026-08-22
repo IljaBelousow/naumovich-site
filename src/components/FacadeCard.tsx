@@ -3,12 +3,17 @@ import Image from "next/image";
 import type { Facade } from "@/data/facades";
 
 export default function FacadeCard({ facade }: { facade: Facade }) {
+  // Определяем ссылку: если это работа из портфолио, ведем в /portfolio, иначе в /catalog
+  const href = facade.category?.startsWith("work_") 
+    ? `/portfolio/${facade.slug}` 
+    : `/catalog/${facade.slug}`;
+
   return (
-    <Link href={`/catalog/${facade.slug}`} className="group block">
+    <Link href={href} className="group block">
       <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
         <Image
           src={facade.image}
-          alt={`Фасад МДФ ${facade.name}`}
+          alt={facade.name}
           fill
           sizes="(max-width: 640px) 50vw, 25vw"
           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
