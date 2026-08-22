@@ -1,7 +1,7 @@
 export type Facade = {
   slug: string;
   name: string;
-  description: string;
+  description?: string;  // <-- добавили знак ?
   image: string;
   gallery?: string[];
   category: "milled" | "handles" | "edge" | "work_facades" | "work_furniture";
