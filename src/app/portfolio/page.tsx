@@ -1,6 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+export const dynamic = "force-dynamic";
+
+import { useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +12,6 @@ export default function PortfolioPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  // Читаем начальные значения из URL или ставим дефолтные
   const initialTab = searchParams.get("tab") || "work_facades";
   const initialExpanded = searchParams.get("expanded") === "true";
 
@@ -24,13 +25,10 @@ export default function PortfolioPage() {
     { id: "work_furniture", title: "Мебель изготовленная на заказ" },
   ];
 
-  // Функция обновления URL (без перезагрузки страницы)
   const updateUrl = (tab: string | null, expandedList: string[]) => {
     const params = new URLSearchParams(searchParams.toString());
-    
     if (tab) {
       params.set("tab", tab);
-      // Если раздел открыт, проверяем, раскрыт ли он полностью
       if (expandedList.includes(tab)) {
         params.set("expanded", "true");
       } else {
@@ -40,30 +38,19 @@ export default function PortfolioPage() {
       params.delete("tab");
       params.delete("expanded");
     }
-    
-    // Заменяем историю, чтобы кнопка "Назад" в браузере работала корректно
     router.replace(`/portfolio?${params.toString()}`, { scroll: false });
   };
 
   const handleSectionClick = (id: string) => {
     const newOpenSection = openSection === id ? null : id;
     setOpenSection(newOpenSection);
-    
-    // Если закрываем раздел, сбрасываем expanded для него (опционально, но логично)
-    let newExpanded = [...expandedSections];
-    if (newOpenSection === null) {
-       // Можно оставить expanded как есть, чтобы при повторном открытии было удобно
-       // Но для чистоты URL лучше обновить
-    }
-    
-    updateUrl(newOpenSection, newExpanded);
+    updateUrl(newOpenSection, expandedSections);
   };
 
   const toggleExpand = (id: string) => {
-    const newExpanded = expandedSections.includes(id) 
-      ? expandedSections.filter(x => x !== id) 
+    const newExpanded = expandedSections.includes(id)
+      ? expandedSections.filter(x => x !== id)
       : [...expandedSections, id];
-    
     setExpandedSections(newExpanded);
     updateUrl(openSection, newExpanded);
   };
@@ -86,9 +73,13 @@ export default function PortfolioPage() {
                   onClick={() => handleSectionClick(section.id)}
                   className="flex w-full cursor-pointer items-center justify-between py-6 text-left group"
                 >
-                  <span className={`text-xl sm:text-2xl font-light transition-colors ${isOpen ? "text-gray-900" : "text-gray-500 group-hover:text-gray-900"}`}>
+                  <Link
+                    href={`/portfolio/${section.id === "work_facades" ? "facades" : "furniture"}`}
+                    className={`text-xl sm:text-2xl font-light transition-colors hover:underline decoration-gray-300 underline-offset-4 ${isOpen ? "text-gray-900" : "text-gray-500 group-hover:text-gray-900"}`}
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     {section.title}
-                  </span>
+                  </Link>
                   <span className={`text-2xl font-light text-gray-400 transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}>
                     +
                   </span>
@@ -113,7 +104,7 @@ export default function PortfolioPage() {
 
                         {items.length > 4 && (
                           <div className="mt-10 text-center">
-                            <button 
+                            <button
                               onClick={() => toggleExpand(section.id)}
                               className="cursor-pointer text-xs uppercase tracking-[0.2em] text-gray-500 hover:text-gray-900 border-b border-gray-300 pb-1 transition-colors"
                             >

@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import { useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
@@ -47,8 +49,8 @@ export default function CatalogPage() {
   };
 
   const toggleExpand = (id: string) => {
-    const newExpanded = expandedSections.includes(id) 
-      ? expandedSections.filter(x => x !== id) 
+    const newExpanded = expandedSections.includes(id)
+      ? expandedSections.filter(x => x !== id)
       : [...expandedSections, id];
     setExpandedSections(newExpanded);
     updateUrl(openSection, newExpanded);
@@ -72,9 +74,13 @@ export default function CatalogPage() {
                   onClick={() => handleSectionClick(section.id)}
                   className="flex w-full cursor-pointer items-center justify-between py-6 text-left group"
                 >
-                  <span className={`text-xl sm:text-2xl font-light transition-colors ${isOpen ? "text-gray-900" : "text-gray-500 group-hover:text-gray-900"}`}>
+                  <Link
+                    href={`/catalog/${section.id}`}
+                    className={`text-xl sm:text-2xl font-light transition-colors hover:underline decoration-gray-300 underline-offset-4 ${isOpen ? "text-gray-900" : "text-gray-500 group-hover:text-gray-900"}`}
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     {section.title}
-                  </span>
+                  </Link>
                   <span className={`text-2xl font-light text-gray-400 transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}>
                     +
                   </span>
@@ -84,12 +90,12 @@ export default function CatalogPage() {
                   <div className="min-h-0">
                     {section.id === "edge" ? (
                       <div className="max-w-3xl border border-gray-100 bg-gray-50 p-4">
-                        <Image 
-                          src={items[0]?.image || "/images/profil_kraya.jpg"} 
-                          alt="Профиль края" 
-                          width={1000} 
-                          height={1200} 
-                          className="w-full h-auto object-contain" 
+                        <Image
+                          src={items[0]?.image || "/images/profil_kraya.jpg"}
+                          alt="Профиль края"
+                          width={1000}
+                          height={1200}
+                          className="w-full h-auto object-contain"
                         />
                       </div>
                     ) : (
@@ -107,7 +113,7 @@ export default function CatalogPage() {
 
                         {items.length > 4 && (
                           <div className="mt-10 text-center">
-                            <button 
+                            <button
                               onClick={() => toggleExpand(section.id)}
                               className="cursor-pointer text-xs uppercase tracking-[0.2em] text-gray-500 hover:text-gray-900 border-b border-gray-300 pb-1 transition-colors"
                             >
