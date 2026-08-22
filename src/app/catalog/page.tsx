@@ -1,24 +1,13 @@
 "use client";
 
-export const dynamic = "force-dynamic";
-
 import { useState } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { facades } from "@/data/facades";
 
 export default function CatalogPage() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-
-  const initialTab = searchParams.get("tab") || "milled";
-  const initialExpanded = searchParams.get("expanded") === "true";
-
-  const [openSection, setOpenSection] = useState<string | null>(initialTab);
-  const [expandedSections, setExpandedSections] = useState<string[]>(
-    initialExpanded && initialTab ? [initialTab] : []
-  );
+  const [openSection, setOpenSection] = useState<string | null>("milled");
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const sections = [
     { id: "milled", title: "Фрезерованные фасады МДФ" },
@@ -26,34 +15,10 @@ export default function CatalogPage() {
     { id: "edge", title: "Профиль края" },
   ];
 
-  const updateUrl = (tab: string | null, expandedList: string[]) => {
-    const params = new URLSearchParams(searchParams.toString());
-    if (tab) {
-      params.set("tab", tab);
-      if (expandedList.includes(tab)) {
-        params.set("expanded", "true");
-      } else {
-        params.delete("expanded");
-      }
-    } else {
-      params.delete("tab");
-      params.delete("expanded");
-    }
-    router.replace(`/catalog?${params.toString()}`, { scroll: false });
-  };
-
-  const handleSectionClick = (id: string) => {
-    const newOpenSection = openSection === id ? null : id;
-    setOpenSection(newOpenSection);
-    updateUrl(newOpenSection, expandedSections);
-  };
-
   const toggleExpand = (id: string) => {
-    const newExpanded = expandedSections.includes(id)
-      ? expandedSections.filter(x => x !== id)
-      : [...expandedSections, id];
-    setExpandedSections(newExpanded);
-    updateUrl(openSection, newExpanded);
+    setExpandedSections(prev =>
+      prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]
+    );
   };
 
   return (
@@ -71,7 +36,7 @@ export default function CatalogPage() {
             return (
               <div key={section.id} className="border-b border-gray-200">
                 <button
-                  onClick={() => handleSectionClick(section.id)}
+                  onClick={() => setOpenSection(isOpen ? null : section.id)}
                   className="flex w-full cursor-pointer items-center justify-between py-6 text-left group"
                 >
                   <Link
