@@ -15,7 +15,7 @@ const milledFacades: Facade[] = Array.from({ length: 47 }, (_, i) => {
     name: `ИПН-${n}`,
     description: "Фрезерованный фасад МДФ.",
     image: `/images/catalog1/image${n}.jpg`,
-    category: "milled",
+    category: "milled" as const,
   };
 }).filter(f => f.slug !== "f18");
 
