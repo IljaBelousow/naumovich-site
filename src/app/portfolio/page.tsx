@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { facades } from "@/data/facades";
@@ -8,44 +8,6 @@ import { facades } from "@/data/facades";
 export default function PortfolioPage() {
   const [openSection, setOpenSection] = useState<string | null>("work_facades");
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  // Восстанавливаем состояние при загрузке
-  useEffect(() => {
-    const savedOpenSection = sessionStorage.getItem("portfolioOpenSection");
-    const savedExpanded = sessionStorage.getItem("portfolioExpandedSections");
-    const savedScroll = sessionStorage.getItem("portfolioScrollPosition");
-
-    if (savedOpenSection) {
-      setOpenSection(savedOpenSection);
-    }
-    if (savedExpanded) {
-      setExpandedSections(JSON.parse(savedExpanded));
-    }
-    if (savedScroll) {
-      setScrollPosition(parseInt(savedScroll, 10));
-      setTimeout(() => {
-        window.scrollTo(0, parseInt(savedScroll, 10));
-      }, 100);
-    }
-  }, []);
-
-  // Сохраняем состояние при изменениях
-  useEffect(() => {
-    sessionStorage.setItem("portfolioOpenSection", openSection || "");
-    sessionStorage.setItem("portfolioExpandedSections", JSON.stringify(expandedSections));
-  }, [openSection, expandedSections]);
-
-  // Сохраняем позицию скролла
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-      sessionStorage.setItem("portfolioScrollPosition", window.scrollY.toString());
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const sections = [
     { id: "work_facades", title: "Фасады" },
@@ -96,7 +58,7 @@ export default function PortfolioPage() {
 
                 <div
                   className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    isOpen ? "max-h-[2000px] opacity-100 pb-12" : "max-h-0 opacity-0"
+                    isOpen ? "max-h-[5000px] opacity-100 pb-12" : "max-h-0 opacity-0"
                   }`}
                 >
                   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -104,6 +66,8 @@ export default function PortfolioPage() {
                       <Link
                         key={item.slug}
                         href={`/portfolio/${item.slug}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="group block cursor-pointer"
                       >
                         <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">

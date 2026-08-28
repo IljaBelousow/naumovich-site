@@ -1,54 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { facades } from "@/data/facades";
-import { useRouter } from "next/navigation";
 
 export default function CatalogPage() {
-  const router = useRouter();
   const [openSection, setOpenSection] = useState<string | null>("milled");
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  // Восстанавливаем состояние при загрузке
-  useEffect(() => {
-    const savedOpenSection = sessionStorage.getItem("catalogOpenSection");
-    const savedExpanded = sessionStorage.getItem("catalogExpandedSections");
-    const savedScroll = sessionStorage.getItem("catalogScrollPosition");
-
-    if (savedOpenSection) {
-      setOpenSection(savedOpenSection);
-    }
-    if (savedExpanded) {
-      setExpandedSections(JSON.parse(savedExpanded));
-    }
-    if (savedScroll) {
-      setScrollPosition(parseInt(savedScroll, 10));
-      // Восстанавливаем позицию скролла после небольшой задержки
-      setTimeout(() => {
-        window.scrollTo(0, parseInt(savedScroll, 10));
-      }, 100);
-    }
-  }, []);
-
-  // Сохраняем состояние при изменениях
-  useEffect(() => {
-    sessionStorage.setItem("catalogOpenSection", openSection || "");
-    sessionStorage.setItem("catalogExpandedSections", JSON.stringify(expandedSections));
-  }, [openSection, expandedSections]);
-
-  // Сохраняем позицию скролла
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-      sessionStorage.setItem("catalogScrollPosition", window.scrollY.toString());
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const sections = [
     { id: "milled", title: "Фрезерованные фасады МДФ" },
@@ -100,7 +59,7 @@ export default function CatalogPage() {
 
                 <div
                   className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    isOpen ? "max-h-[2000px] opacity-100 pb-12" : "max-h-0 opacity-0"
+                    isOpen ? "max-h-[5000px] opacity-100 pb-12" : "max-h-0 opacity-0"
                   }`}
                 >
                   {section.id === "edge" ? (
@@ -120,6 +79,8 @@ export default function CatalogPage() {
                           <Link
                             key={item.slug}
                             href={`/catalog/${item.slug}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="group block cursor-pointer"
                           >
                             <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
