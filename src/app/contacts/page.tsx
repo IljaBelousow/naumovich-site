@@ -76,7 +76,8 @@ export default function ContactsPage() {
                 Адрес производства
               </p>
               <p className="mt-3 text-lg font-light text-gray-600">
-                г. Минск, ул. Производственная, 10
+                Меньковский тракт 21<br />
+                Щомыслицкий сельсовет
               </p>
             </div>
             <div>

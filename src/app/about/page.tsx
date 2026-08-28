@@ -51,6 +51,65 @@ export default function AboutPage() {
           ))}
         </div>
 
+        {/* Технология покраски */}
+        <div className="mt-20 border-t border-gray-100 pt-12">
+          <h2 className="text-2xl font-light text-gray-900 mb-8">
+            Технология покраски
+          </h2>
+          
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-lg font-light text-gray-900 mb-3">
+                Подбор цвета
+              </h3>
+              <p className="text-base font-light text-gray-600">
+                Работаем с системами подбора цвета: <strong>RAL, WCP, NCS, Caparol</strong>
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-light text-gray-900 mb-3">
+                Подготовка поверхности (грунтование)
+              </h3>
+              <p className="text-base font-light text-gray-600 mb-4">
+                Используем двухслойную систему грунтования для идеального результата:
+              </p>
+              
+              <div className="space-y-4 pl-4">
+                <div>
+                  <p className="font-medium text-gray-900">1-й этап — грунт-изолятор:</p>
+                  <ul className="mt-2 space-y-2 text-sm font-light text-gray-600 list-disc list-inside">
+                    <li>Формирует тонкую эластичную плёнку</li>
+                    <li>Снижает впитываемость пористых участков</li>
+                    <li>Предотвращает поднятие ворса</li>
+                    <li>Создаёт барьер от миграции смол и танинов</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <p className="font-medium text-gray-900">2-й этап — наполняющий грунт:</p>
+                  <ul className="mt-2 space-y-2 text-sm font-light text-gray-600 list-disc list-inside">
+                    <li>Выравнивает микронеровности поверхности</li>
+                    <li>Заполняет поры МДФ</li>
+                    <li>Создаёт укрывистую основу под финишную эмаль</li>
+                    <li>Может быть полиуретановым или полиэфирным (в зависимости от задачи)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-light text-gray-900 mb-3">
+                Финишное покрытие
+              </h3>
+              <p className="text-base font-light text-gray-600">
+                После грунтования наносится финишная эмаль выбранного цвета. 
+                Возможно изготовление как глянцевых, так и матовых фасадов.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-20 flex flex-col gap-6 border-t border-gray-100 pt-12 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-xl text-lg font-light text-gray-600">
             Остались вопросы — позвоните, всё расскажем и посчитаем стоимость.
