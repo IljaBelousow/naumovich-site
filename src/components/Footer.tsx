@@ -74,15 +74,14 @@ export default function Footer() {
                   @vintazh100 - Instagram
                 </a>
               </li>
-              <li>г. Минск, ул. Производственная, 10</li>
-              <li>Пн–Пт: 9:00–18:00, Сб: 10:00–15:00</li>
+              <li>Меньковский тракт 21, Щомыслицкий сельсовет</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col gap-2 border-t border-gray-200 pt-6 text-sm font-light text-gray-500 sm:flex-row sm:justify-between">
           <p>© 2026 ИП Наумович. Все права защищены.</p>
-          <p>УНП 123456789</p>
+          <p>УНП 193843566</p>
         </div>
       </div>
     </footer>
