@@ -7,7 +7,7 @@ export default function Home() {
   const featuredFacades = facades.filter(f => f.category === "milled").slice(0, 4);
 
   return (
-    <main className="w-full bg-white antialiased">
+    <main className="w-full bg-white antialiased pt-20 sm:pt-0">
       
       {/* === ГЛАВНАЯ КАРТИНКА (HERO) === */}
       <section className="relative w-full h-[70vh] sm:h-[80vh] lg:h-[90vh] bg-gray-950 overflow-hidden pt-20 sm:pt-0">
