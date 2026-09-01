@@ -30,7 +30,7 @@ const edgeProfile: Facade = {
 
 // 3. Ручки
 const handles: Facade[] = [
-  { slug: "handle-1", name: "Ручка Gola", description: "Алюминиевый профиль.", image: "/images/handles/gola.jpg", category: "handles" },
+  { slug: "handle-1", name: "Ручка Gola", image: "/images/handles/gola.jpg", category: "handles" },
 ];
 
 // 4. Наши работы
