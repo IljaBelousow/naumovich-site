@@ -11,14 +11,20 @@ const names: Record<string, string> = {
   production: "Как мы работаем",
   about: "О компании",
   contacts: "Контакты",
+  edge: "Профиль края",
+  handles: "Ручки",
+  milled: "Фрезерованные фасады",
+  furniture: "Мебель",
 };
 
 function segmentName(segment: string, prev?: string) {
+  // Сначала проверяем статичные названия
   if (names[segment]) return names[segment];
-  if (prev === "catalog") {
-    const facade = facades.find((f) => f.slug === segment);
-    if (facade) return facade.name;
-  }
+  
+  // Ищем во всех данных facades по slug (работает для catalog, portfolio и других)
+  const facade = facades.find((f) => f.slug === segment);
+  if (facade) return facade.name;
+  
   return segment;
 }
 
