@@ -391,3 +391,43 @@ img { display: block; }
 @media(max-width:600px) {
   .catalog-detail-page > div,.portfolio-detail-page > div { width:calc(100% - 2rem); }
 }
+
+
+/* 2026 premium refresh — graphite, porcelain and brushed copper */
+:root {
+  --ink: #20201e;
+  --muted: #73716c;
+  --line: #dedbd4;
+  --paper: #f7f5f0;
+  --paper-deep: #ece8df;
+  --olive: #34332f;
+  --olive-deep: #1d1e1c;
+  --gold: #b98c61;
+  --gold-light: #e2c5a3;
+}
+body { background: var(--paper); color: var(--ink); }
+.site-header { background: rgba(247,245,240,.94); border-bottom-color: rgba(32,32,30,.12); }
+.brand-mark__symbol { border-color: #b98c61; color: #986c45; }
+.site-header__links a:hover,.site-header__mobile a:hover { color: #986c45; }
+.site-header__button,.site-header__mobile-phone { background:#242522; }
+.site-header__button:hover { background:#986c45; }
+.hero-premium { background:#242522; }
+.hero-premium__veil { background:linear-gradient(90deg,rgba(20,20,19,.88) 0%,rgba(24,24,22,.66) 43%,rgba(24,24,22,.12) 100%),linear-gradient(0deg,rgba(18,18,17,.5),transparent 42%); }
+.hero-premium h1 em,.closing-cta h2 em { color:#e2c5a3; }
+.button--gold { background:#e2c5a3; color:#242522; }
+.button--gold:hover { background:#f4e3d1; }
+.activities-section,.catalog-models,.about-values,.contacts-bottom { background:#ece8df; }
+.activity-card,.direction-card { background:#33322f; }
+.activity-card__arrow:hover,.direction-card__arrow:hover { background:#e2c5a3; }
+.model-card__visual,.catalog-model-card__image,.secondary-card__image,.milling-card__image { background:#efede7; }
+.model-card__go,.catalog-model-card__image > i,.button--dark { background:#242522; }
+.model-card__go:hover,.button--dark:hover { background:#986c45; }
+.craft-section,.closing-cta,.catalog-bottom-cta,.production-feature,.contacts-primary,.site-footer { background:#222321; }
+.craft-section__copy .eyebrow,.closing-cta .eyebrow { color:#e2c5a3; }
+.site-footer__label,.site-footer__motto { color:#e2c5a3; }
+.text-link { border-color:#b98c61; }
+.text-link:hover { color:#986c45; }
+.catalog-hero__overlay { background:linear-gradient(90deg,rgba(23,23,21,.84),rgba(23,23,21,.38) 72%,rgba(23,23,21,.12)); }
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
+}
