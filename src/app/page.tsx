@@ -5,7 +5,7 @@ import { facades } from "@/data/facades";
 const activities = [
   {
     number: "01",
-    title: "Фасады МДФ",
+    title: "Крашеные фасады МДФ",
     text: "Для кухонь, шкафов, ванных комнат, гардеробных и коммерческих интерьеров.",
     image: "/images/catalog1/image1.jpg",
     href: "/catalog#milled",
@@ -13,7 +13,7 @@ const activities = [
   },
   {
     number: "02",
-    title: "Мебель и интерьер",
+    title: "Мебель на заказ",
     text: "Фасады и детали для индивидуальных мебельных проектов.",
     image: "/images/catalog2/photo1/5195250767357484499.jpg",
     href: "/portfolio",
@@ -21,7 +21,7 @@ const activities = [
   },
   {
     number: "03",
-    title: "Фрезеровка и декор",
+    title: "Фрезерованные фасады",
     text: "Рельеф, геометрия и выразительные детали из МДФ.",
     image: "/images/catalog1/image7.jpg",
     href: "/frezerovki",
@@ -29,7 +29,7 @@ const activities = [
   },
   {
     number: "04",
-    title: "Мебельные детали",
+    title: "Декоративные элементы",
     text: "Профили, интегрированные ручки и элементы под ваш проект.",
     image: "/images/profil_kraya.jpg",
     href: "/catalog#handles",
@@ -48,8 +48,8 @@ export default function Home() {
         <div className="hero-premium__grain" />
         <div className="hero-premium__content page-shell">
           <p className="eyebrow eyebrow--light"><span /> Производство интерьерных решений · Минск</p>
-          <h1>Материал становится<br /><em>характером пространства.</em></h1>
-          <p className="hero-premium__lead">Фасады МДФ, фрезерованные детали и мебельные элементы под индивидуальные задачи — от идеи до точного исполнения.</p>
+          <h1>Изготовление мебели<br /><em>и крашеных фасадов МДФ.</em></h1>
+          <p className="hero-premium__lead">Производим крашеные фасады МДФ, мебель и декоративные элементы по вашим размерам. Подбираем фрезеровку, цвет и отделку под конкретный интерьер.</p>
           <div className="hero-premium__actions">
             <Link href="/catalog" className="button button--gold">Открыть каталог <span>↗</span></Link>
             <Link href="/contacts" className="button button--ghost">Обсудить проект <span>↗</span></Link>
@@ -64,9 +64,9 @@ export default function Home() {
       <section className="intro-section page-shell section-space">
         <div className="intro-section__label"><span className="eyebrow">О производстве</span><span className="intro-section__line" /></div>
         <div className="intro-section__body">
-          <h2>Не только фасады.<br /><em>Целостный взгляд на интерьер.</em></h2>
+          <h2>Фасады, мебель и детали.<br /><em>В едином стиле.</em></h2>
           <div>
-            <p>Создаём детали, которые задают настроение мебели и пространства. Работаем с формой, фрезеровкой, цветом и финишной отделкой, чтобы элементы органично сочетались с вашим интерьером.</p>
+            <p>Изготавливаем крашеные фасады МДФ и мебельные элементы для кухонь, шкафов, гардеробных и других интерьеров. От выбора модели до согласования цвета и исполнения.</p>
             <Link href="/about" className="text-link">Узнать о нашем подходе <span>↗</span></Link>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function Home() {
         <div className="page-shell section-space">
           <div className="section-heading">
             <div><p className="eyebrow">Что мы создаём / 01—04</p><h2>Направления работы</h2></div>
-            <p>От отдельных мебельных элементов до выразительных решений для всего интерьера.</p>
+            <p>Крашеные гладкие и фрезерованные фасады, мебельные решения и детали для производителей мебели, дизайнеров и частных клиентов.</p>
           </div>
           <div className="activity-grid">
             {activities.map((activity) => (
@@ -97,7 +97,7 @@ export default function Home() {
 
       <section className="models-section page-shell section-space">
         <div className="section-heading">
-          <div><p className="eyebrow">Подборка мастерской</p><h2>Популярные модели</h2></div>
+          <div><p className="eyebrow">Подборка мастерской</p><h2>Каталог фасадов МДФ</h2></div>
           <Link href="/catalog#milled" className="text-link">Все модели <span>↗</span></Link>
         </div>
         <div className="model-grid">
@@ -119,8 +119,8 @@ export default function Home() {
         </div>
         <div className="craft-section__copy">
           <p className="eyebrow eyebrow--light">Точность в каждой детали</p>
-          <h2>Хороший результат начинается с правильных решений.</h2>
-          <p>Помогаем выбрать подходящую фрезеровку, оттенок и тип покрытия. Учитываем назначение детали и общий стиль пространства, а не только внешний вид образца.</p>
+          <h2>Ваша идея — наша точность.</h2>
+          <p>Изготавливаем фасады и мебель по индивидуальным параметрам. Помогаем выбрать профиль, цвет и финишное покрытие с учётом назначения изделия.</p>
           <Link href="/production" className="button button--outline-light">Как устроен процесс <span>↗</span></Link>
           <div className="craft-section__stamp">Форма<br />Материал<br />Отделка</div>
         </div>
@@ -145,8 +145,8 @@ export default function Home() {
         <div className="closing-cta__texture" />
         <div className="page-shell closing-cta__inner">
           <p className="eyebrow eyebrow--light">Ваш проект начинается с разговора</p>
-          <h2>Есть идея?<br /><em>Давайте придадим ей форму.</em></h2>
-          <div className="closing-cta__bottom"><p>Расскажите, что хотите изготовить — поможем определить направление и обсудим детали.</p><Link href="/contacts" className="button button--gold">Связаться с нами <span>↗</span></Link></div>
+          <h2>Нужны фасады или мебель?<br /><em>Обсудим ваш проект.</em></h2>
+          <div className="closing-cta__bottom"><p>Отправьте размеры, эскиз или пример понравившегося изделия — обсудим подходящий вариант изготовления.</p><Link href="/contacts" className="button button--gold">Связаться с нами <span>↗</span></Link></div>
         </div>
       </section>
     </main>
