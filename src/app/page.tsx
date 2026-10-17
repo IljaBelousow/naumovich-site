@@ -2,128 +2,151 @@ import Link from "next/link";
 import Image from "next/image";
 import { facades } from "@/data/facades";
 
+const activities = [
+  {
+    number: "01",
+    title: "Фасады МДФ",
+    text: "Для кухонь, шкафов, ванных комнат, гардеробных и коммерческих интерьеров.",
+    image: "/images/catalog1/image1.jpg",
+    href: "/catalog#milled",
+    className: "activity-card--large",
+  },
+  {
+    number: "02",
+    title: "Мебель и интерьер",
+    text: "Фасады и детали для индивидуальных мебельных проектов.",
+    image: "/images/catalog2/photo1/5195250767357484499.jpg",
+    href: "/portfolio",
+    className: "",
+  },
+  {
+    number: "03",
+    title: "Фрезеровка и декор",
+    text: "Рельеф, геометрия и выразительные детали из МДФ.",
+    image: "/images/catalog1/image7.jpg",
+    href: "/frezerovki",
+    className: "",
+  },
+  {
+    number: "04",
+    title: "Мебельные детали",
+    text: "Профили, интегрированные ручки и элементы под ваш проект.",
+    image: "/images/profil_kraya.jpg",
+    href: "/catalog#handles",
+    className: "",
+  },
+];
+
 export default function Home() {
   const featuredFacades = facades.filter((facade) => facade.category === "milled").slice(0, 4);
 
   return (
-    <main className="w-full overflow-hidden bg-[#fbfaf7] pt-20">
-      <section className="relative isolate min-h-[680px] h-[calc(88svh-5rem)] max-h-[900px] w-full overflow-hidden bg-[#282722]">
-        <Image
-          src="/images/hero/hero-main.jpg"
-          alt="Крашеные фасады МДФ на заказ"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center opacity-65"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-black/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10" />
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1600px] items-center px-6 sm:px-10 lg:px-16 xl:px-24">
-          <div className="max-w-3xl pb-6 text-white">
-            <p className="mb-6 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.32em] text-white/75 sm:text-xs">
-              <span className="h-px w-9 bg-[#c9ad82]" />
-              Производство в Минске · ИП Наумович
-            </p>
-            <h1 className="max-w-3xl text-4xl font-light leading-[1.08] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-              Фасады, которые
-              <span className="mt-1 block font-normal text-[#e1cfb3]">создают характер мебели</span>
-            </h1>
-            <p className="mt-7 max-w-xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
-              Крашеные фасады МДФ по индивидуальным размерам. Фрезеровки, оттенки и отделка под ваш проект.
-            </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/catalog" className="inline-flex min-h-14 items-center justify-center bg-[#d9c4a3] px-8 text-xs font-semibold uppercase tracking-[0.18em] text-[#24231f] hover:bg-white">
-                Смотреть каталог <span className="ml-4 text-base">↗</span>
-              </Link>
-              <Link href="/contacts" className="inline-flex min-h-14 items-center justify-center border border-white/50 bg-white/5 px-8 text-xs font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm hover:border-white hover:bg-white/10">
-                Обсудить проект
-              </Link>
-            </div>
-            <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/25 pt-5 text-[10px] uppercase tracking-[0.17em] text-white/75 sm:text-xs">
-              <span>Индивидуальные размеры</span>
-              <span>Любые цвета</span>
-              <span>Точная фрезеровка</span>
-            </div>
+    <main className="site-main">
+      <section className="hero-premium">
+        <Image src="/images/hero/hero-main.jpg" alt="Фасады МДФ и детали современного интерьера" fill priority sizes="100vw" className="hero-premium__image" />
+        <div className="hero-premium__veil" />
+        <div className="hero-premium__grain" />
+        <div className="hero-premium__content page-shell">
+          <p className="eyebrow eyebrow--light"><span /> Производство интерьерных решений · Минск</p>
+          <h1>Материал становится<br /><em>характером пространства.</em></h1>
+          <p className="hero-premium__lead">Фасады МДФ, фрезерованные детали и мебельные элементы под индивидуальные задачи — от идеи до точного исполнения.</p>
+          <div className="hero-premium__actions">
+            <Link href="/catalog" className="button button--gold">Открыть каталог <span>↗</span></Link>
+            <Link href="/contacts" className="button button--ghost">Обсудить проект <span>↗</span></Link>
+          </div>
+          <div className="hero-premium__meta">
+            <span>Индивидуальные размеры</span><span>Подбор цвета и отделки</span><span>Внимание к деталям</span>
           </div>
         </div>
-        <div className="absolute bottom-8 right-8 z-10 hidden text-right text-[10px] uppercase tracking-[0.25em] text-white/60 lg:block">
-          Мебельные фасады МДФ
-          <span className="mt-2 block text-sm tracking-normal text-white/90">01 / Каталог</span>
+        <div className="hero-premium__index"><span>01</span> / Производство и дизайн</div>
+      </section>
+
+      <section className="intro-section page-shell section-space">
+        <div className="intro-section__label"><span className="eyebrow">О производстве</span><span className="intro-section__line" /></div>
+        <div className="intro-section__body">
+          <h2>Не только фасады.<br /><em>Целостный взгляд на интерьер.</em></h2>
+          <div>
+            <p>Создаём детали, которые задают настроение мебели и пространства. Работаем с формой, фрезеровкой, цветом и финишной отделкой, чтобы элементы органично сочетались с вашим интерьером.</p>
+            <Link href="/about" className="text-link">Узнать о нашем подходе <span>↗</span></Link>
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-[1600px] px-5 py-20 sm:px-10 sm:py-28 lg:px-16 xl:px-24">
-        <div className="mb-10 flex flex-col gap-5 border-b border-[#e8e6e0] pb-7 sm:mb-12 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#9b886e] sm:text-xs">Выберите свой стиль</p>
-            <h2 className="text-3xl font-light tracking-[-0.035em] text-[#24231f] sm:text-5xl">Популярные модели</h2>
+      <section className="activities-section">
+        <div className="page-shell section-space">
+          <div className="section-heading">
+            <div><p className="eyebrow">Что мы создаём / 01—04</p><h2>Направления работы</h2></div>
+            <p>От отдельных мебельных элементов до выразительных решений для всего интерьера.</p>
           </div>
-          <Link href="/catalog" className="group inline-flex items-center gap-3 self-start pb-1 text-xs font-semibold uppercase tracking-[0.15em] text-[#4f4d46] hover:text-[#9b7950] sm:self-auto">
-            Весь каталог <span className="text-lg transition-transform group-hover:translate-x-1">→</span>
-          </Link>
+          <div className="activity-grid">
+            {activities.map((activity) => (
+              <Link key={activity.number} href={activity.href} className={`activity-card ${activity.className}`}>
+                <Image src={activity.image} alt={activity.title} fill sizes="(max-width: 760px) 100vw, 50vw" className="activity-card__image" />
+                <div className="activity-card__shade" />
+                <span className="activity-card__number">{activity.number}</span>
+                <div className="activity-card__copy">
+                  <h3>{activity.title}</h3><p>{activity.text}</p>
+                  <span className="activity-card__arrow">↗</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="section-footnote"><span>01 / 04</span><span>Выберите направление, чтобы изучить модели и варианты исполнения</span></div>
         </div>
-        <div className="grid grid-cols-2 gap-x-4 gap-y-9 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4">
+      </section>
+
+      <section className="models-section page-shell section-space">
+        <div className="section-heading">
+          <div><p className="eyebrow">Подборка мастерской</p><h2>Популярные модели</h2></div>
+          <Link href="/catalog#milled" className="text-link">Все модели <span>↗</span></Link>
+        </div>
+        <div className="model-grid">
           {featuredFacades.map((facade, index) => (
-            <Link key={facade.slug} href={`/catalog/${facade.slug}`} className="group block">
-              <div className="relative mb-4 aspect-[4/5] overflow-hidden bg-[#f0eee8]">
-                <Image
-                  src={facade.image}
-                  alt={facade.name}
-                  fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 320px"
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                />
-                <span className="absolute left-3 top-3 bg-[#fbfaf7]/90 px-2.5 py-1.5 text-[9px] uppercase tracking-[0.15em] text-[#555148] sm:left-4 sm:top-4">
-                  Модель {String(index + 1).padStart(2, "0")}
-                </span>
-                <span className="absolute bottom-3 right-3 flex h-9 w-9 items-center justify-center rounded-full bg-[#fbfaf7] text-lg text-[#24231f] opacity-0 transition-all duration-300 group-hover:opacity-100 sm:bottom-4 sm:right-4">↗</span>
+            <Link key={facade.slug} href={`/catalog/${facade.slug}`} className="model-card">
+              <div className="model-card__visual">
+                <Image src={facade.image} alt={facade.name} fill sizes="(max-width: 700px) 50vw, 25vw" className="model-card__image" />
+                <span className="model-card__index">0{index + 1}</span><span className="model-card__go">↗</span>
               </div>
-              <h3 className="text-sm font-medium tracking-wide text-[#24231f] sm:text-base">{facade.name}</h3>
-              <p className="mt-2 line-clamp-2 text-xs leading-5 text-[#77766f] sm:text-sm">{facade.description || "Фрезерованный фасад МДФ под заказ"}</p>
+              <div className="model-card__caption"><h3>{facade.name}</h3><p>{facade.description || "Фасад МДФ под индивидуальный заказ"}</p></div>
             </Link>
           ))}
         </div>
-        <div className="mt-10 text-center sm:mt-14">
-          <Link href="/catalog" className="inline-flex min-h-12 items-center justify-center border border-[#b8b2a6] px-8 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#24231f] hover:border-[#24231f] hover:bg-[#24231f] hover:text-white">
-            Перейти в каталог
-          </Link>
+      </section>
+
+      <section className="craft-section">
+        <div className="craft-section__image">
+          <Image src="/images/catalog2/photo3/5195250767357484492.jpg" alt="Детали мебельного проекта" fill sizes="(max-width: 900px) 100vw, 50vw" className="object-cover" />
+        </div>
+        <div className="craft-section__copy">
+          <p className="eyebrow eyebrow--light">Точность в каждой детали</p>
+          <h2>Хороший результат начинается с правильных решений.</h2>
+          <p>Помогаем выбрать подходящую фрезеровку, оттенок и тип покрытия. Учитываем назначение детали и общий стиль пространства, а не только внешний вид образца.</p>
+          <Link href="/production" className="button button--outline-light">Как устроен процесс <span>↗</span></Link>
+          <div className="craft-section__stamp">Форма<br />Материал<br />Отделка</div>
         </div>
       </section>
 
-      <section className="bg-[#eeece5]">
-        <div className="mx-auto grid max-w-[1600px] gap-10 px-5 py-16 sm:px-10 sm:py-20 lg:grid-cols-[1fr_0.8fr] lg:items-center lg:gap-20 lg:px-16 xl:px-24">
-          <div>
-            <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#9b7950] sm:text-xs">Обновление мебели</p>
-            <h2 className="max-w-2xl text-3xl font-light leading-tight tracking-[-0.035em] text-[#24231f] sm:text-5xl">
-              Новые фасады — новое настроение интерьера
-            </h2>
-          </div>
-          <div>
-            <p className="text-sm leading-7 text-[#66645c] sm:text-base sm:leading-8">
-              Если корпус кухни или шкафа в хорошем состоянии, можно заменить только фасады. Изготовим дверцы по вашим размерам, поможем подобрать фрезеровку и цвет.
-            </p>
-            <Link href="/contacts" className="mt-7 inline-flex items-center gap-4 border-b border-[#9b7950] pb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#24231f] hover:gap-6">
-              Обсудить изготовление <span className="text-lg">→</span>
-            </Link>
-          </div>
+      <section className="process-section page-shell section-space">
+        <div className="section-heading">
+          <div><p className="eyebrow">От запроса к результату</p><h2>Понятный процесс</h2></div>
+          <p>Без лишних сложностей: вместе определяем задачу и подбираем исполнение.</p>
         </div>
-      </section>
-
-      <section className="mx-auto max-w-[1600px] px-5 py-16 sm:px-10 sm:py-20 lg:px-16 xl:px-24">
-        <div className="grid gap-8 border-y border-[#e8e6e0] py-8 sm:grid-cols-3 sm:gap-10 sm:py-10">
+        <div className="process-grid">
           {[
-            ["01", "Под ваши размеры", "Изготавливаем фасады по параметрам вашего проекта."],
-            ["02", "Цвет и фактура", "Подбираем оттенок и финиш под интерьер."],
-            ["03", "От идеи до детали", "Помогаем выбрать модель и согласовать заказ."],
-          ].map(([number, title, description]) => (
-            <div key={number} className="flex gap-4">
-              <span className="pt-1 text-xs tracking-[0.12em] text-[#a68a62]">{number}</span>
-              <div>
-                <h3 className="text-base font-medium text-[#24231f]">{title}</h3>
-                <p className="mt-2 max-w-xs text-sm leading-6 text-[#77766f]">{description}</p>
-              </div>
-            </div>
-          ))}
+            ["01", "Обсуждаем задачу", "Размеры, назначение, референсы и желаемый результат."],
+            ["02", "Подбираем решение", "Форма, фрезеровка, цвет и подходящая отделка."],
+            ["03", "Согласуем детали", "Уточняем параметры и состав заказа до изготовления."],
+            ["04", "Изготавливаем", "Передаём заказ, уделяя внимание точности исполнения."],
+          ].map(([n, title, text]) => <article key={n} className="process-step"><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}
+        </div>
+      </section>
+
+      <section className="closing-cta">
+        <div className="closing-cta__texture" />
+        <div className="page-shell closing-cta__inner">
+          <p className="eyebrow eyebrow--light">Ваш проект начинается с разговора</p>
+          <h2>Есть идея?<br /><em>Давайте придадим ей форму.</em></h2>
+          <div className="closing-cta__bottom"><p>Расскажите, что хотите изготовить — поможем определить направление и обсудим детали.</p><Link href="/contacts" className="button button--gold">Связаться с нами <span>↗</span></Link></div>
         </div>
       </section>
     </main>
