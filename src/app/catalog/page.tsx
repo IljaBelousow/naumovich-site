@@ -8,10 +8,10 @@ export const metadata = {
 };
 
 const directions = [
-  { id: "facades", number: "01", title: "Фасады МДФ", description: "Для кухонь, шкафов, ванных комнат, гардеробных и коммерческих интерьеров.", image: "/images/catalog1/image1.jpg", href: "#milled", tall: true },
-  { id: "furniture", number: "02", title: "Мебель и интерьер", description: "Фасады и детали для индивидуальных мебельных проектов и обновления готовой мебели.", image: "/images/catalog2/photo1/5195250767357484499.jpg", href: "/portfolio", tall: false },
-  { id: "milling", number: "03", title: "Фрезеровка и декор", description: "Рисунок, рельеф и декоративные элементы, которые задают характер поверхности.", image: "/images/catalog1/image7.jpg", href: "/frezerovki", tall: false },
-  { id: "parts", number: "04", title: "Мебельные детали", description: "Интегрированные ручки, профили края и другие элементы под ваш проект.", image: "/images/profil_kraya.jpg", href: "#handles", tall: false },
+  { id: "facades", number: "01", title: "Крашеные фасады МДФ", description: "Для кухонь, шкафов, ванных комнат, гардеробных и коммерческих интерьеров.", image: "/images/catalog1/image1.jpg", href: "#milled", tall: true },
+  { id: "furniture", number: "02", title: "Мебель на заказ", description: "Фасады и детали для индивидуальных мебельных проектов и обновления готовой мебели.", image: "/images/catalog2/photo1/5195250767357484499.jpg", href: "/portfolio", tall: false },
+  { id: "milling", number: "03", title: "Фрезерованные фасады", description: "Рисунок, рельеф и декоративные элементы, которые задают характер поверхности.", image: "/images/catalog1/image7.jpg", href: "/frezerovki", tall: false },
+  { id: "parts", number: "04", title: "Декоративные элементы", description: "Интегрированные ручки, профили края и другие элементы под ваш проект.", image: "/images/profil_kraya.jpg", href: "#handles", tall: false },
 ];
 
 export default function CatalogPage() {
@@ -26,14 +26,14 @@ export default function CatalogPage() {
         <div className="catalog-hero__overlay" />
         <div className="page-shell catalog-hero__content">
           <p className="eyebrow eyebrow--light"><span /> Каталог производства</p>
-          <h1>Решения для мебели<br /><em>и пространства.</em></h1>
-          <p>Выберите направление. На карточках сразу видны фотографии и описание — без скрытых блоков и лишних действий.</p>
+          <h1>Крашеные фасады МДФ<br /><em>и мебель на заказ.</em></h1>
+          <p>Выберите тип изделия и изучите модели фасадов, варианты фрезеровки и мебельные решения.</p>
           <div className="catalog-hero__links"><a href="#directions">Направления <span>↓</span></a><a href="#milled">Все модели фасадов <span>↗</span></a></div>
         </div>
       </section>
 
       <section id="directions" className="page-shell section-space catalog-directions">
-        <div className="section-heading"><div><p className="eyebrow">Области применения</p><h2>Что мы создаём</h2></div><p>Фасады и детали для разных задач — от мебели в доме до выразительных элементов интерьера.</p></div>
+        <div className="section-heading"><div><p className="eyebrow">Области применения</p><h2>Каталог продукции</h2></div><p>Фасады и детали для разных задач — от мебели в доме до выразительных элементов интерьера.</p></div>
         <div className="direction-grid">
           {directions.map((item) => (
             <Link key={item.id} href={item.href} className={`direction-card ${item.tall ? "direction-card--tall" : ""}`}>
