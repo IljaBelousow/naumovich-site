@@ -34,7 +34,7 @@ export default function PortfolioClient({
     : "/portfolio?tab=work_furniture";
 
   return (
-    <main className="w-full bg-white pt-24 min-h-screen">
+    <main className="site-main portfolio-detail-page">
       {/* Уменьшили py-16 до py-8, чтобы поднять контент */}
       <div className="w-full px-5 py-8 sm:px-8 lg:px-12 xl:px-16">
         

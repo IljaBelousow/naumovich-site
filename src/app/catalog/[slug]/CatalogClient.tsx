@@ -17,7 +17,7 @@ export default function CatalogClient({ item, allFacades }: { item: Facade; allF
   };
 
   return (
-    <main className="min-h-screen bg-[#fbfaf7] pt-20 text-[#24231f]">
+    <main className="site-main catalog-detail-page">
       <div className="mx-auto max-w-[1600px] px-5 py-8 sm:px-10 sm:py-12 lg:px-16 xl:px-24">
         <button onClick={handleBack} className="mb-8 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#77766f] hover:text-[#9b7950]">← Назад в каталог</button>
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
