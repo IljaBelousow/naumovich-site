@@ -1,127 +1,51 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "О компании — ИП Наумович",
-  description:
-    "ИП Наумович — изготовление мебельных деталей из МДФ крашеных и шпонированных, мебель на заказ по индивидуальным параметрам.",
+  description: "Изготовление мебельных деталей из МДФ, крашеных и шпонированных фасадов и мебели на заказ.",
 };
 
 const principles = [
-  {
-    title: "Собственная мастерская",
-    text: "Не перепродаём — изготавливаем сами. От раскроя плиты до упаковки готовой детали.",
-  },
-  {
-    title: "Под заказ",
-    text: "Каждая деталь изготавливается под конкретный проект: любой размер, любая форма.",
-  },
-  {
-    title: "Честные сроки",
-    text: "Называем реальный срок и держим его. Без «где-то через месяц».",
-  },
+  { num: "01", title: "Собственная мастерская", text: "Изготавливаем сами и контролируем детали на каждом этапе." },
+  { num: "02", title: "Под ваш проект", text: "Размеры, форма, цвет и покрытие подбираются под конкретную мебель." },
+  { num: "03", title: "Внимание к отделке", text: "Тщательная подготовка поверхности помогает добиться аккуратного финиша." },
 ];
 
 export default function AboutPage() {
   return (
-    <main className="w-full bg-white">
-      <div className="w-full px-5 py-16 sm:px-8 sm:py-24 lg:px-12 xl:px-16">
-        <p className="text-xs font-medium uppercase tracking-[0.35em] text-gray-500">
-          О компании
-        </p>
-        <h1 className="mt-4 max-w-3xl text-4xl font-extralight leading-tight tracking-tight text-gray-900 sm:text-5xl">
-          ИП Наумович — мебельные детали из МДФ под заказ
-        </h1>
-        <p className="mt-8 max-w-2xl text-lg font-light text-gray-600">
-          Мы изготавливаем мебельные детали из МДФ — крашеные и
-          шпонированные. А также мебель на заказ по индивидуальным
-          параметрам. Работаем и с частными клиентами, и с мебельщиками.
-        </p>
-        <p className="mt-6 max-w-2xl text-lg font-light text-gray-600">
-          Если у вас стоит мебель, которая ещё в порядке, — можно заменить
-          только фасады (дверцы). Это быстрее и дешевле, чем покупать новую
-          мебель.
-        </p>
-
-        <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-3">
-          {principles.map((p) => (
-            <div key={p.title} className="border-t border-gray-200 pt-6">
-              <h2 className="text-xl font-light text-gray-900">{p.title}</h2>
-              <p className="mt-3 text-base font-light text-gray-600">{p.text}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Технология покраски */}
-        <div className="mt-20 border-t border-gray-100 pt-12">
-          <h2 className="text-2xl font-light text-gray-900 mb-8">
-            Технология покраски
-          </h2>
-          
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-lg font-light text-gray-900 mb-3">
-                Подбор цвета
-              </h3>
-              <p className="text-base font-light text-gray-600">
-                Работаем с системами подбора цвета: <strong>RAL, WCP, NCS, Caparol</strong>
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-light text-gray-900 mb-3">
-                Подготовка поверхности (грунтование)
-              </h3>
-              <p className="text-base font-light text-gray-600 mb-4">
-                Используем двухслойную систему грунтования для идеального результата:
-              </p>
-              
-              <div className="space-y-4 pl-4">
-                <div>
-                  <p className="font-medium text-gray-900">1-й этап — грунт-изолятор:</p>
-                  <ul className="mt-2 space-y-2 text-sm font-light text-gray-600 list-disc list-inside">
-                    <li>Формирует тонкую эластичную плёнку</li>
-                    <li>Снижает впитываемость пористых участков</li>
-                    <li>Предотвращает поднятие ворса</li>
-                    <li>Создаёт барьер от миграции смол и танинов</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <p className="font-medium text-gray-900">2-й этап — наполняющий грунт:</p>
-                  <ul className="mt-2 space-y-2 text-sm font-light text-gray-600 list-disc list-inside">
-                    <li>Выравнивает микронеровности поверхности</li>
-                    <li>Заполняет поры МДФ</li>
-                    <li>Создаёт укрывистую основу под финишную эмаль</li>
-                    <li>Может быть полиуретановым или полиэфирным (в зависимости от задачи)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-light text-gray-900 mb-3">
-                Финишное покрытие
-              </h3>
-              <p className="text-base font-light text-gray-600">
-                После грунтования наносится финишная эмаль выбранного цвета. 
-                Возможно изготовление как глянцевых, так и матовых фасадов.
-              </p>
-            </div>
+    <main className="min-h-screen bg-[#fbfaf7] pt-20 text-[#24231f]">
+      <section className="relative isolate min-h-[360px] overflow-hidden bg-[#302e28] sm:min-h-[440px]">
+        <Image src="/images/hero/hero-main.jpg" alt="Крашеные мебельные фасады МДФ" fill priority sizes="100vw" className="object-cover opacity-45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent" />
+        <div className="relative mx-auto flex min-h-[360px] max-w-[1600px] items-end px-5 pb-12 pt-20 sm:min-h-[440px] sm:px-10 sm:pb-16 lg:px-16 xl:px-24">
+          <div>
+            <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#e1cfb3] sm:text-xs">О компании</p>
+            <h1 className="max-w-3xl text-4xl font-light leading-tight tracking-[-0.04em] text-white sm:text-6xl">Детали, из которых складывается мебель</h1>
+            <p className="mt-5 max-w-2xl text-sm leading-7 text-white/75 sm:text-base">ИП Наумович — изготовление фасадов МДФ, мебельных деталей и мебели по индивидуальным параметрам.</p>
           </div>
         </div>
-
-        <div className="mt-20 flex flex-col gap-6 border-t border-gray-100 pt-12 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-xl text-lg font-light text-gray-600">
-            Остались вопросы — позвоните, всё расскажем и посчитаем стоимость.
-          </p>
-          <Link
-            href="/contacts"
-            className="inline-block border border-gray-900 px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-gray-900 hover:text-white"
-          >
-            Связаться
-          </Link>
+      </section>
+      <section className="mx-auto grid max-w-[1600px] gap-10 px-5 py-14 sm:px-10 sm:py-20 lg:grid-cols-[1fr_0.8fr] lg:gap-20 lg:px-16 xl:px-24">
+        <div>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#9b7950]">Наш подход</p>
+          <h2 className="mt-4 text-3xl font-light leading-tight tracking-[-0.035em] sm:text-5xl">От идеи до готового фасада</h2>
         </div>
-      </div>
+        <div className="space-y-5 text-sm leading-7 text-[#77766f] sm:text-base sm:leading-8">
+          <p>Изготавливаем мебельные детали из МДФ — крашеные и шпонированные, а также мебель по индивидуальным параметрам. Работаем с частными клиентами и мебельщиками.</p>
+          <p>Если корпус кухни или шкафа ещё в хорошем состоянии, можно заменить только фасады. Поможем подобрать фрезеровку и цвет, чтобы обновить интерьер без полной замены мебели.</p>
+          <p>Для подбора оттенка используем системы RAL, WCP, NCS и Caparol. Возможны матовые и глянцевые покрытия и декоративные эффекты.</p>
+        </div>
+      </section>
+      <section className="bg-[#eeece5]">
+        <div className="mx-auto grid max-w-[1600px] gap-8 px-5 py-12 sm:grid-cols-3 sm:gap-10 sm:px-10 sm:py-16 lg:px-16 xl:px-24">
+          {principles.map((p) => <div key={p.num} className="border-t border-[#cfc8bb] pt-5"><p className="text-xs tracking-[0.15em] text-[#9b7950]">{p.num}</p><h2 className="mt-4 text-xl font-medium">{p.title}</h2><p className="mt-3 text-sm leading-6 text-[#77766f]">{p.text}</p></div>)}
+        </div>
+      </section>
+      <section className="mx-auto flex max-w-[1600px] flex-col gap-5 px-5 py-12 sm:px-10 sm:py-16 lg:flex-row lg:items-center lg:justify-between lg:px-16 xl:px-24">
+        <div><h2 className="text-2xl font-light sm:text-3xl">Расскажите, что хотите изготовить</h2><p className="mt-2 text-sm text-[#77766f]">Обсудим размеры, материал и отделку.</p></div>
+        <Link href="/contacts" className="inline-flex min-h-12 items-center justify-center bg-[#24231f] px-6 text-[10px] font-semibold uppercase tracking-[0.16em] text-white hover:bg-[#9b7950]">Связаться с нами ↗</Link>
+      </section>
     </main>
   );
 }
