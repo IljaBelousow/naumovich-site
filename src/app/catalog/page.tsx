@@ -8,10 +8,12 @@ export const metadata = {
 };
 
 const directions = [
-  { id: "facades", number: "01", title: "Крашеные фасады МДФ", description: "Для кухонь, шкафов, ванных комнат, гардеробных и коммерческих интерьеров.", image: "/images/catalog1/image1.jpg", href: "#milled", tall: true },
-  { id: "furniture", number: "02", title: "Мебель на заказ", description: "Фасады и детали для индивидуальных мебельных проектов и обновления готовой мебели.", image: "/images/catalog2/photo1/5195250767357484499.jpg", href: "/portfolio", tall: false },
-  { id: "milling", number: "03", title: "Фрезерованные фасады", description: "Рисунок, рельеф и декоративные элементы, которые задают характер поверхности.", image: "/images/catalog1/image7.jpg", href: "/frezerovki", tall: false },
-  { id: "parts", number: "04", title: "Декоративные элементы", description: "Интегрированные ручки, профили края и другие элементы под ваш проект.", image: "/images/profil_kraya.jpg", href: "#handles", tall: false },
+  { id: "facades", number: "01", title: "Крашеные фасады МДФ", description: "Цвет, финиш и исполнение для кухонь, шкафов и интерьеров.", image: "/images/catalog1/image1.jpg", href: "#milled", tall: false },
+  { id: "furniture", number: "02", title: "Мебель на заказ", description: "Индивидуальные мебельные решения для дома и коммерческих пространств.", image: "/images/catalog2/photo1/5195250767357484499.jpg", href: "/portfolio", tall: false },
+  { id: "milling", number: "03", title: "Фрезерованные фасады", description: "Рельеф, геометрия и декоративный рисунок поверхности.", image: "/images/catalog1/image7.jpg", href: "/frezerovki", tall: false },
+  { id: "smooth", number: "04", title: "Гладкие фасады", description: "Лаконичные фасадные решения с акцентом на цвет и фактуру.", image: "/images/catalog1/image2.jpg", href: "#milled", tall: false },
+  { id: "casework", number: "05", title: "Корпусная мебель", description: "Мебельные элементы и готовые решения в составе проекта.", image: "/images/catalog2/photo4/5195250767357484510.jpg", href: "/portfolio", tall: false },
+  { id: "parts", number: "06", title: "Декоративные элементы", description: "Профили края, интегрированные ручки и детали под задачу.", image: "/images/profil_kraya.jpg", href: "#handles", tall: false },
 ];
 
 export default function CatalogPage() {
