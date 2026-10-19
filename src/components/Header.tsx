@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -16,8 +16,20 @@ const navigation = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const mobileMenuRef = useRef<HTMLElement | null>(null);
   const pathname = usePathname();
   const isHome = pathname === "/";
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const closeOnOutsidePointer = (event: PointerEvent) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+        setMobileMenuOpen(false);
+      }
+    };
+    document.addEventListener("pointerdown", closeOnOutsidePointer);
+    return () => document.removeEventListener("pointerdown", closeOnOutsidePointer);
+  }, [mobileMenuOpen]);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 24);
@@ -95,7 +107,7 @@ export default function Header() {
               onClick={(event) => { event.stopPropagation(); setMobileMenuOpen(false); }}
               className="absolute inset-0 h-full w-full cursor-pointer bg-black/35"
             />
-            <aside onClick={(event) => event.stopPropagation()}
+            <aside ref={mobileMenuRef} onClick={(event) => event.stopPropagation()}
               className="absolute inset-y-0 right-0 flex h-[100dvh] w-[85%] max-w-md flex-col justify-start gap-2 overflow-y-auto overscroll-contain border-l border-white/15 bg-[#29313a]/90 px-6 py-2 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-3">
                             <nav aria-label="Основные разделы сайта" className="shrink-0 border-b border-white/25 pb-3">
                 {navigation.map((item) => (
