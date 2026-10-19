@@ -51,7 +51,7 @@ export default function Home() {
           {/* Кнопка */}
           <Link
             href="/catalog"
-            className="group inline-flex min-h-14 items-center justify-center gap-5 border border-white bg-transparent px-10 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-[#F1EEE7] hover:text-gray-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
+            className="site-button-on-dark group"
           >
             Смотреть каталог <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
@@ -138,7 +138,7 @@ export default function Home() {
           </div>
           
           <div className="mt-12 text-center sm:hidden">
-             <Link href="/catalog" className="inline-block border border-[#82745F] px-8 py-3 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 active:bg-[#82745F] active:text-white transition-colors">
+             <Link href="/catalog" className="site-button">
                Смотреть все
              </Link>
           </div>
@@ -162,7 +162,7 @@ export default function Home() {
             <div className="mt-10">
               <Link
                 href="/contacts"
-                className="inline-block bg-gray-900 text-white px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] transition-all duration-300 hover:bg-[#6F6250] active:scale-98 shadow-sm"
+                className="site-button"
               >
                 Узнать стоимость
               </Link>
