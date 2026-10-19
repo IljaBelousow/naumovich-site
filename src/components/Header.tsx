@@ -94,7 +94,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="absolute inset-0 h-full w-full cursor-pointer bg-black/35"
             />
-            <aside className="absolute inset-0 flex h-[100dvh] ml-auto w-full max-w-md flex-col justify-between overflow-hidden border-l border-white/15 bg-[#303030]/50 px-6 py-3 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-4">
+            <aside className="absolute inset-y-0 right-0 flex h-[100dvh] w-full max-w-md flex-col justify-start gap-3 overflow-hidden border-l border-white/15 bg-[#29313a]/40 px-6 py-3 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-4">
               <div className="flex shrink-0 justify-end">
                 <button
                   type="button"
@@ -112,7 +112,7 @@ export default function Header() {
                     key={item.name}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="group flex items-center justify-between py-2 text-sm font-medium transition-colors hover:text-white/70"
+                    className="group flex items-center justify-between py-1.5 text-base font-semibold transition-colors hover:text-white/70"
                   >
                     <span>{item.name}</span>
                     <span aria-hidden="true" className="text-lg text-white/50 transition-transform group-hover:translate-x-1">→</span>
@@ -121,16 +121,16 @@ export default function Header() {
               </nav>
 
               <section className="shrink-0 space-y-1 py-1" aria-label="Телефоны">
-                <a href="tel:+375259929001" className="block text-base font-medium tracking-tight transition-colors hover:text-white/70">+375 25 992-90-01</a>
-                <a href="tel:+375447744449" className="block text-base font-medium tracking-tight transition-colors hover:text-white/70">+375 44 774-44-49</a>
+                <a href="tel:+375259929001" className="block text-lg font-semibold tracking-tight transition-colors hover:text-white/70">+375 (25) 992-90-01</a>
+                <a href="tel:+375447744449" className="block text-lg font-semibold tracking-tight transition-colors hover:text-white/70">+375 (44) 774-44-49</a>
               </section>
 
               <section className="shrink-0 py-1" aria-label="Адрес">
-                <p className="text-sm leading-relaxed text-white/90">Меньковский тракт 21<br />Щомыслицкий сельсовет</p>
+                <p className="text-base font-medium leading-snug text-white/90">Меньковский тракт 21<br />Щомыслицкий сельсовет</p>
               </section>
 
               <section className="shrink-0 py-1" aria-label="График">
-                <p className="text-sm text-white/90">Пн–Пт с 9:00 до 18:00</p>
+                <p className="text-base font-medium text-white/90">Пн–Пт с 9:00 до 18:00</p>
               </section>
 
               <section className="shrink-0 py-1" aria-label="Контакты">
@@ -151,7 +151,7 @@ export default function Header() {
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
                   </a>
                 </div>
-                <a href="mailto:info@naumovich.by" className="mt-2 block text-sm text-white/80 transition-colors hover:text-white">info@naumovich.by</a>
+                <a href="mailto:info@naumovich.by" className="mt-1.5 block text-base font-medium text-white/80 transition-colors hover:text-white">info@naumovich.by</a>
               </section>
 
               <Link
