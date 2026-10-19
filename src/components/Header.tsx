@@ -53,7 +53,7 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-3" onClick={(event) => { setMobileMenuOpen(false); if (pathname === "/") { event.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); } }}>
             <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden">
-              <img src="/favicon.ico" alt="Наумович — главная" className="h-10 w-10 object-contain" />
+              <img src="/icon.svg" alt="Наумович — главная" className="h-10 w-10 object-contain" />
             </span>
             <span className={`hidden text-sm font-medium uppercase tracking-[0.2em] md:block ${textColor}`}>Наумович</span>
           </Link>
