@@ -5,8 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navigation = [
+  { name: "Главная", href: "/" },
   { name: "Каталог", href: "/catalog" },
-  { name: "Наши работы", href: "/portfolio" },
+  { name: "Портфолио", href: "/portfolio" },
   { name: "Как мы работаем", href: "/production" },
   { name: "О компании", href: "/about" },
   { name: "Контакты", href: "/contacts" },
@@ -86,14 +87,14 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="fixed inset-0 z-[60] lg:hidden">
+          <div className="fixed inset-0 z-[60] flex justify-end lg:hidden">
             <button
               type="button"
               aria-label="Закрыть меню"
               onClick={() => setMobileMenuOpen(false)}
               className="absolute inset-0 h-full w-full cursor-pointer bg-black/35"
             />
-            <aside className="absolute inset-0 flex h-[100dvh] w-full max-w-md flex-col justify-between overflow-hidden border-l border-white/15 bg-gray-900/50 px-6 py-3 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-4">
+            <aside className="absolute inset-0 flex h-[100dvh] ml-auto w-full max-w-md flex-col justify-between overflow-hidden border-l border-white/15 bg-[#303030]/50 px-6 py-3 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-4">
               <div className="flex shrink-0 justify-end">
                 <button
                   type="button"
