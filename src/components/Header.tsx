@@ -70,8 +70,8 @@ export default function Header() {
             +375 25 992-90-01
           </a>
 
-          <div className="flex items-center gap-4 lg:hidden">
-            <div className={`flex items-center gap-3 ${textColor}`} aria-label="Связаться с нами">
+          <div className="flex items-center gap-4">
+            <div className={`flex items-center gap-3 lg:hidden ${textColor}`} aria-label="Связаться с нами">
             <a href="https://www.instagram.com/vintazh100" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="transition-all duration-300 hover:scale-110 hover:opacity-80">
               <svg viewBox="0 0 24 24" className="h-[22px] w-[22px]" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
             </a>
@@ -107,7 +107,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="menu-overlay fixed inset-0 z-[60] flex justify-end lg:hidden" onClick={() => setMobileMenuOpen(false)}>
+          <div className="menu-overlay fixed inset-0 z-[60] flex justify-end" onClick={() => setMobileMenuOpen(false)}>
             <button
               type="button"
               aria-label="Закрыть меню"
