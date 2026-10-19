@@ -11,7 +11,7 @@ export default function ContactsPage() {
         <p className="text-xs font-medium uppercase tracking-[0.35em] text-gray-500">
           Свяжитесь с нами
         </p>
-        <h1 className="mt-4 text-4xl font-extralight tracking-tight text-gray-900 sm:text-5xl">
+        <h1 className="mt-4 text-4xl font-light tracking-tight text-gray-900 sm:text-5xl">
           Контакты
         </h1>
 
@@ -20,25 +20,25 @@ export default function ContactsPage() {
           <div>
             <a
               href="tel:+375259929001"
-              className="text-3xl font-extralight tracking-tight text-gray-900 transition-colors hover:text-[#82745F] sm:text-5xl"
+              className="text-3xl font-light tracking-tight text-gray-900 transition-colors hover:text-[#82745F] sm:text-5xl"
             >
               +375 25 992-90-01
             </a>
-            <p className="mt-2 text-base font-light text-gray-500">
+            <p className="mt-2 text-base font-normal text-gray-500">
               Основной номер: звонки, Telegram, Viber
             </p>
 
             <a
               href="tel:+375447744449"
-              className="mt-8 block text-2xl font-extralight tracking-tight text-gray-900 transition-colors hover:text-[#82745F] sm:text-3xl"
+              className="mt-8 block text-2xl font-light tracking-tight text-gray-900 transition-colors hover:text-[#82745F] sm:text-3xl"
             >
               +375 44 774-44-49
             </a>
-            <p className="mt-2 text-base font-light text-gray-500">
+            <p className="mt-2 text-base font-normal text-gray-500">
               Прямой контакт с директором
             </p>
 
-            <p className="mt-10 max-w-md text-lg font-light text-gray-600">
+            <p className="mt-10 max-w-md text-lg font-normal text-gray-600">
               Позвоните или напишите — посчитаем стоимость, подскажем по
               фрезеровкам и цветам.
             </p>
@@ -75,7 +75,7 @@ export default function ContactsPage() {
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-900">
                 Адрес производства
               </p>
-              <p className="mt-3 text-lg font-light text-gray-600">
+              <p className="mt-3 text-lg font-normal text-gray-600">
                 Меньковский тракт 21<br />
                 Щомыслицкий сельсовет
               </p>
@@ -86,7 +86,7 @@ export default function ContactsPage() {
               </p>
               <a
                 href="mailto:info@naumovich.by"
-                className="mt-3 block text-lg font-light text-gray-600 transition-colors hover:text-[#82745F]"
+                className="mt-3 block text-lg font-normal text-gray-600 transition-colors hover:text-[#82745F]"
               >
                 info@naumovich.by
               </a>
@@ -95,7 +95,7 @@ export default function ContactsPage() {
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-900">
                 Режим работы
               </p>
-              <p className="mt-3 text-lg font-light text-gray-600">
+              <p className="mt-3 text-lg font-normal text-gray-600">
                 Пн–Пт: 9:00–18:00
                 <br />
                 Сб: 10:00–15:00
