@@ -5,8 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navigation = [
-  { name: "О компании", href: "/about" },
   { name: "Главная", href: "/" },
+  { name: "О компании", href: "/about" },
   { name: "Каталог", href: "/catalog" },
   { name: "Портфолио", href: "/portfolio" },
   { name: "Как мы работаем", href: "/production" },
