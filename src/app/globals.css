@@ -128,3 +128,74 @@ a {
   --color-accent-hover: #6F6250;
   --color-border: #D8D0C3;
 }
+
+
+/* Unified CTA system: shared geometry inspired by the homepage hero button. */
+.site-button,
+.site-button-on-dark {
+  display: inline-flex;
+  min-height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  border: 1px solid;
+  padding: 1rem 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease;
+  cursor: pointer;
+}
+
+.site-button {
+  border-color: var(--color-ink);
+  background: transparent;
+  color: var(--color-ink);
+}
+
+.site-button:hover {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-page);
+}
+
+.site-button-on-dark {
+  border-color: var(--color-page);
+  background: transparent;
+  color: var(--color-page);
+}
+
+.site-button-on-dark:hover {
+  border-color: var(--color-page);
+  background: var(--color-page);
+  color: var(--color-ink);
+}
+
+.site-button:focus-visible,
+.site-button-on-dark:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.site-button:disabled,
+.site-button-on-dark:disabled,
+.site-button[aria-disabled="true"],
+.site-button-on-dark[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .site-button,
+  .site-button-on-dark {
+    min-height: 3.25rem;
+    max-width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+  }
+}
