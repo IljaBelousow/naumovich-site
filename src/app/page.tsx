@@ -30,9 +30,9 @@ export default function Home() {
           </p>
           
           {/* Заголовок */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extralight text-white tracking-tight leading-tight mb-6">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6 drop-shadow-lg">
             Мебельные детали из МДФ — <br className="hidden sm:block" />
-            <span className="font-normal block mt-2 sm:inline sm:mt-0">крашеные и шпонированные</span>
+            <span className="font-semibold block mt-2 sm:inline sm:mt-0">крашеные и шпонированные</span>
           </h1>
           
           {/* Подзаголовок: зафиксировали ровный перенос, текст больше не наезжает на преимущества */}
@@ -51,7 +51,7 @@ export default function Home() {
           {/* Кнопка */}
           <Link
             href="/catalog"
-            className="bg-white text-gray-950 px-10 py-4 text-xs font-semibold uppercase tracking-[0.25em] hover:bg-gray-100 active:scale-98 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="group inline-flex items-center justify-center gap-3 rounded-sm bg-[#d4af37] px-9 py-4 text-sm font-bold uppercase tracking-[0.12em] text-gray-950 shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#e5c454] hover:shadow-[0_12px_36px_rgba(0,0,0,0.4)] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
           >
             Смотреть каталог
           </Link>
