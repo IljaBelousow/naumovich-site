@@ -58,7 +58,7 @@ export default function Header() {
             <span className={`hidden text-sm font-medium uppercase tracking-[0.2em] md:block ${textColor}`}>Наумович</span>
           </Link>
 
-          <div className="hidden lg:flex lg:gap-x-8">
+          <div className="absolute left-1/2 hidden -translate-x-1/2 items-center justify-center gap-x-8 lg:flex">
             {navigation.map((item) => (
               <Link key={item.name} href={item.href} className={`text-sm font-medium transition-colors hover:opacity-70 ${textColor}`}>
                 {item.name}
