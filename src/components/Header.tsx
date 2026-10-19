@@ -69,9 +69,7 @@ export default function Header() {
             <a href="tel:+375259929001" aria-label="Позвонить" title="Позвонить" className="transition-opacity hover:opacity-60">
               <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 16.5v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 10.2 18a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.9 3.2 2 2 0 0 1 3.9 1h3a2 2 0 0 1 2 1.7l.5 2.8a2 2 0 0 1-.6 1.9L7 9.2a16 16 0 0 0 6 6l1.8-1.8a2 2 0 0 1 1.9-.6l2.8.5a2 2 0 0 1 1.5 3.2Z"/></svg>
             </a>
-            <a href="mailto:info@naumovich.by" aria-label="Написать на почту" title="Email" className="transition-opacity hover:opacity-60">
-              <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-            </a>
+            
             </div>
 
             <button
@@ -94,7 +92,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="absolute inset-0 h-full w-full cursor-pointer bg-black/35"
             />
-            <aside className="absolute inset-y-0 right-0 flex h-[100dvh] w-full max-w-md flex-col justify-start gap-3 overflow-hidden border-l border-white/15 bg-[#29313a]/40 px-6 py-3 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-4">
+            <aside className="absolute inset-y-0 right-0 flex h-[100dvh] w-full max-w-md flex-col justify-start gap-2 overflow-hidden border-l border-white/15 bg-[#29313a]/40 px-6 py-2 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-3">
               <div className="flex shrink-0 justify-end">
                 <button
                   type="button"
@@ -106,7 +104,7 @@ export default function Header() {
                 </button>
               </div>
 
-              <nav aria-label="Основные разделы сайта" className="shrink-0 border-b border-white/25 pb-3">
+              <nav aria-label="Основные разделы сайта" className="shrink-0 border-b border-white/25 pb-2">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
@@ -120,20 +118,20 @@ export default function Header() {
                 ))}
               </nav>
 
-              <section className="shrink-0 space-y-1 py-1" aria-label="Телефоны">
-                <a href="tel:+375259929001" className="block text-lg font-semibold tracking-tight transition-colors hover:text-white/70">+375 (25) 992-90-01</a>
-                <a href="tel:+375447744449" className="block text-lg font-semibold tracking-tight transition-colors hover:text-white/70">+375 (44) 774-44-49</a>
+              <section className="shrink-0 space-y-1 py-0.5" aria-label="Телефоны">
+                <a href="tel:+375259929001" className="block font-mono text-xl font-bold tracking-tight transition-colors hover:text-white/70">+375 (25) 992-90-01</a>
+                <a href="tel:+375447744449" className="block font-mono text-xl font-bold tracking-tight transition-colors hover:text-white/70">+375 (44) 774-44-49</a>
               </section>
 
-              <section className="shrink-0 py-1" aria-label="Адрес">
+              <section className="shrink-0 py-0.5" aria-label="Адрес">
                 <p className="text-base font-medium leading-snug text-white/90">Меньковский тракт 21<br />Щомыслицкий сельсовет</p>
               </section>
 
-              <section className="shrink-0 py-1" aria-label="График">
+              <section className="shrink-0 py-0.5" aria-label="График">
                 <p className="text-base font-medium text-white/90">Пн–Пт с 9:00 до 18:00</p>
               </section>
 
-              <section className="shrink-0 py-1" aria-label="Контакты">
+              <section className="shrink-0 py-0.5" aria-label="Контакты">
                 <div className="flex items-center gap-5 text-white">
                   <a href="https://www.instagram.com/vintazh100" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="cursor-pointer transition-opacity hover:opacity-50">
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
@@ -142,16 +140,14 @@ export default function Header() {
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.4 4.6 18.2 20c-.2 1.1-.8 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.9 8.9-8c.4-.4-.1-.6-.6-.2L6.1 13.8l-4.7-1.5c-1-.3-1-1 .2-1.5L20 3.4c.9-.3 1.7.2 1.4 1.2Z"/></svg>
                   </a>
                   <a href="viber://chat?number=%2B375259929001" aria-label="Viber" title="Viber" className="cursor-pointer transition-opacity hover:opacity-50">
-                    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 3.5C2.8 4.5 2.7 7.1 3.4 9.4c1.6 5.1 6.1 9.6 11.2 11.2 2.3.7 4.9.6 5.9-1.6l.5-1.1-5-2.4-1.6 2-1.4-.6a13 13 0 0 1-5.5-5.5l-.6-1.4 2-1.6-2.4-5L5 3.5Z"/><path d="M13 5a6 6 0 0 1 6 6M13 8a3 3 0 0 1 3 3"/></svg>
+                    <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true"><path fill="#7360f2" d="M12 1.5A10.5 10.5 0 0 0 3.1 17.6L2 22l4.6-1.1A10.5 10.5 0 1 0 12 1.5Z"/><path fill="white" d="M17.8 15.2c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5s0-.4 0-.5-.7-1.7-1-2.3c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.1 3 2 3.1 4.8 4.3c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4s-.2-.2-.5-.3Z"/></svg>
                   </a>
                   <a href="tel:+375259929001" aria-label="Телефон" title="Телефон" className="cursor-pointer transition-opacity hover:opacity-50">
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 16.5v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 10.2 18a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.9 3.2 2 2 0 0 1 3.9 1h3a2 2 0 0 1 2 1.7l.5 2.8a2 2 0 0 1-.6 1.9L7 9.2a16 16 0 0 0 6 6l1.8-1.8a2 2 0 0 1 1.9-.6l2.8.5a2 2 0 0 1 1.5 3.2Z"/></svg>
                   </a>
-                  <a href="mailto:info@naumovich.by" aria-label="Электронная почта" title="Email" className="cursor-pointer transition-opacity hover:opacity-50">
-                    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-                  </a>
+                  
                 </div>
-                <a href="mailto:info@naumovich.by" className="mt-1.5 block text-base font-medium text-white/80 transition-colors hover:text-white">info@naumovich.by</a>
+                
               </section>
 
               <Link
