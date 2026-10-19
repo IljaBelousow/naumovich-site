@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
+
+const manrope = Manrope({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "ИП Наумович — производство крашеных фасадов МДФ",
@@ -19,7 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ru">
-      <body>
+      <body className={manrope.className}>
         <Header />
         <Breadcrumbs />
         {children}
