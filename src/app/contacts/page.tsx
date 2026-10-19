@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function ContactsPage() {
   return (
-    <main className="w-full bg-white">
+    <main className="w-full bg-[#F1EEE7]">
       <div className="w-full px-5 py-16 sm:px-8 sm:py-24 lg:px-12 xl:px-16">
         <p className="text-xs font-medium uppercase tracking-[0.35em] text-gray-500">
           Свяжитесь с нами
