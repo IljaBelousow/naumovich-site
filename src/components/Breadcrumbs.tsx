@@ -42,18 +42,18 @@ export default function Breadcrumbs() {
     <div className="w-full bg-[#F1EEE7] px-5 pt-20 sm:px-8 lg:px-12 xl:px-16">
       <nav
         aria-label="Хлебные крошки"
-        className="flex flex-wrap items-center gap-2 py-4 text-sm font-light text-gray-500"
+        className="flex flex-wrap items-center gap-2 py-4 text-sm font-light text-[#82745F]"
       >
-        <Link href="/" className="transition-colors hover:text-gray-900">
+        <Link href="/" className="transition-colors hover:text-[#82745F]">
           Главная
         </Link>
         {crumbs.map((crumb, i) => (
           <span key={crumb.href} className="flex items-center gap-2">
-            <span className="text-gray-300">/</span>
+            <span className="text-[#BEB5A6]">/</span>
             {i === crumbs.length - 1 ? (
               <span className="text-gray-900">{crumb.name}</span>
             ) : (
-              <Link href={crumb.href} className="transition-colors hover:text-gray-900">
+              <Link href={crumb.href} className="transition-colors hover:text-[#82745F]">
                 {crumb.name}
               </Link>
             )}
