@@ -17,7 +17,7 @@ body {
   min-width: 320px;
   margin: 0;
   background: #F1EEE7;
-  color: #111827;
+  color: #252723;
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
 }
@@ -117,4 +117,14 @@ a {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Warm premium palette: comfortable milk background and restrained bronze accents. */
+:root {
+  --color-page: #F1EEE7;
+  --color-surface: #E5E0D6;
+  --color-ink: #252723;
+  --color-accent: #82745F;
+  --color-accent-hover: #6F6250;
+  --color-border: #D8D0C3;
 }
