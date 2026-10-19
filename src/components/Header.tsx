@@ -88,14 +88,15 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="fixed inset-0 z-[60] flex justify-end lg:hidden">
+          <div className="fixed inset-0 z-[60] flex justify-end lg:hidden" onClick={() => setMobileMenuOpen(false)}>
             <button
               type="button"
               aria-label="Закрыть меню"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(event) => { event.stopPropagation(); setMobileMenuOpen(false); }}
               className="absolute inset-0 h-full w-full cursor-pointer bg-black/35"
             />
-            <aside className="absolute inset-y-0 right-0 flex h-[100dvh] w-[min(88vw,28rem)] flex-col justify-start gap-2 overflow-y-auto overscroll-contain border-l border-white/15 bg-[#29313a]/90 px-6 py-2 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-3">
+            <aside onClick={(event) => event.stopPropagation()}
+              className="absolute inset-y-0 right-0 flex h-[100dvh] w-[85%] max-w-md flex-col justify-start gap-2 overflow-y-auto overscroll-contain border-l border-white/15 bg-[#29313a]/90 px-6 py-2 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-3">
                             <nav aria-label="Основные разделы сайта" className="shrink-0 border-b border-white/25 pb-3">
                 {navigation.map((item) => (
                   <Link
