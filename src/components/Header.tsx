@@ -72,19 +72,19 @@ export default function Header() {
 
           <div className="flex items-center gap-4 lg:hidden">
             <div className={`flex items-center gap-3 ${textColor}`} aria-label="Связаться с нами">
-            <a href="https://www.instagram.com/vintazh100" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="transition-all duration-300 hover:scale-105 hover:opacity-80">
+            <a href="https://www.instagram.com/vintazh100" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="transition-all duration-300 hover:scale-110 hover:opacity-80">
               <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
             </a>
-            <a href="https://t.me/+375259929001" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram" className="transition-all duration-300 hover:scale-105 hover:opacity-80">
+            <a href="https://t.me/+375259929001" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram" className="transition-all duration-300 hover:scale-110 hover:opacity-80">
               <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="currentColor" aria-hidden="true"><path d="M21.4 4.6 18.2 20c-.2 1.1-.8 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.9 8.9-8c.4-.4-.1-.6-.6-.2L6.1 13.8l-4.7-1.5c-1-.3-1-1 .2-1.5L20 3.4c.9-.3 1.7.2 1.4 1.2Z"/></svg>
             </a>
-            <a href="viber://chat?number=%2B375259929001" aria-label="Viber" title="Viber" className="transition-all duration-300 hover:scale-105 hover:opacity-80">
+            <a href="viber://chat?number=%2B375259929001" aria-label="Viber" title="Viber" className="transition-all duration-300 hover:scale-110 hover:opacity-80">
               <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 3.5C2.8 4.5 2.7 7.1 3.4 9.4c1.6 5.1 6.1 9.6 11.2 11.2 2.3.7 4.9.6 5.9-1.6l.5-1.1-5-2.4-1.6 2-1.4-.6a13 13 0 0 1-5.5-5.5l-.6-1.4 2-1.6-2.4-5L5 3.5Z"/><path d="M13 5a6 6 0 0 1 6 6M13 8a3 3 0 0 1 3 3"/></svg>
             </a>
-            <a href="tel:+375259929001" aria-label="Позвонить" title="Позвонить" className="transition-all duration-300 hover:scale-105 hover:opacity-80">
+            <a href="tel:+375259929001" aria-label="Позвонить" title="Позвонить" className="transition-all duration-300 hover:scale-110 hover:opacity-80">
               <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 16.5v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 10.2 18a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.9 3.2 2 2 0 0 1 3.9 1h3a2 2 0 0 1 2 1.7l.5 2.8a2 2 0 0 1-.6 1.9L7 9.2a16 16 0 0 0 6 6l1.8-1.8a2 2 0 0 1 1.9-.6l2.8.5a2 2 0 0 1 1.5 3.2Z"/></svg>
             </a>
-            <a href="mailto:info@naumovich.by" aria-label="Написать на почту" title="Email" className="transition-all duration-300 hover:scale-105 hover:opacity-80">
+            <a href="mailto:info@naumovich.by" aria-label="Написать на почту" title="Email" className="transition-all duration-300 hover:scale-110 hover:opacity-80">
               <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
             </a>
             </div>
@@ -145,19 +145,19 @@ export default function Header() {
 
               <section className="shrink-0 py-1" aria-label="Контакты">
                 <div className="flex items-center gap-5 text-white">
-                  <a href="https://www.instagram.com/vintazh100" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="cursor-pointer transition-all duration-300 hover:scale-105 hover:opacity-80">
+                  <a href="https://www.instagram.com/vintazh100" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="cursor-pointer transition-all duration-300 hover:scale-110 hover:opacity-80">
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
                   </a>
-                  <a href="https://t.me/+375259929001" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram" className="cursor-pointer transition-all duration-300 hover:scale-105 hover:opacity-80">
+                  <a href="https://t.me/+375259929001" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram" className="cursor-pointer transition-all duration-300 hover:scale-110 hover:opacity-80">
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M21.4 4.6 18.2 20c-.2 1.1-.8 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.9 8.9-8c.4-.4-.1-.6-.6-.2L6.1 13.8l-4.7-1.5c-1-.3-1-1 .2-1.5L20 3.4c.9-.3 1.7.2 1.4 1.2Z"/></svg>
                   </a>
-                  <a href="viber://chat?number=%2B375259929001" aria-label="Viber" title="Viber" className="cursor-pointer transition-all duration-300 hover:scale-105 hover:opacity-80">
+                  <a href="viber://chat?number=%2B375259929001" aria-label="Viber" title="Viber" className="cursor-pointer transition-all duration-300 hover:scale-110 hover:opacity-80">
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 3.5C2.8 4.5 2.7 7.1 3.4 9.4c1.6 5.1 6.1 9.6 11.2 11.2 2.3.7 4.9.6 5.9-1.6l.5-1.1-5-2.4-1.6 2-1.4-.6a13 13 0 0 1-5.5-5.5l-.6-1.4 2-1.6-2.4-5L5 3.5Z"/><path d="M13 5a6 6 0 0 1 6 6M13 8a3 3 0 0 1 3 3"/></svg>
                   </a>
-                  <a href="tel:+375259929001" aria-label="Телефон" title="Телефон" className="cursor-pointer transition-all duration-300 hover:scale-105 hover:opacity-80">
+                  <a href="tel:+375259929001" aria-label="Телефон" title="Телефон" className="cursor-pointer transition-all duration-300 hover:scale-110 hover:opacity-80">
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 16.5v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 10.2 18a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.9 3.2 2 2 0 0 1 3.9 1h3a2 2 0 0 1 2 1.7l.5 2.8a2 2 0 0 1-.6 1.9L7 9.2a16 16 0 0 0 6 6l1.8-1.8a2 2 0 0 1 1.9-.6l2.8.5a2 2 0 0 1 1.5 3.2Z"/></svg>
                   </a>
-                  <a href="mailto:info@naumovich.by" aria-label="Электронная почта" title="Email" className="cursor-pointer transition-all duration-300 hover:scale-105 hover:opacity-80">
+                  <a href="mailto:info@naumovich.by" aria-label="Электронная почта" title="Email" className="cursor-pointer transition-all duration-300 hover:scale-110 hover:opacity-80">
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
                   </a>
                 </div>
