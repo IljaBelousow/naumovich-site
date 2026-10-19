@@ -64,9 +64,14 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={(event) => {
-                  if (pathname === item.href) {
+                  const currentPath = pathname.replace(/\/$/, "") || "/";
+                  const targetPath = item.href.replace(/\/$/, "") || "/";
+                  const isCurrentPage = currentPath === targetPath || currentPath.startsWith(`${targetPath}/`);
+                  if (isCurrentPage) {
                     event.preventDefault();
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                    document.documentElement.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                    document.body.scrollTo({ top: 0, left: 0, behavior: "smooth" });
                   }
                 }}
                 className={`text-sm font-medium transition-colors hover:opacity-70 ${textColor}`}
