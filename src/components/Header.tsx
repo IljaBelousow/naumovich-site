@@ -94,19 +94,8 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="absolute inset-0 h-full w-full cursor-pointer bg-black/35"
             />
-            <aside className="absolute inset-y-0 right-0 flex h-[100dvh] w-full max-w-md flex-col justify-start gap-3 overflow-hidden border-l border-white/15 bg-[#29313a]/40 px-6 py-3 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-4">
-              <div className="flex shrink-0 justify-end">
-                <button
-                  type="button"
-                  aria-label="Закрыть меню"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="cursor-pointer p-1 text-2xl leading-none text-white transition-opacity hover:opacity-60"
-                >
-                  ×
-                </button>
-              </div>
-
-              <nav aria-label="Основные разделы сайта" className="shrink-0 border-b border-white/25 pb-3">
+            <aside className="absolute inset-y-0 right-0 flex h-[100dvh] w-full max-w-md flex-col justify-start gap-2 overflow-hidden border-l border-white/15 bg-[#29313a]/40 px-6 py-2 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-3">
+                            <nav aria-label="Основные разделы сайта" className="shrink-0 border-b border-white/25 pb-3">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
@@ -121,8 +110,8 @@ export default function Header() {
               </nav>
 
               <section className="shrink-0 space-y-1 py-1" aria-label="Телефоны">
-                <a href="tel:+375259929001" className="block text-lg font-semibold tracking-tight transition-colors hover:text-white/70">+375 (25) 992-90-01</a>
-                <a href="tel:+375447744449" className="block text-lg font-semibold tracking-tight transition-colors hover:text-white/70">+375 (44) 774-44-49</a>
+                <a href="tel:+375259929001" className="block text-xl font-semibold tracking-tight [font-family:'Comic_Sans_MS','Comic_Sans',cursive] transition-colors hover:text-white/70">+375 (25) 992-90-01</a>
+                <a href="tel:+375447744449" className="block text-xl font-semibold tracking-tight [font-family:'Comic_Sans_MS','Comic_Sans',cursive] transition-colors hover:text-white/70">+375 (44) 774-44-49</a>
               </section>
 
               <section className="shrink-0 py-1" aria-label="Адрес">
@@ -151,7 +140,7 @@ export default function Header() {
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
                   </a>
                 </div>
-                <a href="mailto:info@naumovich.by" className="mt-1.5 block text-base font-medium text-white/80 transition-colors hover:text-white">info@naumovich.by</a>
+                
               </section>
 
               <Link
