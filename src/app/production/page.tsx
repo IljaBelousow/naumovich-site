@@ -46,10 +46,10 @@ export default function ProductionPage() {
         <p className="text-xs font-medium uppercase tracking-[0.35em] text-gray-500">
           Как мы работаем
         </p>
-        <h1 className="mt-4 max-w-3xl text-4xl font-extralight leading-tight tracking-tight text-gray-900 sm:text-5xl">
+        <h1 className="mt-4 max-w-3xl text-4xl font-light leading-tight tracking-tight text-gray-900 sm:text-5xl">
           Как мы делаем фасады
         </h1>
-        <p className="mt-8 max-w-2xl text-lg font-light text-gray-600">
+        <p className="mt-8 max-w-2xl text-lg font-normal text-gray-600">
           Полный цикл в собственной мастерской — без посредников. Поэтому мы отвечаем за каждый миллиметр и каждый оттенок.
         </p>
 
@@ -57,8 +57,8 @@ export default function ProductionPage() {
           {steps.map((step) => (
             <div key={step.num} className="border-t border-[#D8D0C3] pt-6">
               <span className="text-sm font-medium text-[#82745F]">{step.num}</span>
-              <h2 className="mt-3 text-xl font-light text-gray-900">{step.title}</h2>
-              <div className="mt-4 text-base font-light text-gray-600 leading-relaxed">
+              <h2 className="mt-3 text-xl font-normal text-gray-900">{step.title}</h2>
+              <div className="mt-4 text-base font-normal text-gray-600 leading-relaxed">
                 {step.text}
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function ProductionPage() {
         </div>
 
         <div className="mt-20 flex flex-col gap-6 border-t border-[#D8D0C3] pt-12 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-xl text-lg font-light text-gray-600">
+          <p className="max-w-xl text-lg font-normal text-gray-600">
             Хотите посмотреть мастерскую или образцы вживую — приезжайте, покажем и подскажем.
           </p>
           <Link
