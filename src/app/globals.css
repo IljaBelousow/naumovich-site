@@ -368,3 +368,8 @@ a { text-underline-offset: 4px; }
   .industrial-hero img { animation: industrialImageSettle 1.4s cubic-bezier(.2,.75,.25,1) both; }
   @keyframes industrialImageSettle { from { transform: scale(1.045); } to { transform: scale(1); } }
 }
+
+
+/* Improve readability: avoid tiny supporting copy across the site. */
+.text-xs { font-size: 0.8125rem; line-height: 1.45; }
+.text-\[11px\] { font-size: 0.8125rem; line-height: 1.45; }
