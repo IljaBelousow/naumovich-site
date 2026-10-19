@@ -145,8 +145,8 @@ export default function Header() {
               </nav>
 
               <section className="shrink-0 space-y-1 py-1" aria-label="Телефоны">
-                <a href="tel:+375259929001" className="block text-xl font-semibold tracking-tight [font-family:'Comic_Sans_MS','Comic_Sans',cursive] transition-colors hover:text-white/70">+375 (25) 992-90-01</a>
-                <a href="tel:+375447744449" className="block text-xl font-semibold tracking-tight [font-family:'Comic_Sans_MS','Comic_Sans',cursive] transition-colors hover:text-white/70">+375 (44) 774-44-49</a>
+                <a href="tel:+375259929001" className="block text-xl font-semibold tracking-tight transition-colors hover:text-white/70">+375 (25) 992-90-01</a>
+                <a href="tel:+375447744449" className="block text-xl font-semibold tracking-tight transition-colors hover:text-white/70">+375 (44) 774-44-49</a>
               </section>
 
               <section className="shrink-0 py-1" aria-label="Адрес">
