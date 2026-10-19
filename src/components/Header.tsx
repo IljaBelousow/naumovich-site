@@ -60,7 +60,17 @@ export default function Header() {
 
           <div className="absolute left-1/2 z-20 hidden -translate-x-1/2 items-center justify-center gap-x-8 lg:flex">
             {navigation.map((item) => (
-              <Link key={item.name} href={item.href} className={`text-sm font-medium transition-colors hover:opacity-70 ${textColor}`}>
+              <Link
+                key={item.name}
+                href={item.href}
+                onClick={(event) => {
+                  if (pathname === item.href) {
+                    event.preventDefault();
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }}
+                className={`text-sm font-medium transition-colors hover:opacity-70 ${textColor}`}
+              >
                 {item.name}
               </Link>
             ))}
