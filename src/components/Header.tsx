@@ -66,10 +66,6 @@ export default function Header() {
             ))}
           </div>
 
-          <a href="tel:+375259929001" className={`hidden text-sm font-semibold transition-opacity hover:opacity-70 lg:block ${textColor}`}>
-            +375 25 992-90-01
-          </a>
-
           <div className="flex items-center gap-4">
             <div className={`flex items-center gap-3 lg:hidden ${textColor}`} aria-label="Связаться с нами">
             <a href="https://www.instagram.com/vintazh100" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="transition-all duration-300 hover:scale-110 hover:opacity-80">
@@ -89,6 +85,9 @@ export default function Header() {
             </a>
             </div>
 
+            <a href="tel:+375259929001" className={`hidden text-sm font-semibold transition-opacity hover:opacity-70 lg:block ${textColor}`} aria-label="Позвонить">
+              +375 25 992-90-01
+            </a>
             <button
               type="button"
               aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
