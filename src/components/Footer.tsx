@@ -24,7 +24,7 @@ export default function Footer() {
                 Наумович
               </span>
             </Link>
-            <p className="mt-5 max-w-xs text-base font-light text-[#C4C0B7]">
+            <p className="mt-5 max-w-xs text-base font-normal text-[#C4C0B7]">
               Мебельные детали из МДФ — крашеные и шпонированные. Мебель на заказ.
             </p>
           </div>
@@ -39,7 +39,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-base font-light text-[#C4C0B7] transition-colors hover:text-[#B7A58A]"
+                    className="text-base font-normal text-[#C4C0B7] transition-colors hover:text-[#B7A58A]"
                   >
                     {item.name}
                   </Link>
@@ -53,7 +53,7 @@ export default function Footer() {
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-900">
               Контакты
             </p>
-            <ul className="mt-5 space-y-2 text-base font-light text-[#C4C0B7]">
+            <ul className="mt-5 space-y-2 text-base font-normal text-[#C4C0B7]">
               <li>
                 <a href="tel:+375259929001" className="transition-colors hover:text-[#B7A58A]">
                   +375 25 992-90-01 - Контактый номер телефона
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-2 border-t border-[#3B3D37] pt-6 text-sm font-light text-[#A7A49C] sm:flex-row sm:justify-between">
+        <div className="mt-14 flex flex-col gap-2 border-t border-[#3B3D37] pt-6 text-sm font-normal text-[#A7A49C] sm:flex-row sm:justify-between">
           <p>© 2026 ИП Наумович. Все права защищены.</p>
           <p>УНП 193843566</p>
         </div>
