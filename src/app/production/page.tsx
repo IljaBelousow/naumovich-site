@@ -55,8 +55,8 @@ export default function ProductionPage() {
 
         <div className="mt-20 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step) => (
-            <div key={step.num} className="border-t border-gray-200 pt-6">
-              <span className="text-sm font-medium text-gray-400">{step.num}</span>
+            <div key={step.num} className="border-t border-[#D8D0C3] pt-6">
+              <span className="text-sm font-medium text-[#82745F]">{step.num}</span>
               <h2 className="mt-3 text-xl font-light text-gray-900">{step.title}</h2>
               <div className="mt-4 text-base font-light text-gray-600 leading-relaxed">
                 {step.text}
@@ -65,13 +65,13 @@ export default function ProductionPage() {
           ))}
         </div>
 
-        <div className="mt-20 flex flex-col gap-6 border-t border-gray-100 pt-12 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-20 flex flex-col gap-6 border-t border-[#D8D0C3] pt-12 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-xl text-lg font-light text-gray-600">
             Хотите посмотреть мастерскую или образцы вживую — приезжайте, покажем и подскажем.
           </p>
           <Link
             href="/contacts"
-            className="inline-block border border-gray-900 px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-gray-900 hover:text-white"
+            className="inline-block border border-[#82745F] px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-[#82745F] hover:text-white"
           >
             Записаться на визит
           </Link>
