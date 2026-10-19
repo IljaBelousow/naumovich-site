@@ -48,7 +48,7 @@ export default function ContactsPage() {
                 href="https://www.instagram.com/vintazh100"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-[#82745F] px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-[#82745F] hover:text-white"
+                className="site-button"
               >
                 Instagram
               </a>
@@ -56,13 +56,13 @@ export default function ContactsPage() {
                 href="https://t.me/+375259929001"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-[#82745F] px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-[#82745F] hover:text-white"
+                className="site-button"
               >
                 Telegram
               </a>
               <a
                 href="viber://chat?number=%2B375259929001"
-                className="border border-[#82745F] px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-[#82745F] hover:text-white"
+                className="site-button"
               >
                 Viber
               </a>
