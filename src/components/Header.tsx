@@ -46,7 +46,7 @@ export default function Header() {
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         transparentHeader
           ? "border-b border-white/10 bg-gradient-to-b from-black/45 to-transparent"
-          : "border-b border-gray-200/80 bg-[#F1EEE7]/95 shadow-sm backdrop-blur-md"
+          : "border-b border-[#D8D0C3]/80 bg-[#F1EEE7]/95 shadow-sm backdrop-blur-md"
       }`}
     >
       <nav className="relative w-full px-4 sm:px-8 lg:px-12">
@@ -129,14 +129,14 @@ export default function Header() {
               className="menu-backdrop absolute inset-0 h-full w-full cursor-pointer bg-black/35"
             />
             <aside ref={mobileMenuRef} onClick={(event) => event.stopPropagation()}
-              className="menu-panel absolute inset-y-0 right-0 flex h-[100dvh] w-[85%] max-w-md flex-col justify-start gap-2 overflow-y-auto overscroll-contain border-l border-white/15 bg-[#29313a]/90 px-6 py-2 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-3">
+              className="menu-panel absolute inset-y-0 right-0 flex h-[100dvh] w-[85%] max-w-md flex-col justify-start gap-2 overflow-y-auto overscroll-contain border-l border-white/15 bg-[#252723]/95 px-6 py-2 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-3">
                             <nav aria-label="Основные разделы сайта" className="shrink-0 border-b border-white/25 pb-3">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`group flex items-center justify-between py-1.5 text-base font-semibold transition-all duration-300 hover:translate-x-1 hover:text-white/70 ${pathname === item.href || (item.href !== "/" && pathname.startsWith(`${item.href}/`)) ? "text-red-400" : "text-white"}`}
+                    className={`group flex items-center justify-between py-1.5 text-base font-semibold transition-all duration-300 hover:translate-x-1 hover:text-white/70 ${pathname === item.href || (item.href !== "/" && pathname.startsWith(`${item.href}/`)) ? "text-[#B7A58A]" : "text-white"}`}
                   >
                     <span>{item.name}</span>
                     <span aria-hidden="true" className="text-lg text-white/50 transition-transform group-hover:translate-x-1">→</span>
@@ -181,7 +181,7 @@ export default function Header() {
               <Link
                 href="/contacts"
                 onClick={() => setMobileMenuOpen(false)}
-                className="group inline-flex min-h-12 w-full shrink-0 cursor-pointer items-center justify-center gap-4 border border-white bg-transparent px-7 py-3 text-center text-xs font-medium uppercase tracking-[0.16em] text-white transition-all duration-300 hover:bg-[#F1EEE7] hover:text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                className="group inline-flex min-h-12 w-full shrink-0 cursor-pointer items-center justify-center gap-4 border border-white bg-transparent px-7 py-3 text-center text-xs font-medium uppercase tracking-[0.16em] text-white transition-all duration-300 hover:bg-[#F1EEE7] hover:text-[#82745F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
               >
                 Связаться с нами <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
