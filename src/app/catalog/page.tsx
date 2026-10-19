@@ -21,29 +21,29 @@ export default function CatalogPage() {
           Каталог
         </h1>
 
-        <div className="border-t border-gray-200">
+        <div className="border-t border-[#D8D0C3]">
           {sections.map((section) => {
             const items = facades.filter((f) => f.category === section.id);
 
             return (
-              <div key={section.id} className="border-b border-gray-200 py-12">
+              <div key={section.id} className="border-b border-[#D8D0C3] py-12">
                 <div className="flex items-center justify-between mb-8">
                   <Link
                     href={`/catalog/${section.id}`}
-                    className="text-xl sm:text-2xl font-light text-gray-900 hover:underline decoration-gray-300 underline-offset-4"
+                    className="text-xl sm:text-2xl font-light text-gray-900 hover:underline decoration-[#82745F]/60 underline-offset-4"
                   >
                     {section.title}
                   </Link>
                   <Link
                     href={`/catalog/${section.id}`}
-                    className="text-xs uppercase tracking-[0.2em] text-gray-400 hover:text-gray-900"
+                    className="text-xs uppercase tracking-[0.2em] text-[#82745F] hover:text-[#82745F]"
                   >
                     Все 
                   </Link>
                 </div>
 
                 {section.id === "edge" ? (
-                  <div className="max-w-3xl border border-gray-100 bg-gray-50 p-4">
+                  <div className="max-w-3xl border border-[#D8D0C3] bg-[#E5E0D6]/70 p-4">
                     <Image
                       src={items[0]?.image || "/images/profil_kraya.jpg"}
                       alt="Профиль края"
@@ -61,7 +61,7 @@ export default function CatalogPage() {
                         href={`/catalog/${item.slug}`}
                         className="group block"
                       >
-                        <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
+                        <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#E5E0D6]">
                           <Image
                             src={item.image}
                             alt={item.name}
