@@ -181,7 +181,7 @@ export default function Header() {
               <Link
                 href="/contacts"
                 onClick={() => setMobileMenuOpen(false)}
-                className="group inline-flex min-h-12 w-full shrink-0 cursor-pointer items-center justify-center gap-4 border border-white bg-transparent px-7 py-3 text-center text-xs font-medium uppercase tracking-[0.16em] text-white transition-all duration-300 hover:bg-[#F1EEE7] hover:text-[#82745F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                className="site-button-on-dark group w-full shrink-0"
               >
                 Связаться с нами <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
