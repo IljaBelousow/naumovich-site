@@ -431,3 +431,55 @@ body { background: var(--paper); color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
 }
+
+
+/* Six-category editorial catalog layout */
+.activity-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(280px, 26vw));
+}
+.activity-card--large,
+.direction-card--tall {
+  grid-row: auto;
+}
+.direction-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(280px, 25vw));
+}
+.activity-card,
+.direction-card {
+  min-width: 0;
+}
+.activity-card__copy h3,
+.direction-card__content h2 {
+  text-wrap: balance;
+}
+@media (max-width: 900px) {
+  .activity-grid,
+  .direction-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+  }
+  .activity-card,
+  .direction-card {
+    min-height: 320px;
+  }
+}
+@media (max-width: 650px) {
+  .activity-grid,
+  .direction-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+  }
+  .activity-card,
+  .direction-card {
+    min-height: 340px;
+  }
+  .activity-card__copy,
+  .direction-card__content {
+    right: 1.1rem;
+    bottom: 1.1rem;
+    left: 1.1rem;
+    padding: 1.1rem;
+  }
+}
