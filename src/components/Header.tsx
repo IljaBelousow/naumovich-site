@@ -44,7 +44,8 @@ export default function Header() {
             +375 25 992-90-01
           </a>
 
-          <div className={`flex items-center gap-3 ${textColor} lg:hidden`} aria-label="Связаться с нами">
+          <div className="flex items-center gap-4 lg:hidden">
+            <div className={`flex items-center gap-3 ${textColor}`} aria-label="Связаться с нами">
             <a href="https://www.instagram.com/vintazh100" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="transition-opacity hover:opacity-60">
               <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
             </a>
@@ -60,17 +61,18 @@ export default function Header() {
             <a href="mailto:info@naumovich.by" aria-label="Написать на почту" title="Email" className="transition-opacity hover:opacity-60">
               <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
             </a>
-          </div>
+            </div>
 
-          <button
-            type="button"
-            aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"
-            aria-expanded={mobileMenuOpen}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`lg:hidden p-2 text-xl leading-none transition-colors ${textColor}`}
-          >
-            {mobileMenuOpen ? "✕" : "☰"}
-          </button>
+            <button
+              type="button"
+              aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
+              aria-expanded={mobileMenuOpen}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className={`p-2 text-xl leading-none transition-colors ${textColor}`}
+            >
+              {mobileMenuOpen ? "✕" : "☰"}
+            </button>
+          </div>
         </div>
 
         {mobileMenuOpen && (
