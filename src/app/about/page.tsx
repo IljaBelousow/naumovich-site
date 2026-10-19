@@ -116,7 +116,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/contacts"
-            className="inline-block border border-[#82745F] px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-[#82745F] hover:text-white"
+            className="site-button"
           >
             Связаться
           </Link>
