@@ -93,21 +93,20 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="absolute inset-0 h-full w-full cursor-pointer bg-black/35"
             />
-            <aside className="absolute inset-0 flex h-[100dvh] w-full max-w-md flex-col justify-between overflow-hidden border-l border-white/15 bg-gray-900/50 px-6 py-4 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-5">
-              <div className="flex shrink-0 items-center justify-between">
-                <span aria-hidden="true" />
+            <aside className="absolute inset-0 flex h-[100dvh] w-full max-w-md flex-col justify-between overflow-hidden border-l border-white/15 bg-gray-900/50 px-6 py-3 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-4">
+              <div className="flex shrink-0 justify-end">
                 <button
                   type="button"
                   aria-label="Закрыть меню"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="cursor-pointer p-2 text-2xl leading-none text-white transition-opacity hover:opacity-60"
+                  className="cursor-pointer p-1 text-2xl leading-none text-white transition-opacity hover:opacity-60"
                 >
                   ×
                 </button>
               </div>
 
               <nav aria-label="Основные разделы сайта" className="shrink-0 border-b border-white/25 pb-3">
-                {navigation.map((item, index) => (
+                {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
@@ -120,27 +119,21 @@ export default function Header() {
                 ))}
               </nav>
 
-              <section className="shrink-0 border-b border-white/20 py-4" aria-label="Телефоны">
-                <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.22em] text-white/60">Связаться по телефону</p>
+              <section className="shrink-0 space-y-1 py-1" aria-label="Телефоны">
                 <a href="tel:+375259929001" className="block text-base font-medium tracking-tight transition-colors hover:text-white/70">+375 25 992-90-01</a>
-                
-                <a href="tel:+375447744449" className="mt-1 block text-base font-medium tracking-tight transition-colors hover:text-white/70">+375 44 774-44-49</a>
-                
+                <a href="tel:+375447744449" className="block text-base font-medium tracking-tight transition-colors hover:text-white/70">+375 44 774-44-49</a>
               </section>
 
-              <section className="shrink-0 border-b border-white/20 py-4">
-                <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-white/60">Адрес производства</p>
-                <p className="mt-2 text-sm leading-relaxed text-white/90">Меньковский тракт 21<br />Щомыслицкий сельсовет</p>
+              <section className="shrink-0 py-1" aria-label="Адрес">
+                <p className="text-sm leading-relaxed text-white/90">Меньковский тракт 21<br />Щомыслицкий сельсовет</p>
               </section>
 
-              <section className="border-b border-gray-200 py-6">
-                <p className="text-xs font-medium uppercase tracking-[0.25em] text-gray-500">График работы</p>
-                <p className="mt-2 text-sm text-white/90">Пн–Пт с 9:00 до 18:00</p>
+              <section className="shrink-0 py-1" aria-label="График">
+                <p className="text-sm text-white/90">Пн–Пт с 9:00 до 18:00</p>
               </section>
 
-              <section className="border-b border-gray-200 py-6">
-                <p className="text-xs font-medium uppercase tracking-[0.25em] text-gray-500">Мы на связи</p>
-                <div className="mt-3 flex items-center gap-5 text-white">
+              <section className="shrink-0 py-1" aria-label="Контакты">
+                <div className="flex items-center gap-5 text-white">
                   <a href="https://www.instagram.com/vintazh100" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="cursor-pointer transition-opacity hover:opacity-50">
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
                   </a>
