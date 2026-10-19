@@ -7,10 +7,10 @@ export default function Home() {
   const featuredFacades = facades.filter(f => f.category === "milled").slice(0, 4);
 
   return (
-    <main className="w-full bg-white antialiased pt-20 sm:pt-0">
+    <main className="w-full bg-white antialiased">
       
       {/* === ГЛАВНАЯ КАРТИНКА (HERO) === */}
-      <section className="relative w-full h-[70vh] sm:h-[80vh] lg:h-[90vh] bg-gray-950 overflow-hidden pt-20 sm:pt-0">
+      <section className="relative h-[100svh] min-h-[600px] w-full overflow-hidden bg-gray-950">
         <Image
           src="/images/hero/hero-main.jpg" 
           alt="Крашеные фасады МДФ на заказ"
