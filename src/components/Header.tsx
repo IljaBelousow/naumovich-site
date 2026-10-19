@@ -93,9 +93,9 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="absolute inset-0 h-full w-full cursor-pointer bg-black/35"
             />
-            <aside className="absolute inset-y-0 right-0 flex w-full max-w-md flex-col overflow-y-auto border-l border-white/15 bg-gray-700/90 px-6 pb-5 pt-24 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:pb-6">
-              <div className="flex shrink-0 items-center justify-between border-b border-white/20 pb-4">
-                <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/65">Навигация</p>
+            <aside className="absolute inset-0 flex h-[100dvh] w-full max-w-md flex-col justify-between overflow-hidden border-l border-white/15 bg-gray-900/50 px-6 py-4 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:py-5">
+              <div className="flex shrink-0 items-center justify-between">
+                <span aria-hidden="true" />
                 <button
                   type="button"
                   aria-label="Закрыть меню"
@@ -106,13 +106,13 @@ export default function Header() {
                 </button>
               </div>
 
-              <nav aria-label="Основные разделы сайта" className="shrink-0 border-b border-white/20 py-2">
+              <nav aria-label="Основные разделы сайта" className="shrink-0 border-b border-white/25 pb-3">
                 {navigation.map((item, index) => (
                   <Link
                     key={item.name}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="group flex items-center justify-between border-b border-white/10 py-3 text-sm font-medium transition-colors last:border-0 hover:text-white/70 sm:py-3.5"
+                    className="group flex items-center justify-between py-2 text-sm font-medium transition-colors hover:text-white/70"
                   >
                     <span>{item.name}</span>
                     <span aria-hidden="true" className="text-lg text-white/50 transition-transform group-hover:translate-x-1">→</span>
@@ -123,9 +123,9 @@ export default function Header() {
               <section className="shrink-0 border-b border-white/20 py-4" aria-label="Телефоны">
                 <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.22em] text-white/60">Связаться по телефону</p>
                 <a href="tel:+375259929001" className="block text-base font-medium tracking-tight transition-colors hover:text-white/70">+375 25 992-90-01</a>
-                <p className="mt-0.5 text-[11px] text-white/65">Основной номер · звонки и мессенджеры</p>
-                <a href="tel:+375447744449" className="mt-4 block text-base font-medium tracking-tight transition-colors hover:text-white/70">+375 44 774-44-49</a>
-                <p className="mt-1 text-xs text-gray-500">Прямой контакт с директором</p>
+                
+                <a href="tel:+375447744449" className="mt-1 block text-base font-medium tracking-tight transition-colors hover:text-white/70">+375 44 774-44-49</a>
+                
               </section>
 
               <section className="shrink-0 border-b border-white/20 py-4">
@@ -157,13 +157,13 @@ export default function Header() {
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
                   </a>
                 </div>
-                <a href="mailto:info@naumovich.by" className="mt-3 block text-sm text-white/80 transition-colors hover:text-white">info@naumovich.by</a>
+                <a href="mailto:info@naumovich.by" className="mt-2 block text-sm text-white/80 transition-colors hover:text-white">info@naumovich.by</a>
               </section>
 
               <Link
                 href="/contacts"
                 onClick={() => setMobileMenuOpen(false)}
-                className="group mt-auto inline-flex min-h-12 w-full shrink-0 cursor-pointer items-center justify-center gap-4 border border-white bg-transparent px-6 py-3 text-center text-[11px] font-medium uppercase tracking-[0.16em] text-white transition-all duration-300 hover:bg-white hover:text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-700"
+                className="group inline-flex min-h-11 w-full shrink-0 cursor-pointer items-center justify-center gap-4 border border-white bg-transparent px-6 py-2 text-center text-[11px] font-medium uppercase tracking-[0.16em] text-white transition-all duration-300 hover:bg-white hover:text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
               >
                 Связаться с нами <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
