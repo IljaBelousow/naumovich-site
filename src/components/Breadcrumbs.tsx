@@ -39,7 +39,7 @@ export default function Breadcrumbs() {
   }));
 
   return (
-    <div className="w-full bg-white px-5 pt-20 sm:px-8 lg:px-12 xl:px-16">
+    <div className="w-full bg-[#F1EEE7] px-5 pt-20 sm:px-8 lg:px-12 xl:px-16">
       <nav
         aria-label="Хлебные крошки"
         className="flex flex-wrap items-center gap-2 py-4 text-sm font-light text-gray-500"
