@@ -38,7 +38,7 @@ export default function CatalogPage() {
                     href={`/catalog/${section.id}`}
                     className="text-xs uppercase tracking-[0.2em] text-gray-400 hover:text-gray-900"
                   >
-                    Все →
+                    Все 
                   </Link>
                 </div>
 
