@@ -86,61 +86,61 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="fixed inset-x-0 bottom-0 top-20 z-40 lg:hidden">
+          <div className="fixed inset-0 z-[60] lg:hidden">
             <button
               type="button"
               aria-label="Закрыть меню"
               onClick={() => setMobileMenuOpen(false)}
               className="absolute inset-0 h-full w-full cursor-pointer bg-black/35"
             />
-            <aside className="absolute inset-y-0 right-0 w-full max-w-md overflow-y-auto border-l border-gray-200 bg-white px-7 py-8 text-gray-900 shadow-2xl sm:px-9">
-              <div className="flex items-center justify-between border-b border-gray-200 pb-5">
-                <p className="text-xs font-medium uppercase tracking-[0.3em] text-gray-500">Навигация</p>
+            <aside className="absolute inset-y-0 right-0 flex w-full max-w-md flex-col overflow-y-auto border-l border-white/15 bg-gray-700/90 px-6 pb-5 pt-24 text-white shadow-2xl backdrop-blur-md sm:px-8 sm:pb-6">
+              <div className="flex shrink-0 items-center justify-between border-b border-white/20 pb-4">
+                <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/65">Навигация</p>
                 <button
                   type="button"
                   aria-label="Закрыть меню"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="cursor-pointer p-2 text-2xl leading-none text-gray-900 transition-opacity hover:opacity-60"
+                  className="cursor-pointer p-2 text-2xl leading-none text-white transition-opacity hover:opacity-60"
                 >
                   ×
                 </button>
               </div>
 
-              <nav aria-label="Основные разделы сайта" className="border-b border-gray-200 py-3">
+              <nav aria-label="Основные разделы сайта" className="shrink-0 border-b border-white/20 py-2">
                 {navigation.map((item, index) => (
                   <Link
                     key={item.name}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="group flex items-center justify-between border-b border-gray-100 py-4 text-base font-medium transition-colors last:border-0 hover:text-gray-500"
+                    className="group flex items-center justify-between border-b border-white/10 py-3 text-sm font-medium transition-colors last:border-0 hover:text-white/70 sm:py-3.5"
                   >
                     <span>{item.name}</span>
-                    <span aria-hidden="true" className="text-lg text-gray-400 transition-transform group-hover:translate-x-1">→</span>
+                    <span aria-hidden="true" className="text-lg text-white/50 transition-transform group-hover:translate-x-1">→</span>
                   </Link>
                 ))}
               </nav>
 
-              <section className="border-b border-gray-200 py-6" aria-label="Телефоны">
-                <p className="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-500">Связаться по телефону</p>
-                <a href="tel:+375259929001" className="block text-lg font-medium tracking-tight transition-colors hover:text-gray-500">+375 25 992-90-01</a>
-                <p className="mt-1 text-xs text-gray-500">Основной номер · звонки и мессенджеры</p>
-                <a href="tel:+375447744449" className="mt-5 block text-lg font-medium tracking-tight transition-colors hover:text-gray-500">+375 44 774-44-49</a>
+              <section className="shrink-0 border-b border-white/20 py-4" aria-label="Телефоны">
+                <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.22em] text-white/60">Связаться по телефону</p>
+                <a href="tel:+375259929001" className="block text-base font-medium tracking-tight transition-colors hover:text-white/70">+375 25 992-90-01</a>
+                <p className="mt-0.5 text-[11px] text-white/65">Основной номер · звонки и мессенджеры</p>
+                <a href="tel:+375447744449" className="mt-4 block text-base font-medium tracking-tight transition-colors hover:text-white/70">+375 44 774-44-49</a>
                 <p className="mt-1 text-xs text-gray-500">Прямой контакт с директором</p>
               </section>
 
-              <section className="border-b border-gray-200 py-6">
-                <p className="text-xs font-medium uppercase tracking-[0.25em] text-gray-500">Адрес производства</p>
-                <p className="mt-3 text-sm leading-relaxed text-gray-700">Меньковский тракт 21<br />Щомыслицкий сельсовет</p>
+              <section className="shrink-0 border-b border-white/20 py-4">
+                <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-white/60">Адрес производства</p>
+                <p className="mt-2 text-sm leading-relaxed text-white/90">Меньковский тракт 21<br />Щомыслицкий сельсовет</p>
               </section>
 
               <section className="border-b border-gray-200 py-6">
                 <p className="text-xs font-medium uppercase tracking-[0.25em] text-gray-500">График работы</p>
-                <p className="mt-3 text-sm text-gray-700">Пн–Пт с 9:00 до 18:00</p>
+                <p className="mt-2 text-sm text-white/90">Пн–Пт с 9:00 до 18:00</p>
               </section>
 
               <section className="border-b border-gray-200 py-6">
                 <p className="text-xs font-medium uppercase tracking-[0.25em] text-gray-500">Мы на связи</p>
-                <div className="mt-4 flex items-center gap-5 text-gray-900">
+                <div className="mt-3 flex items-center gap-5 text-white">
                   <a href="https://www.instagram.com/vintazh100" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="cursor-pointer transition-opacity hover:opacity-50">
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
                   </a>
@@ -157,13 +157,13 @@ export default function Header() {
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
                   </a>
                 </div>
-                <a href="mailto:info@naumovich.by" className="mt-4 block text-sm text-gray-600 transition-colors hover:text-gray-900">info@naumovich.by</a>
+                <a href="mailto:info@naumovich.by" className="mt-3 block text-sm text-white/80 transition-colors hover:text-white">info@naumovich.by</a>
               </section>
 
               <Link
                 href="/contacts"
                 onClick={() => setMobileMenuOpen(false)}
-                className="group mt-7 inline-flex min-h-14 w-full cursor-pointer items-center justify-center gap-5 border border-gray-900 bg-transparent px-8 py-4 text-center text-xs font-medium uppercase tracking-[0.18em] text-gray-900 transition-all duration-300 hover:bg-gray-900 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+                className="group mt-auto inline-flex min-h-12 w-full shrink-0 cursor-pointer items-center justify-center gap-4 border border-white bg-transparent px-6 py-3 text-center text-[11px] font-medium uppercase tracking-[0.16em] text-white transition-all duration-300 hover:bg-white hover:text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-700"
               >
                 Связаться с нами <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
