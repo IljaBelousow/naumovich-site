@@ -17,7 +17,7 @@ export default function CatalogPage() {
   return (
     <main className="w-full bg-[#F1EEE7] pt-20 min-h-screen">
       <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-16">
-        <h1 className="text-4xl font-extralight tracking-tight text-gray-900 mb-12">
+        <h1 className="text-4xl font-light tracking-tight text-gray-900 mb-12">
           Каталог
         </h1>
 
@@ -30,7 +30,7 @@ export default function CatalogPage() {
                 <div className="flex items-center justify-between mb-8">
                   <Link
                     href={`/catalog/${section.id}`}
-                    className="text-xl sm:text-2xl font-light text-gray-900 hover:underline decoration-[#82745F]/60 underline-offset-4"
+                    className="text-xl sm:text-2xl font-normal text-gray-900 hover:underline decoration-[#82745F]/60 underline-offset-4"
                   >
                     {section.title}
                   </Link>
