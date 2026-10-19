@@ -7,7 +7,7 @@ export default function Home() {
   const featuredFacades = facades.filter(f => f.category === "milled").slice(0, 4);
 
   return (
-    <main className="w-full bg-white antialiased">
+    <main className="w-full bg-[#F1EEE7] antialiased">
       
       {/* === ГЛАВНАЯ КАРТИНКА (HERO) === */}
       <section className="relative h-[100svh] min-h-[600px] w-full overflow-hidden bg-gray-950">
@@ -51,7 +51,7 @@ export default function Home() {
           {/* Кнопка */}
           <Link
             href="/catalog"
-            className="group inline-flex min-h-14 items-center justify-center gap-5 border border-white bg-transparent px-10 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-white hover:text-gray-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
+            className="group inline-flex min-h-14 items-center justify-center gap-5 border border-white bg-transparent px-10 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-[#F1EEE7] hover:text-gray-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
           >
             Смотреть каталог <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
@@ -98,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* === БЛОК НАШИ ФАСАДЫ === */}
-      <section className="w-full bg-white py-24 sm:py-32">
+      <section className="w-full bg-[#F1EEE7] py-24 sm:py-32">
         <div className="w-full px-6 sm:px-12 lg:px-20 xl:px-24">
           <div className="flex items-end justify-between mb-16 border-b border-gray-100 pb-8">
             <div>
