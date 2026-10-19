@@ -31,8 +31,8 @@ export default function Home() {
           
           {/* Заголовок */}
           <h1 className="industrial-headline text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6 drop-shadow-lg">
-            Мебельные детали из МДФ — <br className="hidden sm:block" />
-            <span className="font-semibold block mt-2 sm:inline sm:mt-0">крашеные и шпонированные</span>
+            Изготовление мебели и <br className="hidden sm:block" />
+            <span className="font-semibold block mt-2 sm:inline sm:mt-0">крашеных фасадов из МДФ</span>
           </h1>
           
           {/* Подзаголовок: зафиксировали ровный перенос, текст больше не наезжает на преимущества */}
