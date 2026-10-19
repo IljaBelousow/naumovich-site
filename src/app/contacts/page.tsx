@@ -20,7 +20,7 @@ export default function ContactsPage() {
           <div>
             <a
               href="tel:+375259929001"
-              className="text-3xl font-extralight tracking-tight text-gray-900 transition-colors hover:text-gray-500 sm:text-5xl"
+              className="text-3xl font-extralight tracking-tight text-gray-900 transition-colors hover:text-[#82745F] sm:text-5xl"
             >
               +375 25 992-90-01
             </a>
@@ -30,7 +30,7 @@ export default function ContactsPage() {
 
             <a
               href="tel:+375447744449"
-              className="mt-8 block text-2xl font-extralight tracking-tight text-gray-900 transition-colors hover:text-gray-500 sm:text-3xl"
+              className="mt-8 block text-2xl font-extralight tracking-tight text-gray-900 transition-colors hover:text-[#82745F] sm:text-3xl"
             >
               +375 44 774-44-49
             </a>
@@ -48,7 +48,7 @@ export default function ContactsPage() {
                 href="https://www.instagram.com/vintazh100"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-gray-900 px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-gray-900 hover:text-white"
+                className="border border-[#82745F] px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-[#82745F] hover:text-white"
               >
                 Instagram
               </a>
@@ -56,13 +56,13 @@ export default function ContactsPage() {
                 href="https://t.me/+375259929001"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-gray-900 px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-gray-900 hover:text-white"
+                className="border border-[#82745F] px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-[#82745F] hover:text-white"
               >
                 Telegram
               </a>
               <a
                 href="viber://chat?number=%2B375259929001"
-                className="border border-gray-900 px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-gray-900 hover:text-white"
+                className="border border-[#82745F] px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-[#82745F] hover:text-white"
               >
                 Viber
               </a>
@@ -86,7 +86,7 @@ export default function ContactsPage() {
               </p>
               <a
                 href="mailto:info@naumovich.by"
-                className="mt-3 block text-lg font-light text-gray-600 transition-colors hover:text-gray-900"
+                className="mt-3 block text-lg font-light text-gray-600 transition-colors hover:text-[#82745F]"
               >
                 info@naumovich.by
               </a>
