@@ -22,39 +22,17 @@ export default function Home() {
         {/* Затемняющий оверлей для идеальной читаемости белого текста */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50 z-10"></div>
 
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 z-20 max-w-5xl mx-auto">
-          
-          {/* Аккуратная надпись над заголовком с правильным отступом */}
-          <p className="industrial-kicker text-xs font-normal uppercase tracking-[0.4em] text-white/75 mb-5 sm:mb-6">
-            ИП НАУМОВИЧ
-          </p>
-          
-          {/* Заголовок */}
-          <h1 className="industrial-headline text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6 drop-shadow-lg">
-            Изготовление мебели и <br className="hidden sm:block" />
-            <span className="font-semibold block mt-2 sm:inline sm:mt-0">крашеных фасадов из МДФ</span>
-          </h1>
-          
-          {/* Подзаголовок: зафиксировали ровный перенос, текст больше не наезжает на преимущества */}
-          <p className="text-base sm:text-lg lg:text-xl text-gray-200 font-normal max-w-3xl mb-12 leading-relaxed">
-            Собственная мастерская. <br className="hidden sm:block" />
-            Мебель на заказ по индивидуальным параметрам в Минске.
-          </p>
-          
-          {/* Преимущества: чистый минималистичный вариант, как на вашем последнем скриншоте */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-y-3 sm:gap-x-12 text-xs sm:text-sm font-normal uppercase tracking-[0.25em] text-white/80 mb-12">
-            <span className="transition-opacity duration-300 hover:text-white">Любые размеры</span>
-            <span className="transition-opacity duration-300 hover:text-white">Любые цвета</span>
-            <span className="transition-opacity duration-300 hover:text-white">Любые фрезеровки</span>
+        <div className="absolute inset-0 z-20 flex items-center justify-center px-6">
+          <div className="w-full max-w-5xl text-left">
+            <p className="industrial-kicker mb-5 text-xs font-normal uppercase tracking-[0.4em] text-white/75 sm:mb-6">
+              ИП НАУМОВИЧ
+            </p>
+            <h1 className="industrial-headline max-w-4xl text-left text-3xl font-bold uppercase leading-tight tracking-tight text-white drop-shadow-lg sm:text-5xl lg:text-6xl">
+              ИЗГОТОВЛЕНИЕ МЕБЕЛИ И
+              <br className="hidden sm:block" />
+              <span className="mt-2 block font-semibold sm:mt-0">КРАШЕНЫХ ФАСАДОВ ИЗ МДФ</span>
+            </h1>
           </div>
-          
-          {/* Кнопка */}
-          <Link
-            href="/catalog"
-            className="site-button-on-dark group"
-          >
-            Смотреть каталог <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
-          </Link>
         </div>
       </section>
       {/* === КОНЕЦ ГЛАВНОЙ КАРТИНКИ === */}
