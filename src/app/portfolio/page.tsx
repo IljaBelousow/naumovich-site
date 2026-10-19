@@ -20,22 +20,22 @@ export default function PortfolioPage() {
           Наши работы
         </h1>
 
-        <div className="border-t border-gray-200">
+        <div className="border-t border-[#D8D0C3]">
           {sections.map((section) => {
             const items = facades.filter((f) => f.category === section.id);
 
             return (
-              <div key={section.id} className="border-b border-gray-200 py-12">
+              <div key={section.id} className="border-b border-[#D8D0C3] py-12">
                 <div className="flex items-center justify-between mb-8">
                   <Link
                     href={`/portfolio/${section.link}`}
-                    className="text-xl sm:text-2xl font-light text-gray-900 hover:underline decoration-gray-300 underline-offset-4"
+                    className="text-xl sm:text-2xl font-light text-gray-900 hover:underline decoration-[#82745F]/60 underline-offset-4"
                   >
                     {section.title}
                   </Link>
                   <Link
                     href={`/portfolio/${section.link}`}
-                    className="text-xs uppercase tracking-[0.2em] text-gray-400 hover:text-gray-900"
+                    className="text-xs uppercase tracking-[0.2em] text-[#82745F] hover:text-[#82745F]"
                   >
                     Все →
                   </Link>
@@ -48,7 +48,7 @@ export default function PortfolioPage() {
                       href={`/portfolio/${item.slug}`}
                       className="group block"
                     >
-                      <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
+                      <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#E5E0D6]">
                         <Image
                           src={item.image}
                           alt={item.name}
