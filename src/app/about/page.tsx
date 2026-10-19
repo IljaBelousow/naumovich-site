@@ -28,15 +28,15 @@ export default function AboutPage() {
         <p className="text-xs font-medium uppercase tracking-[0.35em] text-gray-500">
           О компании
         </p>
-        <h1 className="mt-4 max-w-3xl text-4xl font-extralight leading-tight tracking-tight text-gray-900 sm:text-5xl">
+        <h1 className="mt-4 max-w-3xl text-4xl font-light leading-tight tracking-tight text-gray-900 sm:text-5xl">
           ИП Наумович — мебельные детали из МДФ под заказ
         </h1>
-        <p className="mt-8 max-w-2xl text-lg font-light text-gray-600">
+        <p className="mt-8 max-w-2xl text-lg font-normal text-gray-600">
           Мы изготавливаем мебельные детали из МДФ — крашеные и
           шпонированные. А также мебель на заказ по индивидуальным
           параметрам. Работаем и с частными клиентами, и с мебельщиками.
         </p>
-        <p className="mt-6 max-w-2xl text-lg font-light text-gray-600">
+        <p className="mt-6 max-w-2xl text-lg font-normal text-gray-600">
           Если у вас стоит мебель, которая ещё в порядке, — можно заменить
           только фасады (дверцы). Это быстрее и дешевле, чем покупать новую
           мебель.
@@ -45,40 +45,40 @@ export default function AboutPage() {
         <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-3">
           {principles.map((p) => (
             <div key={p.title} className="border-t border-[#D8D0C3] pt-6">
-              <h2 className="text-xl font-light text-gray-900">{p.title}</h2>
-              <p className="mt-3 text-base font-light text-gray-600">{p.text}</p>
+              <h2 className="text-xl font-normal text-gray-900">{p.title}</h2>
+              <p className="mt-3 text-base font-normal text-gray-600">{p.text}</p>
             </div>
           ))}
         </div>
 
         {/* Технология покраски */}
         <div className="mt-20 border-t border-[#D8D0C3] pt-12">
-          <h2 className="text-2xl font-light text-gray-900 mb-8">
+          <h2 className="text-2xl font-normal text-gray-900 mb-8">
             Технология покраски
           </h2>
           
           <div className="space-y-8">
             <div>
-              <h3 className="text-lg font-light text-gray-900 mb-3">
+              <h3 className="text-lg font-normal text-gray-900 mb-3">
                 Подбор цвета
               </h3>
-              <p className="text-base font-light text-gray-600">
+              <p className="text-base font-normal text-gray-600">
                 Работаем с системами подбора цвета: <strong>RAL, WCP, NCS, Caparol</strong>
               </p>
             </div>
 
             <div>
-              <h3 className="text-lg font-light text-gray-900 mb-3">
+              <h3 className="text-lg font-normal text-gray-900 mb-3">
                 Подготовка поверхности (грунтование)
               </h3>
-              <p className="text-base font-light text-gray-600 mb-4">
+              <p className="text-base font-normal text-gray-600 mb-4">
                 Используем двухслойную систему грунтования для идеального результата:
               </p>
               
               <div className="space-y-4 pl-4">
                 <div>
                   <p className="font-medium text-gray-900">1-й этап — грунт-изолятор:</p>
-                  <ul className="mt-2 space-y-2 text-sm font-light text-gray-600 list-disc list-inside">
+                  <ul className="mt-2 space-y-2 text-sm font-normal text-gray-600 list-disc list-inside">
                     <li>Формирует тонкую эластичную плёнку</li>
                     <li>Снижает впитываемость пористых участков</li>
                     <li>Предотвращает поднятие ворса</li>
@@ -88,7 +88,7 @@ export default function AboutPage() {
 
                 <div>
                   <p className="font-medium text-gray-900">2-й этап — наполняющий грунт:</p>
-                  <ul className="mt-2 space-y-2 text-sm font-light text-gray-600 list-disc list-inside">
+                  <ul className="mt-2 space-y-2 text-sm font-normal text-gray-600 list-disc list-inside">
                     <li>Выравнивает микронеровности поверхности</li>
                     <li>Заполняет поры МДФ</li>
                     <li>Создаёт укрывистую основу под финишную эмаль</li>
@@ -99,10 +99,10 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <h3 className="text-lg font-light text-gray-900 mb-3">
+              <h3 className="text-lg font-normal text-gray-900 mb-3">
                 Финишное покрытие
               </h3>
-              <p className="text-base font-light text-gray-600">
+              <p className="text-base font-normal text-gray-600">
                 После грунтования наносится финишная эмаль выбранного цвета. 
                 Возможно изготовление как глянцевых, так и матовых фасадов.
               </p>
@@ -111,7 +111,7 @@ export default function AboutPage() {
         </div>
 
         <div className="mt-20 flex flex-col gap-6 border-t border-[#D8D0C3] pt-12 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-xl text-lg font-light text-gray-600">
+          <p className="max-w-xl text-lg font-normal text-gray-600">
             Остались вопросы — позвоните, всё расскажем и посчитаем стоимость.
           </p>
           <Link
