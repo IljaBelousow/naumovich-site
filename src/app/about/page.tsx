@@ -8,19 +8,16 @@ export const metadata = {
 
 const figures = [
   {
-    value: "03",
-    label: "направления работы",
-    detail: "Крашеные фасады, шпонированные фасады и мебель на заказ",
+    value: "8+",
+    label: "лет в работе",
   },
   {
-    value: "02",
-    label: "варианта отделки",
-    detail: "Эмаль и шпон — под стиль и задачу вашего интерьера",
+    value: "ПРОЕКТЫ",
+    label: "Количество выполненных проектов",
   },
   {
-    value: "01",
-    label: "проект под вас",
-    detail: "Размеры, форма и детали согласовываются индивидуально",
+    value: "МДФ",
+    label: "Мебель и крашеные фасады",
   },
 ];
 
@@ -63,9 +60,7 @@ export default function AboutPage() {
               Небольшие детали.<br />Большая разница.
             </h2>
           </div>
-          <p className="max-w-md text-sm leading-7 text-gray-600 sm:text-base">
-            Работаем с материалом, формой и отделкой, чтобы результат соответствовал вашему замыслу.
-          </p>
+          
         </div>
 
         <div className="about-figures grid border-y border-[#B8B9B4] sm:grid-cols-3">
@@ -77,12 +72,11 @@ export default function AboutPage() {
                 <span className="mt-2 flex h-9 w-9 items-center justify-center rounded-full border border-[#B8B9B4] text-sm text-[#C65D32] transition-all duration-500 group-hover:-translate-y-1 group-hover:border-[#C65D32] group-hover:bg-[#202322] group-hover:text-[#E9E8E3]">↗</span>
               </div>
               <h3 className="mt-8 text-lg font-medium sm:text-xl">{figure.label}</h3>
-              <p className="mt-3 max-w-xs text-sm leading-6 text-gray-600">{figure.detail}</p>
+              
               <span className="about-figure-line absolute bottom-0 left-0 h-[2px] w-0 bg-[#C65D32] transition-all duration-700 group-hover:w-full" />
             </article>
           ))}
         </div>
-        <p className="mt-4 text-xs leading-5 text-gray-500">Количество направлений и вариантов отделки — по ассортименту мастерской, а не рекламные показатели.</p>
       </section>
 
       <section className="bg-[#D7D7D2]">
