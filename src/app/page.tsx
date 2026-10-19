@@ -60,6 +60,43 @@ export default function Home() {
       {/* === КОНЕЦ ГЛАВНОЙ КАРТИНКИ === */}
 
 
+      {/* === О КОМПАНИИ: первый информационный блок главной === */}
+      <section id="about" className="w-full bg-[#f7f6f3] py-20 sm:py-28">
+        <div className="mx-auto grid w-full max-w-[1600px] gap-12 px-6 sm:px-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-20 lg:px-20 xl:px-24">
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-gray-400">О компании</p>
+            <h2 className="max-w-xl text-3xl font-extralight leading-tight tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+              Изготавливаем детали, которые задают характер мебели
+            </h2>
+          </div>
+          <div className="max-w-3xl">
+            <p className="text-lg font-light leading-relaxed text-gray-700 sm:text-xl">
+              ИП Наумович — собственная мастерская по изготовлению мебельных деталей из МДФ: крашеных и шпонированных. Производим детали и мебель под индивидуальные размеры, работаем с частными клиентами и мебельщиками.
+            </p>
+            <p className="mt-5 text-base font-light leading-relaxed text-gray-600 sm:text-lg">
+              Подбираем решения под ваш проект: от формы и фрезеровки до цвета и финишного покрытия. А если корпус мебели ещё в хорошем состоянии, можно заменить только фасады — без покупки новой мебели.
+            </p>
+            <div className="mt-8 grid gap-6 border-t border-gray-200 pt-6 sm:grid-cols-3">
+              <div>
+                <h3 className="text-base font-medium text-gray-900">Собственная мастерская</h3>
+                <p className="mt-2 text-sm font-light leading-relaxed text-gray-600">Контролируем изготовление на каждом этапе.</p>
+              </div>
+              <div>
+                <h3 className="text-base font-medium text-gray-900">Под заказ</h3>
+                <p className="mt-2 text-sm font-light leading-relaxed text-gray-600">Размеры, форма и отделка под ваш проект.</p>
+              </div>
+              <div>
+                <h3 className="text-base font-medium text-gray-900">Подбор цвета</h3>
+                <p className="mt-2 text-sm font-light leading-relaxed text-gray-600">Помогаем подобрать подходящее покрытие.</p>
+              </div>
+            </div>
+            <Link href="/about" className="group mt-8 inline-flex items-center gap-4 border-b border-gray-900 pb-2 text-xs font-medium uppercase tracking-[0.2em] text-gray-900 transition-colors hover:text-gray-500">
+              Подробнее о компании <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* === БЛОК НАШИ ФАСАДЫ === */}
       <section className="w-full bg-white py-24 sm:py-32">
         <div className="w-full px-6 sm:px-12 lg:px-20 xl:px-24">
