@@ -14,7 +14,7 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <main className="w-full bg-white pt-20 min-h-screen">
+    <main className="w-full bg-[#F1EEE7] pt-20 min-h-screen">
       <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-16">
         <h1 className="text-4xl font-extralight tracking-tight text-gray-900 mb-12">
           Наши работы
