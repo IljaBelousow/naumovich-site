@@ -12,7 +12,7 @@ const figures = [
     label: "лет в работе",
   },
   {
-    value: "ПРОЕКТЫ",
+    value: "—",
     label: "Количество выполненных проектов",
   },
   {
@@ -65,13 +65,13 @@ export default function AboutPage() {
 
         <div className="about-figures grid border-y border-[#B8B9B4] sm:grid-cols-3">
           {figures.map((figure, index) => (
-            <article key={figure.value} className="about-figure group relative border-b border-[#B8B9B4] px-5 py-8 sm:border-b-0 sm:px-7 sm:py-10 lg:px-10 lg:py-12"
+            <article key={figure.value} className="about-figure group relative min-w-0 border-b border-[#B8B9B4] px-5 py-8 sm:border-b-0 sm:px-7 sm:py-10 lg:px-10 lg:py-12"
               style={{ animationDelay: `${index * 140}ms` }}>
-              <div className="flex items-start justify-between gap-4">
-                <span className="about-figure-value text-6xl font-light leading-none tracking-[-0.08em] text-[#C65D32] sm:text-7xl lg:text-8xl">{figure.value}</span>
-                <span className="mt-2 flex h-9 w-9 items-center justify-center rounded-full border border-[#B8B9B4] text-sm text-[#C65D32] transition-all duration-500 group-hover:-translate-y-1 group-hover:border-[#C65D32] group-hover:bg-[#202322] group-hover:text-[#E9E8E3]">↗</span>
+              <div className="flex min-h-16 items-center justify-between gap-4 sm:min-h-20">
+                <span className="about-figure-value block min-w-0 break-words text-5xl font-light leading-none tracking-[-0.05em] text-[#C65D32] sm:text-6xl lg:text-7xl">{figure.value}</span>
+                <span aria-hidden="true" className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center border border-[#B8B9B4] text-sm text-[#C65D32] transition-all duration-300 group-hover:border-[#C65D32] group-hover:bg-[#202322] group-hover:text-[#E9E8E3]">↗</span>
               </div>
-              <h3 className="mt-8 text-lg font-medium sm:text-xl">{figure.label}</h3>
+              <h3 className="mt-6 max-w-full break-words text-lg font-medium leading-snug sm:text-xl">{figure.label}</h3>
               
               <span className="about-figure-line absolute bottom-0 left-0 h-[2px] w-0 bg-[#C65D32] transition-all duration-700 group-hover:w-full" />
             </article>
