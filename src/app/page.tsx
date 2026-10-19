@@ -51,7 +51,7 @@ export default function Home() {
           {/* Кнопка */}
           <Link
             href="/catalog"
-            className="group inline-flex min-h-14 items-center justify-center gap-5 border border-white/70 bg-white/[0.06] px-10 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white hover:text-gray-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
+            className="group inline-flex min-h-14 items-center justify-center gap-5 border-2 border-white bg-transparent px-10 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-white hover:text-gray-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
           >
             Смотреть каталог <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
