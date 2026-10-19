@@ -28,9 +28,10 @@ export default function Home() {
               ИП НАУМОВИЧ
             </p>
             <h1 className="industrial-headline max-w-4xl text-left text-3xl font-bold uppercase leading-tight tracking-tight text-white drop-shadow-lg sm:text-5xl lg:text-6xl">
-              ИЗГОТОВЛЕНИЕ МЕБЕЛИ И
-              <br className="hidden sm:block" />
-              <span className="mt-2 block font-semibold sm:mt-0">КРАШЕНЫХ ФАСАДОВ ИЗ МДФ</span>
+              <span className="block">ИЗГОТОВЛЕНИЕ</span>
+              <span className="block">МЕБЕЛИ И</span>
+              <span className="block">КРАШЕНЫХ ФАСАДОВ</span>
+              <span className="block">ИЗ МДФ</span>
             </h1>
           </div>
         </div>
