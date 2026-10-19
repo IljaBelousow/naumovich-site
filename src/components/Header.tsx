@@ -6,7 +6,7 @@ import Link from "next/link";
 const navigation = [
   { name: "Каталог", href: "/catalog" },
   { name: "Наши работы", href: "/portfolio" },
-  { name: "Как мы работаем", href: "/production" },
+  { name: "Производство", href: "/production" },
   { name: "О компании", href: "/about" },
   { name: "Контакты", href: "/contacts" },
 ];
@@ -15,42 +15,39 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-sm">
-      <nav className="w-full px-5 sm:px-8 lg:px-12">
-        <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center border border-gray-900 text-xs font-semibold tracking-[0.15em] text-gray-900">ИПН</span>
-            <span className="hidden text-sm font-medium uppercase tracking-[0.2em] text-gray-900 md:block">Наумович</span>
-          </Link>
-
-          <div className="hidden lg:flex lg:gap-x-8">
-            {navigation.map((item) => (
-              <Link key={item.name} href={item.href} className="text-sm font-medium text-gray-900 hover:text-gray-500 transition-colors">
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          <a href="tel:+375259929001" className="hidden text-sm font-semibold text-gray-900 hover:text-gray-500 lg:block">
-            +375 25 992-90-01
+    <header className="site-header">
+      <nav className="site-header__nav" aria-label="Главная навигация">
+        <Link href="/" className="site-brand" aria-label="ИП Наумович — главная" onClick={() => setMobileMenuOpen(false)}>
+          <span className="site-brand__mark">Н.</span>
+          <span className="site-brand__name">НАУМОВИЧ<span>МЕБЕЛЬНЫЕ ДЕТАЛИ</span></span>
+        </Link>
+        <div className="site-header__links">
+          {navigation.map((item) => (
+            <Link key={item.name} href={item.href}>{item.name}</Link>
+          ))}
+        </div>
+        <div className="site-header__actions">
+          <a className="site-header__phone" href="tel:+375259929001" aria-label="Позвонить по номеру +375 25 992-90-01">
+            <span>+375 25 992-90-01</span><span className="site-header__phone-label">Связаться с нами</span>
           </a>
-
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden p-2 text-gray-700">
-            {mobileMenuOpen ? "✕" : "☰"}
+          <button type="button" className="site-header__toggle" aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"} aria-expanded={mobileMenuOpen} onClick={() => setMobileMenuOpen((open) => !open)}>
+            <span>{mobileMenuOpen ? "Закрыть" : "Меню"}</span>
+            <span className="site-header__toggle-icon" aria-hidden="true"><i /><i /></span>
           </button>
         </div>
-
-        {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 bg-gray-50 pb-4">
-            {navigation.map((item) => (
-              <Link key={item.name} href={item.href} onClick={() => setMobileMenuOpen(false)} className="block px-5 py-3 font-medium text-gray-900 border-b border-gray-200">
-                {item.name}
+      </nav>
+      {mobileMenuOpen && (
+        <div className="mobile-menu">
+          <div className="mobile-menu__links">
+            {navigation.map((item, index) => (
+              <Link key={item.name} href={item.href} onClick={() => setMobileMenuOpen(false)}>
+                <span>0{index + 1}</span>{item.name}<span aria-hidden="true">↗</span>
               </Link>
             ))}
-            <div className="px-5 pt-4 font-semibold">+375 25 992-90-01</div>
           </div>
-        )}
-      </nav>
+          <a className="mobile-menu__phone" href="tel:+375259929001">+375 25 992-90-01 <span aria-hidden="true">↗</span></a>
+        </div>
+      )}
     </header>
   );
 }
