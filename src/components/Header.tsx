@@ -46,7 +46,7 @@ export default function Header() {
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         transparentHeader
           ? "border-b border-white/10 bg-gradient-to-b from-black/45 to-transparent"
-          : "border-b border-gray-200/80 bg-white/95 shadow-sm backdrop-blur-md"
+          : "border-b border-gray-200/80 bg-[#F1EEE7]/95 shadow-sm backdrop-blur-md"
       }`}
     >
       <nav className="relative w-full px-4 sm:px-8 lg:px-12">
@@ -181,7 +181,7 @@ export default function Header() {
               <Link
                 href="/contacts"
                 onClick={() => setMobileMenuOpen(false)}
-                className="group inline-flex min-h-12 w-full shrink-0 cursor-pointer items-center justify-center gap-4 border border-white bg-transparent px-7 py-3 text-center text-xs font-medium uppercase tracking-[0.16em] text-white transition-all duration-300 hover:bg-white hover:text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                className="group inline-flex min-h-12 w-full shrink-0 cursor-pointer items-center justify-center gap-4 border border-white bg-transparent px-7 py-3 text-center text-xs font-medium uppercase tracking-[0.16em] text-white transition-all duration-300 hover:bg-[#F1EEE7] hover:text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
               >
                 Связаться с нами <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
