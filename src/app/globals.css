@@ -1,8 +1,69 @@
 @import "tailwindcss";
+
+/* Cross-device baseline: prevent accidental horizontal overflow and respect mobile safe areas. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
-    background: #ffffff;
-    color: #111827;
-    -webkit-font-smoothing: antialiased;
+  min-width: 320px;
+  margin: 0;
+  background: #ffffff;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+main,
+section,
+article,
+aside,
+header,
+footer {
+  min-width: 0;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+[role="button"],
+a {
+  touch-action: manipulation;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
 }
 
 @keyframes menuPanelIn {
@@ -18,15 +79,42 @@ body {
 .menu-panel {
   animation: menuPanelIn 280ms cubic-bezier(0.22, 1, 0.36, 1) both;
   transform-origin: right center;
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
 }
 
 .menu-backdrop {
   animation: menuBackdropIn 220ms ease-out both;
 }
 
+@media (max-width: 640px) {
+  /* Keep long labels and contact details from forcing the viewport wider. */
+  h1,
+  h2,
+  h3,
+  p,
+  a {
+    overflow-wrap: anywhere;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    max-width: 100%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .menu-panel,
-  .menu-backdrop {
-    animation: none;
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
