@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   title: "ИП Наумович — производство крашеных фасадов МДФ",
   description:
     "Изготовление мебельных деталей из МДФ — крашеных и шпонированных. Мебель на заказ по индивидуальным параметрам.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
