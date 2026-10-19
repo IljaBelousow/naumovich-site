@@ -49,8 +49,8 @@ export default function Header() {
           : "border-b border-gray-200/80 bg-white/95 shadow-sm backdrop-blur-md"
       }`}
     >
-      <nav className="relative w-full px-5 sm:px-8 lg:px-12">
-        <div className="flex h-20 items-center justify-between">
+      <nav className="relative w-full px-4 sm:px-8 lg:px-12">
+        <div className="flex h-16 items-center justify-between sm:h-20">
           <Link href="/" className="relative z-10 flex items-center gap-3" onClick={(event) => { setMobileMenuOpen(false); if (pathname === "/") { event.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); } }}>
             <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden">
               <img src="/icon.svg" alt="Наумович — главная" className="h-10 w-10 object-contain" />
@@ -82,7 +82,7 @@ export default function Header() {
           </div>
 
           <div className="flex items-center gap-4">
-            <div className={`flex items-center gap-3 lg:hidden ${textColor}`} aria-label="Связаться с нами">
+            <div className={`hidden items-center gap-3 sm:flex lg:hidden ${textColor}`} aria-label="Связаться с нами">
             <a href="https://www.instagram.com/vintazh100" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram" className="transition-all duration-300 hover:scale-110 hover:opacity-80">
               <svg viewBox="0 0 24 24" className="h-[22px] w-[22px]" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
             </a>
