@@ -38,9 +38,6 @@ export default function CatalogPage() {
             <p className="about-intro max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
               Крашеные и шпонированные фасады из МДФ, фрезеровка, интегрированные ручки и мебельные детали.
             </p>
-            <Link href="/catalog" className="site-button-on-dark group mt-6 inline-flex shrink-0">
-              Перейти в каталог <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
-            </Link>
           </div>
         </div>
       </section>
