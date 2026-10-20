@@ -9,13 +9,32 @@ export const metadata = {
 export default function ContactsPage() {
   return (
     <main className="w-full bg-[#F1EEE7]">
-      <section className="relative isolate flex min-h-[420px] items-end overflow-hidden bg-[#202322] text-white sm:min-h-[500px]">
-        <Image src="/images/hero/hero-main.jpg" alt="Мастерская по изготовлению мебели и фасадов" fill priority sizes="100vw" className="object-cover object-center opacity-45" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#141716]/85 via-[#141716]/45 to-[#141716]/20" />
-        <div className="relative mx-auto w-full max-w-[1500px] px-6 pb-12 pt-32 sm:px-12 sm:pb-16 lg:px-20">
-          <p className="about-intro mb-5 text-xs font-medium uppercase tracking-[0.32em] text-[#E16A3A]">Свяжитесь с нами · ИП Наумович</p>
-          <h1 className="about-intro max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl">Контакты</h1>
-          <p className="about-intro mt-5 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">Обсудим ваш проект, подскажем по материалам и поможем выбрать решение.</p>
+      <section className="relative isolate flex min-h-[560px] items-end overflow-hidden bg-[#202322] text-[#E9E8E3] sm:min-h-[650px]">
+        <Image
+          src="/images/hero/hero-main.jpg"
+          alt="Мастерская по изготовлению мебели и фасадов"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center opacity-45"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#141716]/90 via-[#141716]/55 to-[#141716]/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#141716]/70 via-transparent to-[#141716]/20" />
+        <div className="relative mx-auto w-full max-w-[1500px] px-6 pb-16 pt-32 sm:px-12 sm:pb-20 lg:px-20">
+          <p className="about-intro mb-6 flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.32em] text-[#E16A3A]">
+            <span className="h-px w-9 bg-[#E16A3A]" /> Контакты · ИП Наумович
+          </p>
+          <h1 className="about-intro max-w-5xl text-4xl font-bold leading-[1.08] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
+            <span>Обсудим ваш<br className="hidden sm:block" /> будущий проект.</span>
+          </h1>
+          <div className="mt-6">
+            <p className="about-intro max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
+              Свяжитесь с нами, чтобы обсудить фасады из МДФ, мебель на заказ, материалы и варианты отделки.
+            </p>
+            <Link href="tel:+375259929001" className="site-button-on-dark group mt-6 inline-flex shrink-0">
+              Связаться с нами <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
+            </Link>
+          </div>
         </div>
       </section>
       <div className="w-full px-5 py-12 sm:px-8 sm:py-16 lg:px-12 xl:px-16">
