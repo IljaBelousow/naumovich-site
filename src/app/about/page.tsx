@@ -247,18 +247,10 @@ export default function AboutPage() {
               </Link>
             ))}
           </div>
-          <div className="mt-7 flex flex-col items-start gap-5 rounded-sm bg-white/45 p-5 sm:p-6">
-            <p className="max-w-xl text-sm leading-7 text-[#656963]">
-              Есть идея или задача? Обсудим материалы, размеры и подходящую отделку.
-            </p>
-            <div className="flex flex-wrap items-center gap-6">
-              <Link href="/portfolio" className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#C65D32] transition-colors hover:text-[#202322]">
-                Все проекты <span aria-hidden="true">↗</span>
-              </Link>
-              <Link href="/contacts" className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#202322] transition-colors hover:text-[#C65D32]">
-                Связаться с нами <span aria-hidden="true">↗</span>
-              </Link>
-            </div>
+          <div className="mt-8">
+            <Link href="/portfolio" className="site-button group inline-flex">
+              Смотреть портфолио <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
+            </Link>
           </div>
         </div>
       </section>
