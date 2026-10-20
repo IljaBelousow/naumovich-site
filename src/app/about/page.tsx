@@ -52,10 +52,10 @@ export default function AboutPage() {
           <p className="about-intro mb-6 flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.32em] text-[#E16A3A]">
             <span className="h-px w-9 bg-[#E16A3A]" /> О компании · ИП Наумович
           </p>
-          <h1 className="about-intro max-w-5xl text-4xl font-light leading-[1.08] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
+          <h1 className="about-intro max-w-5xl text-4xl font-bold leading-[1.08] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
             Детали, которые<br className="hidden sm:block" /> задают характер мебели.
           </h1>
-          <div className="mt-8 flex flex-col gap-7 sm:flex-row sm:items-end sm:justify-between">
+          <div className="mt-6 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
             <p className="about-intro max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
               Изготавливаем крашеные и шпонированные фасады из МДФ, мебель и детали под заказ.
               Продумываем каждую деталь под ваш интерьер.
@@ -67,18 +67,18 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#D7D7D2] py-20 sm:py-28">
+      <section className="bg-[#D7D7D2] py-12 sm:py-16">
         <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-12 lg:px-20">
-          <div className="mb-12 flex flex-col gap-5 border-b border-[#B8B9B4] pb-8 sm:flex-row sm:items-end sm:justify-between">
+          <div className="mb-8 flex flex-col gap-4 border-b border-[#B8B9B4] pb-8 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#C65D32]">Наши направления</p>
-              <h2 className="max-w-2xl text-3xl font-light leading-tight tracking-tight sm:text-4xl lg:text-5xl">Что изготавливаем</h2>
+              <h2 className="max-w-2xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Что изготавливаем</h2>
             </div>
             <Link href="/catalog" className="site-button group shrink-0">
               Перейти в каталог <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
             </Link>
           </div>
-          <div className="grid gap-8 md:grid-cols-3 md:gap-10">
+          <div className="grid gap-6 md:grid-cols-3 md:gap-8">
             {directions.map((item) => (
               <article key={item.number} className="border-t border-[#B8B9B4] pt-5">
                 <span className="text-xs font-medium tracking-[0.2em] text-[#C65D32]">{item.number}</span>
@@ -90,8 +90,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#E9E8E3] py-20 sm:py-28">
-        <div className="mx-auto grid w-full max-w-[1500px] gap-12 px-6 sm:px-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:px-20">
+      <section className="bg-[#E9E8E3] py-12 sm:py-16">
+        <div className="mx-auto grid w-full max-w-[1500px] gap-8 px-6 sm:px-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12 lg:px-20">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#C65D32]">Наш принцип</p>
             <h2 className="max-w-xl text-3xl font-light leading-tight tracking-tight sm:text-4xl lg:text-5xl">
@@ -119,12 +119,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#202322] py-20 text-[#E9E8E3] sm:py-28">
+      <section className="bg-[#202322] py-12 text-[#E9E8E3] sm:py-16">
         <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-12 lg:px-20">
           <div className="flex flex-col gap-7 border-b border-white/20 pb-8 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#E16A3A]">Наши работы</p>
-              <h2 className="text-3xl font-light leading-tight sm:text-4xl lg:text-5xl">Готовые проекты</h2>
+              <h2 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">Готовые проекты</h2>
               <p className="mt-5 max-w-2xl text-base leading-7 text-white/65 sm:text-lg">
                 Посмотрите примеры реализованных решений для фасадов и мебели — от отдельных деталей до законченных проектов.
               </p>
@@ -133,7 +133,7 @@ export default function AboutPage() {
               Смотреть портфолио <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
             </Link>
           </div>
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {featuredWorks.map((work, index) => (
               <Link key={work.slug} href={`/portfolio/${work.slug}`} className="group block">
                 <div className="relative aspect-[4/3] overflow-hidden bg-white/5">
@@ -155,7 +155,7 @@ export default function AboutPage() {
               </Link>
             ))}
           </div>
-          <div className="mt-10 flex flex-col gap-5 border-t border-white/20 pt-7 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-7 flex flex-col gap-4 border-t border-white/20 pt-7 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-xl text-sm leading-7 text-white/55">
               Есть идея или задача? Обсудим материалы, размеры и подходящую отделку.
             </p>
