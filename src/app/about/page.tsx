@@ -93,7 +93,8 @@ function AboutIcon({ name, className = "h-6 w-6" }: { name: string; className?: 
   };
   return <svg aria-hidden="true" viewBox="0 0 24 24" className={className} {...common}>{paths[name] ?? paths.sparkles}</svg>;
 }
-\nexport default function AboutPage() {
+
+export default function AboutPage() {
   const featuredWorks = facades.filter((item) => item.category === "work_facades").slice(0, 3);
 
   return (
