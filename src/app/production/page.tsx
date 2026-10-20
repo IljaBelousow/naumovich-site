@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Производство — ИП Наумович",
@@ -42,16 +43,16 @@ const steps = [
 export default function ProductionPage() {
   return (
     <main className="w-full bg-[#F1EEE7]">
-      <div className="w-full px-5 py-16 sm:px-8 sm:py-24 lg:px-12 xl:px-16">
-        <p className="text-xs font-medium uppercase tracking-[0.35em] text-gray-500">
-          Как мы работаем
-        </p>
-        <h1 className="mt-4 max-w-3xl text-4xl font-light leading-tight tracking-tight text-gray-900 sm:text-5xl">
-          Как мы делаем фасады
-        </h1>
-        <p className="mt-8 max-w-2xl text-lg font-normal text-gray-600">
-          Полный цикл в собственной мастерской — без посредников. Поэтому мы отвечаем за каждый миллиметр и каждый оттенок.
-        </p>
+      <section className="relative isolate flex min-h-[420px] items-end overflow-hidden bg-[#202322] text-white sm:min-h-[500px]">
+        <Image src="/images/hero/hero-main.jpg" alt="Производство фасадов из МДФ" fill priority sizes="100vw" className="object-cover object-center opacity-45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#141716]/85 via-[#141716]/45 to-[#141716]/20" />
+        <div className="relative mx-auto w-full max-w-[1500px] px-6 pb-12 pt-32 sm:px-12 sm:pb-16 lg:px-20">
+          <p className="mb-5 text-xs font-medium uppercase tracking-[0.32em] text-[#E16A3A]">Как мы работаем · ИП Наумович</p>
+          <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl">Как мы делаем фасады</h1>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">Полный цикл в собственной мастерской — от фрезеровки до финишной покраски.</p>
+        </div>
+      </section>
+      <div className="w-full px-5 py-12 sm:px-8 sm:py-16 lg:px-12 xl:px-16">
 
         <div className="mt-20 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step) => (
