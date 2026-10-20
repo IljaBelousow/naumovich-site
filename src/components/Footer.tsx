@@ -1,12 +1,11 @@
 import Link from "next/link";
 
 const navigation = [
-  { name: "Каталог фасадов и мебели", href: "/catalog" },
-  { name: "Фрезерованные фасады", href: "/catalog/milled" },
-  { name: "Интегрированные ручки", href: "/catalog/handles" },
-  { name: "Портфолио проектов", href: "/portfolio" },
-  { name: "Производство", href: "/production" },
+  { name: "Главная", href: "/" },
   { name: "О компании", href: "/about" },
+  { name: "Каталог", href: "/catalog" },
+  { name: "Портфолио", href: "/portfolio" },
+  { name: "Как мы работаем", href: "/production" },
   { name: "Контакты", href: "/contacts" },
 ];
 
@@ -49,7 +48,7 @@ export default function Footer() {
 
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#202322]">Связаться с нами</p>
-            <ul className="mt-5 space-y-4 text-sm text-[#62645E]">
+            <ul className="mt-5 space-y-2 text-sm text-[#62645E]">
               {contactLinks.map((item) => (
                 <li key={item.label}>
                   <a href={item.href} {...("external" in item && item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
