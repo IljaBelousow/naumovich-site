@@ -48,7 +48,7 @@ export default function Footer() {
           </nav>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#202322]">Связаться с нами</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E9E8E3]">Связаться с нами</p>
             <ul className="mt-5 space-y-4 text-sm text-[#C5C6C1]">
               {contactLinks.map((item) => (
                 <li key={item.label}>
@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#202322]">Производство</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E9E8E3]">Производство</p>
             <address className="mt-5 text-sm not-italic leading-6 text-[#C5C6C1]">
               Меньковский тракт, 21<br />Щомыслицкий сельсовет
             </address>
@@ -75,7 +75,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-[#3B3D37] pt-6 text-xs text-[#A7A49C] sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} ИП Наумович. Все права защищены.</p>
-          <Link href="/privacy" className="transition-colors hover:text-[#E16A3A]">Политика конфиденциальности</Link>
+          <Link href="/privacy" className="inline-flex items-center rounded-sm border border-[#555A53] px-3 py-2 text-[#C5C6C1] transition-colors hover:border-[#E16A3A] hover:text-[#E16A3A]">Политика конфиденциальности</Link>
           <p>УНП 193843566</p>
         </div>
       </div>
