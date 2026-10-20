@@ -32,14 +32,6 @@ export default function CatalogClient({
     <main className="w-full bg-white pt-24 min-h-screen">
       {/* Уменьшили отступы */}
       <div className="w-full px-5 py-8 sm:px-8 lg:px-12 xl:px-16">
-        
-        <button 
-          onClick={handleBack}
-          className="text-xs uppercase tracking-[0.25em] text-gray-400 hover:text-gray-900 mb-8 inline-block cursor-pointer"
-        >
-          ← Назад в каталог
-        </button>
-
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="space-y-4">
             <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">

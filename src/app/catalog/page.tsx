@@ -1,86 +1,87 @@
 import Link from "next/link";
 import Image from "next/image";
-import { facades } from "@/data/facades";
 
 export const metadata = {
   title: "Каталог — ИП Наумович",
-  description: "Каталог фрезерованных фасадов МДФ, интегрированных ручек и профилей края.",
+  description: "Фрезерованные фасады МДФ, интегрированные ручки и мебель под заказ.",
 };
 
+const categories = [
+  {
+    title: "Фрезерованные фасады МДФ",
+    href: "/catalog/milled",
+    image: "/images/catalog1/image1.jpg",
+    imageAlt: "Фрезерованный фасад из МДФ",
+  },
+  {
+    title: "Интегрированные ручки",
+    href: "/catalog/handles",
+    image: "/images/handles/gola.jpg",
+    imageAlt: "Интегрированная ручка Gola",
+  },
+  {
+    title: "Мебель под заказ",
+    href: "/portfolio",
+    image: "/images/catalog2/photo1/5195250767357484499.jpg",
+    imageAlt: "Мебельный проект на заказ",
+  },
+];
+
 export default function CatalogPage() {
-  const sections = [
-    { id: "milled", title: "Фрезерованные фасады МДФ" },
-    { id: "handles", title: "Интегрированные ручки" },
-    { id: "edge", title: "Профиль края" },
-  ];
-
   return (
-    <main className="w-full bg-white pt-20 min-h-screen">
-      <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-16">
-        <h1 className="text-4xl font-extralight tracking-tight text-gray-900 mb-12">
-          Каталог
-        </h1>
-
-        <div className="border-t border-gray-200">
-          {sections.map((section) => {
-            const items = facades.filter((f) => f.category === section.id);
-
-            return (
-              <div key={section.id} className="border-b border-gray-200 py-12">
-                <div className="flex items-center justify-between mb-8">
-                  <Link
-                    href={`/catalog/${section.id}`}
-                    className="text-xl sm:text-2xl font-light text-gray-900 hover:underline decoration-gray-300 underline-offset-4"
-                  >
-                    {section.title}
-                  </Link>
-                  <Link
-                    href={`/catalog/${section.id}`}
-                    className="text-xs uppercase tracking-[0.2em] text-gray-400 hover:text-gray-900"
-                  >
-                    Все 
-                  </Link>
-                </div>
-
-                {section.id === "edge" ? (
-                  <div className="max-w-3xl border border-gray-100 bg-gray-50 p-4">
-                    <Image
-                      src={items[0]?.image || "/images/profil_kraya.jpg"}
-                      alt="Профиль края"
-                      width={1000}
-                      height={1200}
-                      className="w-full h-auto object-contain"
-                      priority
-                    />
-                  </div>
-                ) : (
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {items.slice(0, 4).map((item) => (
-                      <Link
-                        key={item.slug}
-                        href={`/catalog/${item.slug}`}
-                        className="group block"
-                      >
-                        <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
-                          <Image
-                            src={item.image}
-                            alt={item.name}
-                            fill
-                            className="object-cover group-hover:scale-105 transition-transform duration-500"
-                          />
-                        </div>
-                        <h3 className="mt-3 text-sm font-medium text-gray-900">
-                          {item.name}
-                        </h3>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+    <main className="w-full min-h-screen bg-[#E9E8E3]">
+      <section className="relative isolate flex min-h-[300px] items-end overflow-hidden bg-[#202322] text-[#E9E8E3] sm:min-h-[360px]">
+        <Image
+          src="/images/hero/hero-main.jpg"
+          alt="Каталог мебели и фасадов из МДФ"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_30%] opacity-55"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#141716]/78 via-[#141716]/35 to-[#141716]/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#141716]/55 via-transparent to-[#141716]/10" />
+        <div className="relative mx-auto w-full max-w-[1500px] px-6 pb-8 pt-24 sm:px-12 sm:pb-10 lg:px-20">
+          <p className="about-intro mb-6 flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.32em] text-[#E16A3A]">
+            <span className="h-px w-9 bg-[#E16A3A]" /> Каталог · ИП Наумович
+          </p>
+          <h1 className="about-intro max-w-5xl text-4xl font-bold leading-[1.08] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
+            <span>Каталог</span>
+          </h1>
+          <p className="about-intro mt-6 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
+            Крашеные и шпонированные фасады из МДФ, фрезеровка, интегрированные ручки и мебельные детали.
+          </p>
         </div>
-      </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-[1600px] px-5 py-10 sm:px-8 sm:py-14 lg:px-12 xl:px-16">
+        <div className="flex flex-col gap-5 lg:gap-7">
+          {categories.map((category) => (
+            <Link
+              key={category.title}
+              href={category.href}
+              className="group relative isolate block min-h-[190px] overflow-hidden bg-[#202322] sm:min-h-[230px] lg:min-h-[260px]"
+            >
+              <Image
+                src={category.image}
+                alt={category.imageAlt}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#141716]/90 via-[#141716]/25 to-transparent transition-colors duration-300 group-hover:from-[#141716]/95" />
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-8">
+                <h2 className="max-w-sm text-xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-2xl">
+                  {category.title}
+                </h2>
+                <span className="mt-4 inline-flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.18em] text-white">
+                  Смотреть <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-2">↗</span>
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

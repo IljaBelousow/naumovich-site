@@ -33,27 +33,42 @@ export default function Breadcrumbs() {
   if (pathname === "/") return null;
 
   const segments = pathname.split("/").filter(Boolean);
-  const crumbs = segments.map((segment, i) => ({
-    name: segmentName(segment, segments[i - 1]),
-    href: "/" + segments.slice(0, i + 1).join("/"),
-  }));
+  const product = segments.length === 2 && segments[0] === "catalog"
+    ? facades.find((f) => f.slug === segments[1])
+    : undefined;
+
+  const isProductPage = Boolean(product);
+  const textColor = isProductPage ? "text-[#202322]" : "text-white";
+  const mutedColor = isProductPage ? "text-[#202322]/55" : "text-white/60";
+  const linkColor = isProductPage ? "text-[#202322]/75 hover:text-[#202322]" : "text-white/80 hover:text-white";
+
+  const crumbs = product?.category === "milled"
+    ? [
+        { name: "Каталог", href: "/catalog" },
+        { name: "Фрезерованные фасады", href: "/catalog/milled" },
+        { name: product.name, href: pathname },
+      ]
+    : segments.map((segment, i) => ({
+        name: segmentName(segment, segments[i - 1]),
+        href: "/" + segments.slice(0, i + 1).join("/"),
+      }));
 
   return (
-    <div className="w-full bg-white px-5 pt-20 sm:px-8 lg:px-12 xl:px-16">
+    <div className="pointer-events-none absolute inset-x-0 top-[5.5rem] z-40 px-5 sm:px-8 lg:px-12 xl:px-16">
       <nav
         aria-label="Хлебные крошки"
-        className="flex flex-wrap items-center gap-2 py-4 text-sm font-light text-gray-500"
+        className={`pointer-events-auto inline-flex flex-wrap items-center gap-2 border-0 bg-transparent p-0 text-sm font-medium shadow-none outline-none ${textColor}`}
       >
-        <Link href="/" className="transition-colors hover:text-gray-900">
+        <Link href="/" className={`transition-colors ${linkColor}`}>
           Главная
         </Link>
         {crumbs.map((crumb, i) => (
           <span key={crumb.href} className="flex items-center gap-2">
-            <span className="text-gray-300">/</span>
+            <span className={mutedColor}>/</span>
             {i === crumbs.length - 1 ? (
-              <span className="text-gray-900">{crumb.name}</span>
+              <span className={textColor}>{crumb.name}</span>
             ) : (
-              <Link href={crumb.href} className="transition-colors hover:text-gray-900">
+              <Link href={crumb.href} className={`transition-colors ${linkColor}`}>
                 {crumb.name}
               </Link>
             )}
