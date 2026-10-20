@@ -60,7 +60,7 @@ export default function CatalogPage() {
             <Link
               key={category.title}
               href={category.href}
-              className="group relative isolate block min-h-[240px] overflow-hidden bg-[#202322] sm:min-h-[300px] lg:min-h-[340px]"
+              className="group relative isolate block min-h-[190px] overflow-hidden bg-[#202322] sm:min-h-[230px] lg:min-h-[260px]"
             >
               <Image
                 src={category.image}
@@ -70,11 +70,11 @@ export default function CatalogPage() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#141716]/90 via-[#141716]/25 to-transparent transition-colors duration-300 group-hover:from-[#141716]/95" />
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-10">
-                <h2 className="max-w-sm text-2xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-3xl">
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-8">
+                <h2 className="max-w-sm text-xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-2xl">
                   {category.title}
                 </h2>
-                <span className="mt-6 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-white">
+                <span className="mt-4 inline-flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.18em] text-white">
                   Смотреть <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-2">↗</span>
                 </span>
               </div>
