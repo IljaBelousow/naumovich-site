@@ -156,9 +156,12 @@ export default function Header() {
                 <p className="text-base font-medium leading-snug text-white/90">Меньковский тракт 21<br />Щомыслицкий сельсовет</p>
               </section>
 
-              <section className="shrink-0 py-1" aria-label="График работы">
-                <p className="text-base font-medium text-white/90">Пн–Пт с 9:00 до 18:00</p>
-                <p className="mt-1 text-base font-medium text-white/90">Сб 10:00–15:00</p>
+              <section className="shrink-0 py-2" aria-label="График работы">
+                <p className="text-sm font-semibold uppercase tracking-[0.12em] text-white/60">График работы</p>
+                <p className="mt-1 text-base font-medium leading-7 text-white/90">
+                  Пн–Пт: 9:00–18:00<br />
+                  Сб: 10:00–15:00
+                </p>
               </section>
 
               <section className="shrink-0 py-1" aria-label="Контакты">
