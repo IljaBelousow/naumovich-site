@@ -69,12 +69,12 @@ export default function CatalogClient({
                   type="button"
                   onClick={() => setShowEdgeProfile((shown) => !shown)}
                   aria-expanded={showEdgeProfile}
-                  className="flex w-full items-center justify-between border-b border-gray-300 py-4 text-left text-xs font-medium uppercase tracking-[0.16em] text-gray-900 transition-colors hover:border-gray-900"
+                  className="group flex w-full items-center justify-between bg-gray-900 px-5 py-4 text-left text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
                 >
                   <span>{showEdgeProfile ? "Скрыть профиль края" : "Просмотреть профиль края"}</span>
                   <span
                     aria-hidden="true"
-                    className={`text-2xl font-light leading-none transition-transform duration-200 ${showEdgeProfile ? "rotate-180" : ""}`}
+                    className={`text-2xl font-light leading-none transition-transform duration-200 group-hover:translate-y-0.5 ${showEdgeProfile ? "rotate-180" : ""}`}
                   >
                     ⌄
                   </span>
