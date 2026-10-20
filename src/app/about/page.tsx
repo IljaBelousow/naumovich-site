@@ -119,21 +119,21 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#202322] py-12 text-[#E9E8E3] sm:py-16">
+      <section className="bg-[#E9E8E3] py-12 text-[#202322] sm:py-16">
         <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-12 lg:px-20">
-          <div className="flex flex-col gap-7 border-b border-white/20 pb-8 sm:flex-row sm:items-end sm:justify-between">
+          <div className="mb-7 flex flex-col gap-4 border-b border-[#B8B9B4] pb-7 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#E16A3A]">Наши работы</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#C65D32]">Наши работы</p>
               <h2 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">Готовые проекты</h2>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-white/65 sm:text-lg">
-                Посмотрите примеры реализованных решений для фасадов и мебели — от отдельных деталей до законченных проектов.
+              <p className="mt-3 max-w-2xl text-base leading-7 text-[#555954] sm:text-lg">
+                Примеры реализованных решений для фасадов и мебели — от отдельных деталей до законченных проектов.
               </p>
             </div>
-            <Link href="/portfolio" className="site-button-on-dark group shrink-0">
+            <Link href="/portfolio" className="site-button group shrink-0">
               Смотреть портфолио <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
             </Link>
           </div>
-          <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {featuredWorks.map((work, index) => (
               <Link key={work.slug} href={`/portfolio/${work.slug}`} className="group block">
                 <div className="relative aspect-[4/3] overflow-hidden bg-white/5">
@@ -145,25 +145,25 @@ export default function AboutPage() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
-                  <span className="absolute bottom-4 left-4 text-xs uppercase tracking-[0.2em] text-white/90">
+                  <span className="absolute bottom-4 left-4 text-xs font-semibold uppercase tracking-[0.2em] text-white">
                     Проект {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="absolute bottom-3 right-4 translate-y-2 text-xl text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100" aria-hidden="true">↗</span>
                 </div>
-                <h3 className="mt-4 text-base font-medium text-white transition-colors group-hover:text-[#E16A3A]">{work.name}</h3>
-                <p className="mt-1 text-sm text-white/55">Фасады и мебельные решения</p>
+                <h3 className="mt-4 text-base font-bold text-[#202322] transition-colors group-hover:text-[#C65D32]">{work.name}</h3>
+                <p className="mt-1 text-sm text-[#656963]">Фасады и мебельные решения</p>
               </Link>
             ))}
           </div>
-          <div className="mt-7 flex flex-col gap-4 border-t border-white/20 pt-7 sm:flex-row sm:items-center sm:justify-between">
-            <p className="max-w-xl text-sm leading-7 text-white/55">
+          <div className="mt-7 flex flex-col gap-4 border-t border-[#B8B9B4] pt-7 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-xl text-sm leading-7 text-[#656963]">
               Есть идея или задача? Обсудим материалы, размеры и подходящую отделку.
             </p>
             <div className="flex flex-wrap items-center gap-6">
-              <Link href="/portfolio" className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-[#E16A3A] transition-colors hover:text-white">
+              <Link href="/portfolio" className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#C65D32] transition-colors hover:text-[#202322]">
                 Все проекты <span aria-hidden="true">↗</span>
               </Link>
-              <Link href="/contacts" className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-white/75 transition-colors hover:text-white">
+              <Link href="/contacts" className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#202322] transition-colors hover:text-[#C65D32]">
                 Связаться с нами <span aria-hidden="true">↗</span>
               </Link>
             </div>
