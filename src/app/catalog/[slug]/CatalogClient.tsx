@@ -54,6 +54,38 @@ export default function CatalogClient({
                 ))}
               </div>
             )}
+
+            {item.slug === "f1" && (
+              <div className="pt-1">
+                <button
+                  type="button"
+                  onClick={() => setShowEdgeProfile((shown) => !shown)}
+                  aria-expanded={showEdgeProfile}
+                  className="flex w-full items-center justify-between border-b border-gray-300 py-4 text-left text-xs font-medium uppercase tracking-[0.16em] text-gray-900 transition-colors hover:border-gray-900"
+                >
+                  <span>{showEdgeProfile ? "Скрыть профиль края" : "Просмотреть профиль края"}</span>
+                  <span
+                    aria-hidden="true"
+                    className={`text-2xl font-light leading-none transition-transform duration-200 ${showEdgeProfile ? "rotate-180" : ""}`}
+                  >
+                    ⌄
+                  </span>
+                </button>
+
+                {showEdgeProfile && (
+                  <div className="mt-4 border border-gray-200 bg-gray-50 p-3 sm:p-5">
+                    <Image
+                      src="/images/profil_kraya.jpg"
+                      alt="Варианты профиля края фасада"
+                      width={1200}
+                      height={900}
+                      sizes="(max-width: 768px) 100vw, 768px"
+                      className="h-auto w-full object-contain"
+                    />
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col justify-center">
@@ -73,32 +105,7 @@ export default function CatalogClient({
                 <li>Шпонирование</li>
               </ul>
 
-              {item.slug === "f1" && (
-                <div className="mt-6">
-                  <button
-                    type="button"
-                    onClick={() => setShowEdgeProfile((shown) => !shown)}
-                    aria-expanded={showEdgeProfile}
-                    className="inline-flex items-center gap-3 border border-gray-300 px-5 py-3 text-xs font-medium uppercase tracking-[0.16em] text-gray-900 transition-colors hover:border-gray-900"
-                  >
-                    {showEdgeProfile ? "Скрыть профиль края" : "Просмотреть профиль края"}
-                    <span aria-hidden="true">{showEdgeProfile ? "−" : "+"}</span>
-                  </button>
 
-                  {showEdgeProfile && (
-                    <div className="mt-5 max-w-3xl border border-gray-200 bg-gray-50 p-3 sm:p-5">
-                      <Image
-                        src="/images/profil_kraya.jpg"
-                        alt="Варианты профиля края фасада"
-                        width={1200}
-                        height={900}
-                        sizes="(max-width: 768px) 100vw, 768px"
-                        className="h-auto w-full object-contain"
-                      />
-                    </div>
-                  )}
-                </div>
-              )}
             </div>
 
             <div className="mt-12">
