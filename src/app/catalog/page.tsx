@@ -32,7 +32,7 @@ export default function CatalogPage() {
             <span className="h-px w-9 bg-[#E16A3A]" /> Каталог · ИП Наумович
           </p>
           <h1 className="about-intro max-w-5xl text-4xl font-bold leading-[1.08] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-            <span>Фасады и мебель<br className="hidden sm:block" /> для вашего проекта.</span>
+            <span>Каталог</span>
           </h1>
           <div className="mt-6">
             <p className="about-intro max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
