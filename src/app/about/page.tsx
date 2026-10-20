@@ -155,21 +155,17 @@ export default function AboutPage() {
             ))}
           </div>
           <div className="mt-8 flex items-start gap-4 rounded-sm bg-[#E9E8E3]/70 px-6 py-5 text-base leading-7 text-[#424640] sm:px-8 sm:py-6 sm:text-lg">
-            <AboutIcon name="sparkles" className="mt-1 h-6 w-6 shrink-0 text-[#C65D32]" />\n            <span>Наша задача — помочь воплотить вашу идею в изделии, где продуманы внешний вид, материалы и детали.</span>
+            <AboutIcon name="sparkles" className="mt-1 h-6 w-6 shrink-0 text-[#C65D32]" />
+            <span>Наша задача — помочь воплотить вашу идею в изделии, где продуманы внешний вид, материалы и детали.</span>
           </div>
         </div>
       </section>
 
       <section className="bg-[#E9E8E3] py-14 sm:py-20">
         <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-12 lg:px-20">
-          <div className="mb-8 flex flex-col gap-4 pb-2 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#C65D32]">Наши направления</p>
-              <h2 className="max-w-2xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Что изготавливаем</h2>
-            </div>
-            <Link href="/catalog" className="site-button group shrink-0">
-              Перейти в каталог <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
-            </Link>
+          <div className="mb-8 max-w-3xl">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#C65D32]">Наши направления</p>
+            <h2 className="max-w-2xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Что изготавливаем</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-3 md:gap-8">
             {directions.map((item) => (
@@ -180,11 +176,17 @@ export default function AboutPage() {
               </article>
             ))}
           </div>
+          <div className="mt-8">
+            <Link href="/catalog" className="site-button group inline-flex">
+              Перейти в каталог <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="bg-[#202322] py-14 text-[#E9E8E3] sm:py-20">
-        <div className="mx-auto grid w-full max-w-[1500px] gap-8 px-6 sm:px-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12 lg:px-20">
+        <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-12 lg:px-20">
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#E16A3A]">Наш принцип</p>
             <h2 className="max-w-xl text-3xl font-light leading-tight tracking-tight sm:text-4xl lg:text-5xl">
@@ -193,9 +195,6 @@ export default function AboutPage() {
             <p className="mt-6 max-w-lg text-base leading-8 text-white/65 sm:text-lg">
               Каждый проект начинается с обсуждения задачи. Учитываем ваши пожелания и помогаем выбрать детали, которые повлияют на итоговый вид изделия.
             </p>
-            <Link href="/contacts" className="group mt-8 inline-flex items-center gap-4 border-b border-[#E16A3A] pb-2 text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-[#E16A3A]">
-              Обсудить свой проект <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </Link>
           </div>
           <div className="grid gap-4 sm:gap-5">
             {approach.map(([number, title, text]) => (
@@ -208,22 +207,23 @@ export default function AboutPage() {
               </article>
             ))}
           </div>
+          </div>
+          <div className="mt-8">
+            <Link href="/contacts" className="group inline-flex items-center gap-4 border-b border-[#E16A3A] pb-2 text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-[#E16A3A]">
+              Обсудить свой проект <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="bg-[#E9E8E3] py-14 text-[#202322] sm:py-20">
         <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-12 lg:px-20">
-          <div className="mb-7 flex flex-col gap-4 pb-2 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#C65D32]">Наши работы</p>
-              <h2 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">Готовые проекты</h2>
-              <p className="mt-3 max-w-2xl text-base leading-7 text-[#555954] sm:text-lg">
-                Примеры решений для фасадов и мебели — от отдельных деталей до готовых интерьерных проектов.
-              </p>
-            </div>
-            <Link href="/portfolio" className="site-button group shrink-0">
-              Смотреть портфолио <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
-            </Link>
+          <div className="mb-7 max-w-3xl">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#C65D32]">Наши работы</p>
+            <h2 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">Готовые проекты</h2>
+            <p className="mt-3 max-w-2xl text-base leading-7 text-[#555954] sm:text-lg">
+              Примеры решений для фасадов и мебели — от отдельных деталей до готовых интерьерных проектов.
+            </p>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {featuredWorks.map((work, index) => (
@@ -247,7 +247,7 @@ export default function AboutPage() {
               </Link>
             ))}
           </div>
-          <div className="mt-7 flex flex-col gap-4 rounded-sm bg-white/45 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+          <div className="mt-7 flex flex-col items-start gap-5 rounded-sm bg-white/45 p-5 sm:p-6">
             <p className="max-w-xl text-sm leading-7 text-[#656963]">
               Есть идея или задача? Обсудим материалы, размеры и подходящую отделку.
             </p>
