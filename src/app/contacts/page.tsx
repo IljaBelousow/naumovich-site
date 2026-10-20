@@ -73,22 +73,28 @@ export default function ContactsPage() {
                 href="https://www.instagram.com/vintazh100"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="site-button"
+                aria-label="Instagram"
+                className="group inline-flex items-center gap-3 border border-[#C9C4B9] px-5 py-4 text-sm font-medium text-[#202322] transition-colors hover:border-[#E16A3A] hover:text-[#C65D32]"
               >
+                <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
                 Instagram
               </a>
               <a
                 href="https://t.me/+375259929001"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="site-button"
+                aria-label="Telegram"
+                className="group inline-flex items-center gap-3 border border-[#C9C4B9] px-5 py-4 text-sm font-medium text-[#202322] transition-colors hover:border-[#E16A3A] hover:text-[#C65D32]"
               >
+                <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M21.4 4.6 18.2 20c-.2 1.1-.8 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.9 8.9-8c.4-.4-.1-.6-.6-.2L6.1 13.8l-4.7-1.5c-1-.3-1-1 .2-1.5L20 3.4c.9-.3 1.7.2 1.4 1.2Z"/></svg>
                 Telegram
               </a>
               <a
                 href="viber://chat?number=%2B375259929001"
-                className="site-button"
+                aria-label="Viber"
+                className="group inline-flex items-center gap-3 border border-[#C9C4B9] px-5 py-4 text-sm font-medium text-[#202322] transition-colors hover:border-[#E16A3A] hover:text-[#C65D32]"
               >
+                <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 3.5C2.8 4.5 2.7 7.1 3.4 9.4c1.6 5.1 6.1 9.6 11.2 11.2 2.3.7 4.9.6 5.9-1.6l.5-1.1-5-2.4-1.6 2-1.4-.6a13 13 0 0 1-5.5-5.5l-.6-1.4 2-1.6-2.4-5L5 3.5Z"/><path d="M13 5a6 6 0 0 1 6 6M13 8a3 3 0 0 1 3 3"/></svg>
                 Viber
               </a>
             </div>
