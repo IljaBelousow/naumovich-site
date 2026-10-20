@@ -55,12 +55,12 @@ export default function AboutPage() {
           <h1 className="about-intro max-w-5xl text-4xl font-bold leading-[1.08] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
             Детали, которые<br className="hidden sm:block" /> задают характер мебели.
           </h1>
-          <div className="mt-6 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+          <div className="mt-6">
             <p className="about-intro max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
               Изготавливаем крашеные и шпонированные фасады из МДФ, мебель и детали под заказ.
               Продумываем каждую деталь под ваш интерьер.
             </p>
-            <Link href="/contacts" className="site-button-on-dark group shrink-0">
+            <Link href="/contacts" className="site-button-on-dark group mt-6 inline-flex shrink-0">
               Обсудить проект <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
             </Link>
           </div>
