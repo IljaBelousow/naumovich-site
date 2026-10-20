@@ -373,3 +373,13 @@ a { text-underline-offset: 4px; }
 /* Improve readability: avoid tiny supporting copy across the site. */
 .text-xs { font-size: 0.8125rem; line-height: 1.45; }
 .text-\[11px\] { font-size: 0.8125rem; line-height: 1.45; }
+
+
+/* Site-wide typography: stronger headings and more readable body copy. */
+body {
+  font-weight: 500;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700 !important;
+  letter-spacing: -0.025em;
+}
