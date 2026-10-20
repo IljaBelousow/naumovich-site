@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { facades } from "@/data/facades";
 
 export const metadata = {
   title: "О компании — ИП Наумович",
@@ -32,6 +33,8 @@ const approach = [
 ];
 
 export default function AboutPage() {
+  const featuredWorks = facades.filter((item) => item.category === "work_facades").slice(0, 3);
+
   return (
     <main className="w-full overflow-hidden bg-[#E9E8E3] text-[#202322]">
       <section className="relative isolate flex min-h-[560px] items-end overflow-hidden bg-[#202322] text-[#E9E8E3] sm:min-h-[650px]">
@@ -130,14 +133,41 @@ export default function AboutPage() {
               Смотреть портфолио <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
             </Link>
           </div>
-          <div className="mt-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredWorks.map((work, index) => (
+              <Link key={work.slug} href={`/portfolio/${work.slug}`} className="group block">
+                <div className="relative aspect-[4/3] overflow-hidden bg-white/5">
+                  <Image
+                    src={work.image}
+                    alt={work.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
+                  <span className="absolute bottom-4 left-4 text-xs uppercase tracking-[0.2em] text-white/90">
+                    Проект {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="absolute bottom-3 right-4 translate-y-2 text-xl text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100" aria-hidden="true">↗</span>
+                </div>
+                <h3 className="mt-4 text-base font-medium text-white transition-colors group-hover:text-[#E16A3A]">{work.name}</h3>
+                <p className="mt-1 text-sm text-white/55">Фасады и мебельные решения</p>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-col gap-5 border-t border-white/20 pt-7 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-xl text-sm leading-7 text-white/55">
               Есть идея или задача? Обсудим материалы, размеры и подходящую отделку.
             </p>
-            <Link href="/contacts" className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-[#E16A3A] transition-colors hover:text-white">
-              Связаться с нами <span aria-hidden="true">↗</span>
-            </Link>
-          </div>
+            <div className="flex flex-wrap items-center gap-6">
+              <Link href="/portfolio" className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-[#E16A3A] transition-colors hover:text-white">
+                Все проекты <span aria-hidden="true">↗</span>
+              </Link>
+              <Link href="/contacts" className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-white/75 transition-colors hover:text-white">
+                Связаться с нами <span aria-hidden="true">↗</span>
+              </Link>
+            </div>
+          </div>          </div>
         </div>
       </section>
     </main>
