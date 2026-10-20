@@ -33,10 +33,20 @@ export default function Breadcrumbs() {
   if (pathname === "/") return null;
 
   const segments = pathname.split("/").filter(Boolean);
-  const crumbs = segments.map((segment, i) => ({
-    name: segmentName(segment, segments[i - 1]),
-    href: "/" + segments.slice(0, i + 1).join("/"),
-  }));
+  const product = segments.length === 2 && segments[0] === "catalog"
+    ? facades.find((f) => f.slug === segments[1])
+    : undefined;
+
+  const crumbs = product?.category === "milled"
+    ? [
+        { name: "Каталог", href: "/catalog" },
+        { name: "Фрезерованные фасады", href: "/catalog/milled" },
+        { name: product.name, href: pathname },
+      ]
+    : segments.map((segment, i) => ({
+        name: segmentName(segment, segments[i - 1]),
+        href: "/" + segments.slice(0, i + 1).join("/"),
+      }));
 
   return (
     <div className="pointer-events-none absolute inset-x-0 top-[5.5rem] z-40 px-5 sm:px-8 lg:px-12 xl:px-16">
