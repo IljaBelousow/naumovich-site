@@ -144,18 +144,17 @@ export default function AboutPage() {
             {companyValues.map((item) => (
               <article key={item.number} className="group min-h-[220px] rounded-sm bg-[#E9E8E3]/65 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-[#E9E8E3] sm:p-8 lg:min-h-[245px]">
                 <div className="flex items-start justify-between gap-4">
-                  <span className="flex h-11 w-11 items-center justify-center border border-[#C65D32]/50 text-xs font-semibold tracking-widest text-[#C65D32] transition-colors duration-300 group-hover:bg-[#C65D32] group-hover:text-white">
-                    {item.mark}
+                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#C65D32]/10 text-[#C65D32] transition-colors duration-300 group-hover:bg-[#C65D32] group-hover:text-white sm:h-[72px] sm:w-[72px]">
+                    <AboutIcon name={item.icon} className="h-8 w-8 sm:h-9 sm:w-9" />
                   </span>
-                  <span className="text-xs tracking-[0.2em] text-[#8A8B85]">{item.number}</span>
                 </div>
                 <h3 className="mt-7 text-xl font-medium sm:text-2xl">{item.title}</h3>
-                <p className="mt-3 max-w-md text-sm leading-7 text-[#656963] sm:text-base">{item.text}</p>
+                <p className="mt-3 max-w-md text-base leading-7 text-[#656963] sm:text-lg sm:leading-8">{item.text}</p>
               </article>
             ))}
           </div>
           <div className="mt-8 flex items-start gap-4 rounded-sm bg-[#E9E8E3]/70 px-6 py-5 text-base leading-7 text-[#424640] sm:px-8 sm:py-6 sm:text-lg">
-            <AboutIcon name="sparkles" className="mt-1 h-6 w-6 shrink-0 text-[#C65D32]" />
+            <AboutIcon name="sparkles" className="mt-1 h-8 w-8 shrink-0 text-[#C65D32] sm:h-9 sm:w-9" />
             <span>Наша задача — помочь воплотить вашу идею в изделии, где продуманы внешний вид, материалы и детали.</span>
           </div>
         </div>
@@ -170,9 +169,9 @@ export default function AboutPage() {
           <div className="grid gap-6 md:grid-cols-3 md:gap-8">
             {directions.map((item) => (
               <article key={item.number} className="rounded-sm bg-white/45 p-6 transition-colors duration-300 hover:bg-white/75">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#C65D32]/10 text-[#C65D32]"><AboutIcon name={item.number === "01" ? "layers" : item.number === "02" ? "sofa" : "ruler"} /></span>
-                <h3 className="mt-5 text-xl font-medium sm:text-2xl">{item.title}</h3>
-                <p className="mt-4 max-w-md text-base leading-7 text-[#656963]">{item.text}</p>
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#C65D32]/10 text-[#C65D32]"><AboutIcon name={item.number === "01" ? "layers" : item.number === "02" ? "sofa" : "ruler"} className="h-8 w-8 sm:h-9 sm:w-9" /></span>
+                <h3 className="mt-5 text-xl font-medium sm:text-2xl lg:text-[26px]">{item.title}</h3>
+                <p className="mt-4 max-w-md text-lg leading-8 text-[#656963]">{item.text}</p>
               </article>
             ))}
           </div>
@@ -199,10 +198,10 @@ export default function AboutPage() {
           <div className="grid gap-4 sm:gap-5">
             {approach.map(([number, title, text]) => (
               <article key={number} className="grid gap-3 rounded-sm bg-white/[0.045] p-5 transition-colors duration-300 hover:bg-white/[0.08] sm:grid-cols-[52px_1fr] sm:gap-6 sm:p-7">
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#E16A3A]/15 text-[#E16A3A]"><AboutIcon name={number === "01" ? "message" : number === "02" ? "palette" : "sparkles"} /></span>
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#E16A3A]/15 text-[#E16A3A] sm:h-16 sm:w-16"><AboutIcon name={number === "01" ? "message" : number === "02" ? "palette" : "sparkles"} className="h-7 w-7 sm:h-8 sm:w-8" /></span>
                 <div>
                   <h3 className="text-xl font-medium">{title}</h3>
-                  <p className="mt-3 max-w-2xl text-base leading-7 text-white/65">{text}</p>
+                  <p className="mt-3 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">{text}</p>
                 </div>
               </article>
             ))}
@@ -221,7 +220,7 @@ export default function AboutPage() {
           <div className="mb-7 max-w-3xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#C65D32]">Наши работы</p>
             <h2 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">Готовые проекты</h2>
-            <p className="mt-3 max-w-2xl text-base leading-7 text-[#555954] sm:text-lg">
+            <p className="mt-3 max-w-2xl text-lg leading-8 text-[#555954] sm:text-xl">
               Примеры решений для фасадов и мебели — от отдельных деталей до готовых интерьерных проектов.
             </p>
           </div>
