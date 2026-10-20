@@ -41,37 +41,45 @@ export default function Home() {
 
       {/* === О КОМПАНИИ: краткая версия страницы About === */}
       <section id="about" className="w-full bg-[#D7D7D2] py-16 sm:py-20">
-        <div className="mx-auto grid w-full max-w-[1600px] gap-8 px-6 sm:px-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-16 lg:px-20 xl:px-24">
-          <div>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#C65D32]">О компании</p>
-            <h2 className="max-w-xl text-3xl font-light leading-tight tracking-tight text-gray-900 sm:text-4xl">
-              Детали, которые задают характер мебели
-            </h2>
-          </div>
-          <div className="max-w-3xl">
-            <p className="text-base font-normal leading-relaxed text-gray-700 sm:text-lg">
-              ИП Наумович изготавливает крашеные и шпонированные фасады из МДФ, мебель и мебельные детали под заказ. Учитываем размеры, назначение изделия и особенности вашего интерьера.
-            </p>
-            <p className="mt-4 text-sm font-normal leading-relaxed text-gray-600 sm:text-base">
-              Помогаем подобрать форму, фрезеровку, цвет и финишное покрытие — от отдельных фасадов до мебельных решений.
-            </p>
-            <div className="mt-6 grid gap-5 border-t border-[#B8B9B4] pt-5 sm:grid-cols-3">
-              <div>
-                <h3 className="text-sm font-medium text-gray-900 sm:text-base">Фасады из МДФ</h3>
-                <p className="mt-1.5 text-sm font-normal leading-relaxed text-gray-600">Крашеные, шпонированные и с разными вариантами отделки.</p>
-              </div>
-              <div>
-                <h3 className="text-sm font-medium text-gray-900 sm:text-base">Мебель на заказ</h3>
-                <p className="mt-1.5 text-sm font-normal leading-relaxed text-gray-600">Под размеры помещения и задачи вашего проекта.</p>
-              </div>
-              <div>
-                <h3 className="text-sm font-medium text-gray-900 sm:text-base">Внимание к деталям</h3>
-                <p className="mt-1.5 text-sm font-normal leading-relaxed text-gray-600">Продумываем форму, цвет и покрытие изделия.</p>
-              </div>
+        <div className="mx-auto w-full max-w-[1600px] px-6 sm:px-12 lg:px-20 xl:px-24">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
+            <div>
+              <p className="mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#C65D32]">
+                <span className="h-px w-8 bg-[#C65D32]" /> О компании · ИП Наумович
+              </p>
+              <h2 className="max-w-xl text-3xl font-light leading-tight tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+                Детали, которые задают характер мебели
+              </h2>
+              <p className="mt-5 max-w-xl text-base leading-7 text-gray-700 sm:text-lg sm:leading-8">
+                Изготавливаем крашеные и шпонированные фасады из МДФ, мебель и детали под заказ. Продумываем каждую деталь под ваш интерьер.
+              </p>
+              <Link href="/about" className="group mt-6 inline-flex items-center gap-4 border-b border-[#C65D32] pb-2 text-xs font-medium uppercase tracking-[0.2em] text-gray-900 transition-colors hover:text-[#C65D32]">
+                Подробнее о компании <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </Link>
             </div>
-            <Link href="/about" className="group mt-6 inline-flex items-center gap-4 border-b border-[#C65D32] pb-2 text-xs font-medium uppercase tracking-[0.2em] text-gray-900 transition-colors hover:text-[#C65D32]">
-              Подробнее о компании <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </Link>
+            <div className="grid gap-4 sm:grid-cols-3">
+              <article className="min-h-[190px] bg-[#E9E8E3]/70 p-5 transition-colors duration-300 hover:bg-[#E9E8E3] sm:p-6">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#C65D32]/10 text-[#C65D32]">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5Z" /><path d="m3 12 9 5 9-5M3 16l9 5 9-5" /></svg>
+                </span>
+                <h3 className="mt-5 text-base font-medium text-gray-900 sm:text-lg">Фасады из МДФ</h3>
+                <p className="mt-2 text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">Крашеные, шпонированные и с разными вариантами финишной отделки.</p>
+              </article>
+              <article className="min-h-[190px] bg-[#E9E8E3]/70 p-5 transition-colors duration-300 hover:bg-[#E9E8E3] sm:p-6">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#C65D32]/10 text-[#C65D32]">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12V9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3" /><path d="M4 12a2 2 0 0 0-2 2v4h20v-4a2 2 0 0 0-2-2H4ZM5 18v3M19 18v3" /></svg>
+                </span>
+                <h3 className="mt-5 text-base font-medium text-gray-900 sm:text-lg">Мебель на заказ</h3>
+                <p className="mt-2 text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">Решения с учётом размеров помещения, задач и стиля интерьера.</p>
+              </article>
+              <article className="min-h-[190px] bg-[#E9E8E3]/70 p-5 transition-colors duration-300 hover:bg-[#E9E8E3] sm:p-6">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#C65D32]/10 text-[#C65D32]">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3a9 9 0 1 0 0 18h1.2a2 2 0 0 0 1.5-3.3 1.8 1.8 0 0 1 1.4-3h1.4A4.5 4.5 0 0 0 22 10.2C22 6.2 17.5 3 12 3Z" /><path d="M7.5 10h.01M10 6.8h.01M15 7.5h.01M17.5 10h.01" /></svg>
+                </span>
+                <h3 className="mt-5 text-base font-medium text-gray-900 sm:text-lg">Подбор отделки</h3>
+                <p className="mt-2 text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">Помогаем выбрать форму, фрезеровку, цвет и подходящее покрытие.</p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
