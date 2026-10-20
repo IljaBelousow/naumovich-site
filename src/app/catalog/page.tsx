@@ -58,12 +58,12 @@ export default function CatalogPage() {
       </section>
 
       <section className="mx-auto w-full max-w-[1600px] px-5 py-10 sm:px-8 sm:py-14 lg:px-12 xl:px-16">
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+        <div className="flex flex-col gap-5 lg:gap-7">
           {categories.map((category, index) => (
             <Link
               key={category.title}
               href={category.href}
-              className="group relative isolate block min-h-[340px] overflow-hidden bg-[#202322] sm:min-h-[420px]"
+              className="group relative isolate block min-h-[240px] overflow-hidden bg-[#202322] sm:min-h-[300px] lg:min-h-[340px]"
             >
               <Image
                 src={category.image}
@@ -73,7 +73,7 @@ export default function CatalogPage() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#141716]/90 via-[#141716]/25 to-transparent transition-colors duration-300 group-hover:from-[#141716]/95" />
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-10">
                 <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.28em] text-[#E16A3A]">
                   Категория 0{index + 1}
                 </p>
