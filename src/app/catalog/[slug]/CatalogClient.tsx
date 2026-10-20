@@ -109,7 +109,7 @@ export default function CatalogClient({
             </div>
 
             <div className="mt-12">
-              <Link href="/contacts" className="inline-block border border-gray-900 px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 hover:bg-gray-900 hover:text-white transition-colors cursor-pointer">
+              <Link href="/contacts" className="inline-flex items-center justify-center bg-gray-900 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2">
                 Запросить расчёт
               </Link>
             </div>
@@ -120,7 +120,7 @@ export default function CatalogClient({
           <div className="mt-24 border-t border-gray-100 pt-14">
              <div className="flex items-center justify-between mb-8">
                 <h2 className="text-2xl font-extralight tracking-tight text-gray-900 sm:text-3xl">Похожее в каталоге</h2>
-                <button onClick={handleBack} className="text-xs uppercase tracking-[0.2em] text-gray-400 hover:text-gray-900 transition-colors cursor-pointer">
+                <button onClick={handleBack} className="inline-flex items-center bg-gray-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2">
                    Весь каталог →
                 </button>
              </div>
