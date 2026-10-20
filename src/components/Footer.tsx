@@ -10,7 +10,7 @@ const navigation = [
 ];
 
 const contactLinks = [
-  { label: "+375 25 992-90-01", href: "tel:+375259929001", phone: true },
+  { label: "+375 25 992-90-01 · рабочий", href: "tel:+375259929001", phone: true },
   { label: "+375 44 774-44-49 · директор", href: "tel:+375447744449", phone: true },
   { label: "@vintazh100 · Instagram", href: "https://www.instagram.com/vintazh100", external: true },
   { label: "Telegram", href: "https://t.me/+375259929001", external: true },
@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.15fr_0.9fr_1.15fr_0.9fr] lg:gap-12">
           <div>
             <Link href="/" className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center border border-[#C65D32] text-xs font-semibold tracking-[0.15em] text-[#E9E8E3]">ИПН</span>
+              <span className="flex h-10 w-10 items-center justify-center overflow-hidden" aria-hidden="true"><img src="/icon.svg" alt="" className="h-full w-full object-contain" /></span>
               <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#E9E8E3]">Наумович</span>
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-7 text-[#C5C6C1]">
@@ -74,7 +74,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-[#3B3D37] pt-6 text-xs text-[#A7A49C] sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} ИП Наумович. Все права защищены.</p>
-          <Link href="/privacy" className="inline-flex items-center rounded-sm border border-[#555A53] px-3 py-2 text-[#C5C6C1] transition-colors hover:border-[#E16A3A] hover:text-[#E16A3A]">Политика конфиденциальности</Link>
+          <Link href="/privacy" className="inline-flex items-center py-2 text-[#C5C6C1] transition-colors hover:text-[#E16A3A]">Политика конфиденциальности</Link>
           <p>УНП 193843566</p>
         </div>
       </div>
