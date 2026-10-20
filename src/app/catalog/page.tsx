@@ -9,21 +9,18 @@ export const metadata = {
 const categories = [
   {
     title: "Фрезерованные фасады МДФ",
-    description: "Формы, фрезеровка и отделка под ваш проект",
     href: "/catalog/milled",
     image: "/images/catalog1/image1.jpg",
     imageAlt: "Фрезерованный фасад из МДФ",
   },
   {
     title: "Интегрированные ручки",
-    description: "Минималистичные решения для современных фасадов",
     href: "/catalog/handles",
     image: "/images/handles/gola.jpg",
     imageAlt: "Интегрированная ручка Gola",
   },
   {
     title: "Мебель под заказ",
-    description: "Индивидуальные решения и реализованные проекты",
     href: "/portfolio",
     image: "/images/catalog2/photo1/5195250767357484499.jpg",
     imageAlt: "Мебельный проект на заказ",
@@ -77,9 +74,6 @@ export default function CatalogPage() {
                 <h2 className="max-w-sm text-2xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-3xl">
                   {category.title}
                 </h2>
-                <p className="mt-3 max-w-sm text-sm leading-6 text-white/75">
-                  {category.description}
-                </p>
                 <span className="mt-6 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-white">
                   Смотреть <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-2">↗</span>
                 </span>
