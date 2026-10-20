@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "О компании — ИП Наумович",
@@ -6,13 +7,45 @@ export const metadata = {
     "Изготовление крашеных и шпонированных фасадов из МДФ и мебели на заказ. Индивидуальный подход к каждому проекту.",
 };
 
+const directions = [
+  {
+    number: "01",
+    title: "Фасады из МДФ",
+    text: "Крашеные и шпонированные фасады, фрезеровка и разные варианты финишной отделки.",
+  },
+  {
+    number: "02",
+    title: "Мебель на заказ",
+    text: "Изготовление мебельных решений с учётом размеров помещения, задач и стиля интерьера.",
+  },
+  {
+    number: "03",
+    title: "Мебельные детали",
+    text: "Детали по индивидуальным размерам — от формы и профиля до цвета и покрытия.",
+  },
+];
+
+const approach = [
+  ["01", "Вникаем в задачу", "Учитываем размеры, назначение мебели, пожелания и особенности интерьера."],
+  ["02", "Подбираем решение", "Помогаем определиться с формой, фрезеровкой, цветом и типом покрытия."],
+  ["03", "Контролируем результат", "Следим за качеством деталей на этапах подготовки, отделки и изготовления."],
+];
+
 export default function AboutPage() {
   return (
     <main className="w-full overflow-hidden bg-[#E9E8E3] text-[#202322]">
-      <section className="relative isolate overflow-hidden bg-[#202322] text-[#E9E8E3]">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.08]" aria-hidden="true"
-          style={{ backgroundImage: "linear-gradient(90deg, transparent 49.9%, #E16A3A 50%, transparent 50.1%)", backgroundSize: "120px 100%" }} />
-        <div className="relative mx-auto flex min-h-[470px] w-full max-w-[1500px] flex-col justify-end px-6 pb-16 pt-28 sm:px-12 sm:pb-20 lg:min-h-[560px] lg:px-20">
+      <section className="relative isolate flex min-h-[560px] items-end overflow-hidden bg-[#202322] text-[#E9E8E3] sm:min-h-[650px]">
+        <Image
+          src="/images/hero/hero-main.jpg"
+          alt="Мебельные фасады и детали из МДФ"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center opacity-45"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#141716]/90 via-[#141716]/55 to-[#141716]/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#141716]/70 via-transparent to-[#141716]/20" />
+        <div className="relative mx-auto w-full max-w-[1500px] px-6 pb-16 pt-32 sm:px-12 sm:pb-20 lg:px-20">
           <p className="about-intro mb-6 flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.32em] text-[#E16A3A]">
             <span className="h-px w-9 bg-[#E16A3A]" /> О компании · ИП Наумович
           </p>
@@ -20,8 +53,8 @@ export default function AboutPage() {
             Детали, которые<br className="hidden sm:block" /> задают характер мебели.
           </h1>
           <div className="mt-8 flex flex-col gap-7 sm:flex-row sm:items-end sm:justify-between">
-            <p className="about-intro max-w-2xl text-base leading-8 text-white/65 sm:text-lg">
-              Изготавливаем крашеные и шпонированные фасады из МДФ и мебель на заказ.
+            <p className="about-intro max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
+              Изготавливаем крашеные и шпонированные фасады из МДФ, мебель и детали под заказ.
               Продумываем каждую деталь под ваш интерьер.
             </p>
             <Link href="/contacts" className="site-button-on-dark group shrink-0">
@@ -31,53 +64,80 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* === О КОМПАНИИ: первый информационный блок главной === */}
-      <section id="about" className="w-full bg-[#D7D7D2] py-20 sm:py-28">
-        <div className="mx-auto grid w-full max-w-[1600px] gap-12 px-6 sm:px-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-20 lg:px-20 xl:px-24">
-          <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#C65D32]">О компании</p>
-            <h2 className="max-w-xl text-3xl font-light leading-tight tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-              Изготавливаем детали, которые задают характер мебели
-            </h2>
-          </div>
-          <div className="max-w-3xl">
-            <p className="text-lg font-normal leading-relaxed text-gray-700 sm:text-xl">
-              ИП Наумович — собственная мастерская по изготовлению мебельных деталей из МДФ: крашеных и шпонированных. Производим детали и мебель под индивидуальные размеры, работаем с частными клиентами и мебельщиками.
-            </p>
-            <p className="mt-5 text-base font-normal leading-relaxed text-gray-600 sm:text-lg">
-              Подбираем решения под ваш проект: от формы и фрезеровки до цвета и финишного покрытия. А если корпус мебели ещё в хорошем состоянии, можно заменить только фасады — без покупки новой мебели.
-            </p>
-            <div className="mt-8 grid gap-6 border-t border-[#B8B9B4] pt-6 sm:grid-cols-3">
-              <div>
-                <h3 className="text-base font-medium text-gray-900">Собственная мастерская</h3>
-                <p className="mt-2 text-sm font-normal leading-relaxed text-gray-600">Контролируем изготовление на каждом этапе.</p>
-              </div>
-              <div>
-                <h3 className="text-base font-medium text-gray-900">Под заказ</h3>
-                <p className="mt-2 text-sm font-normal leading-relaxed text-gray-600">Размеры, форма и отделка под ваш проект.</p>
-              </div>
-              <div>
-                <h3 className="text-base font-medium text-gray-900">Подбор цвета</h3>
-                <p className="mt-2 text-sm font-normal leading-relaxed text-gray-600">Помогаем подобрать подходящее покрытие.</p>
-              </div>
+      <section className="bg-[#D7D7D2] py-20 sm:py-28">
+        <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-12 lg:px-20">
+          <div className="mb-12 flex flex-col gap-5 border-b border-[#B8B9B4] pb-8 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#C65D32]">Наши направления</p>
+              <h2 className="max-w-2xl text-3xl font-light leading-tight tracking-tight sm:text-4xl lg:text-5xl">Что изготавливаем</h2>
             </div>
-            <Link href="/contacts" className="group mt-8 inline-flex items-center gap-4 border-b border-[#C65D32] pb-2 text-xs font-medium uppercase tracking-[0.2em] text-gray-900 transition-colors hover:text-[#C65D32]">
-              Обсудить проект <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
+            <Link href="/catalog" className="site-button group shrink-0">
+              Перейти в каталог <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
             </Link>
+          </div>
+          <div className="grid gap-8 md:grid-cols-3 md:gap-10">
+            {directions.map((item) => (
+              <article key={item.number} className="border-t border-[#B8B9B4] pt-5">
+                <span className="text-xs font-medium tracking-[0.2em] text-[#C65D32]">{item.number}</span>
+                <h3 className="mt-5 text-xl font-medium sm:text-2xl">{item.title}</h3>
+                <p className="mt-4 max-w-md text-base leading-7 text-gray-600">{item.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-[1500px] px-6 py-20 sm:px-12 sm:py-28 lg:px-20">
-        <div className="about-bottom flex flex-col gap-7 bg-[#202322] px-7 py-10 text-[#E9E8E3] sm:px-12 sm:py-14 lg:flex-row lg:items-center lg:justify-between lg:px-16">
+      <section className="bg-[#E9E8E3] py-20 sm:py-28">
+        <div className="mx-auto grid w-full max-w-[1500px] gap-12 px-6 sm:px-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:px-20">
           <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#E16A3A]">Ваш проект</p>
-            <h2 className="max-w-2xl text-3xl font-light leading-tight sm:text-4xl">Расскажите, что хотите создать.</h2>
-            <p className="mt-4 max-w-xl text-sm leading-7 text-white/60 sm:text-base">Обсудим материалы, размеры и подходящий вариант отделки.</p>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#C65D32]">Наш принцип</p>
+            <h2 className="max-w-xl text-3xl font-light leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+              Подход к каждому заказу
+            </h2>
+            <p className="mt-6 max-w-lg text-base leading-8 text-gray-600 sm:text-lg">
+              Для нас важно, чтобы готовые детали подходили не только по размеру, но и по характеру интерьера.
+              Поэтому каждый проект начинаем с ваших задач и внимательно прорабатываем детали.
+            </p>
+            <Link href="/contacts" className="group mt-8 inline-flex items-center gap-4 border-b border-[#C65D32] pb-2 text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-[#C65D32]">
+              Обсудить свой проект <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </Link>
           </div>
-          <Link href="/contacts" className="site-button-on-dark group shrink-0">
-            Связаться <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
-          </Link>
+          <div className="border-t border-[#B8B9B4]">
+            {approach.map(([number, title, text]) => (
+              <article key={number} className="grid gap-3 border-b border-[#B8B9B4] py-6 sm:grid-cols-[64px_1fr] sm:gap-6 sm:py-8">
+                <span className="text-xs font-medium tracking-[0.2em] text-[#C65D32]">{number}</span>
+                <div>
+                  <h3 className="text-xl font-medium">{title}</h3>
+                  <p className="mt-3 max-w-2xl text-base leading-7 text-gray-600">{text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#202322] py-20 text-[#E9E8E3] sm:py-28">
+        <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-12 lg:px-20">
+          <div className="flex flex-col gap-7 border-b border-white/20 pb-8 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#E16A3A]">Наши работы</p>
+              <h2 className="text-3xl font-light leading-tight sm:text-4xl lg:text-5xl">Готовые проекты</h2>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-white/65 sm:text-lg">
+                Посмотрите примеры реализованных решений для фасадов и мебели — от отдельных деталей до законченных проектов.
+              </p>
+            </div>
+            <Link href="/portfolio" className="site-button-on-dark group shrink-0">
+              Смотреть портфолио <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
+            </Link>
+          </div>
+          <div className="mt-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-xl text-sm leading-7 text-white/55">
+              Есть идея или задача? Обсудим материалы, размеры и подходящую отделку.
+            </p>
+            <Link href="/contacts" className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-[#E16A3A] transition-colors hover:text-white">
+              Связаться с нами <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
         </div>
       </section>
     </main>
