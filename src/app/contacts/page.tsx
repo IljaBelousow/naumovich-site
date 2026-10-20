@@ -113,17 +113,6 @@ export default function ContactsPage() {
             </div>
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-900">
-                Email
-              </p>
-              <a
-                href="mailto:info@naumovich.by"
-                className="mt-3 block text-lg font-normal text-gray-600 transition-colors hover:text-[#82745F]"
-              >
-                info@naumovich.by
-              </a>
-            </div>
-            <div>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-900">
                 Режим работы
               </p>
               <p className="mt-3 text-lg font-normal text-gray-600">
