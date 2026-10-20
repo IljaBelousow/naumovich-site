@@ -42,15 +42,13 @@ export default function Header() {
   // Одинаковое поведение шапки на всех страницах: прозрачная сверху,
   // затем светлая с лёгким размытием после прокрутки.
   const transparentHeader = !scrolled;
-  const textColor = transparentHeader && hasDarkHero ? "text-white" : "text-gray-900";
+  const textColor = transparentHeader ? "text-white" : "text-gray-900";
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         transparentHeader
-          ? hasDarkHero
-            ? "border-b border-white/10 bg-gradient-to-b from-black/45 to-transparent"
-            : "border-b border-transparent bg-transparent"
+          ? "border-b border-white/10 bg-gradient-to-b from-black/45 to-transparent"
           : "border-b border-[#B8B9B4]/80 bg-[#E9E8E3]/95 shadow-sm backdrop-blur-md"
       }`}
     >
