@@ -14,36 +14,42 @@ const companyValues = [
     title: "Изготовление под заказ",
     text: "Создаём фасады, мебель и детали с учётом размеров, назначения и особенностей вашего проекта.",
     mark: "01",
+    icon: "settings",
   },
   {
     number: "02",
     title: "Внимание к деталям",
     text: "Продумываем форму, фрезеровку, цвет и финишное покрытие, чтобы элементы сочетались с интерьером.",
     mark: "02",
+    icon: "sparkles",
   },
   {
     number: "03",
     title: "Выбор материалов и отделки",
     text: "Помогаем сориентироваться в вариантах фасадов, покрытий и внешнего вида будущего изделия.",
     mark: "03",
+    icon: "palette",
   },
   {
     number: "04",
     title: "Индивидуальный подход",
     text: "Отталкиваемся от вашей задачи, пожеланий и нужного результата, а не от шаблонного решения.",
     mark: "04",
+    icon: "user",
   },
   {
     number: "05",
     title: "Разные направления",
     text: "Работаем как с отдельными фасадами и мебельными деталями, так и с мебельными решениями.",
     mark: "05",
+    icon: "layers",
   },
   {
     number: "06",
     title: "Сопровождение проекта",
     text: "Обсуждаем детали заказа и помогаем определиться с подходящим решением до начала работ.",
     mark: "06",
+    icon: "message",
   },
 ];
 
@@ -71,7 +77,23 @@ const approach = [
   ["03", "Прорабатываем детали", "Согласуем важные характеристики будущего изделия и уделяем внимание отделке."],
 ];
 
-export default function AboutPage() {
+
+function AboutIcon({ name, className = "h-6 w-6" }: { name: string; className?: string }) {
+  const common = { fill: "none", stroke: "currentColor", strokeWidth: 1.6, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+  const paths: Record<string, React.ReactNode> = {
+    settings: <><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z" /><path d="m19.4 15 .1.1a1.7 1.7 0 0 1-2.4 2.4l-.1-.1a1.7 1.7 0 0 0-2.9 1.2v.2a1.7 1.7 0 0 1-3.4 0v-.2a1.7 1.7 0 0 0-2.9-1.2l-.1.1a1.7 1.7 0 0 1-2.4-2.4l.1-.1a1.7 1.7 0 0 0-1.2-2.9H4a1.7 1.7 0 0 1 0-3.4h.2a1.7 1.7 0 0 0 1.2-2.9l-.1-.1a1.7 1.7 0 0 1 2.4-2.4l.1.1a1.7 1.7 0 0 0 2.9-1.2V4a1.7 1.7 0 0 1 3.4 0v.2a1.7 1.7 0 0 0 2.9 1.2l.1-.1a1.7 1.7 0 0 1 2.4 2.4l-.1.1a1.7 1.7 0 0 0 1.2 2.9h.2a1.7 1.7 0 0 1 0 3.4h-.2a1.7 1.7 0 0 0-1.2.9Z" /></>,
+    sparkles: <><path d="m12 3 1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6L12 3Z" /><path d="m19 16 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z" /></>,
+    palette: <><path d="M12 3a9 9 0 1 0 0 18h1.2a2 2 0 0 0 1.5-3.3 1.8 1.8 0 0 1 1.4-3h1.4A4.5 4.5 0 0 0 22 10.2C22 6.2 17.5 3 12 3Z" /><path d="M7.5 10h.01M10 6.8h.01M15 7.5h.01M17.5 10h.01" /></>,
+    user: <><circle cx="12" cy="8" r="3.5" /><path d="M5 21a7 7 0 0 1 14 0" /></>,
+    layers: <><path d="m12 3 9 5-9 5-9-5 9-5Z" /><path d="m3 12 9 5 9-5M3 16l9 5 9-5" /></>,
+    message: <><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l1.5-3A7.5 7.5 0 1 1 20 11.5Z" /><path d="M8 11h8M8 14h5" /></>,
+    factory: <><path d="M3 21V9l6 3V8l6 4V5h4v16H3Z" /><path d="M7 17h2M13 17h2M17 9h2" /></>,
+    sofa: <><path d="M5 12V9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3" /><path d="M4 12a2 2 0 0 0-2 2v4h20v-4a2 2 0 0 0-2-2H4ZM5 18v3M19 18v3" /></>,
+    ruler: <><path d="m4 16 12-12 4 4L8 20l-4-4Z" /><path d="m13 7 2 2M10 10l2 2M7 13l2 2" /></>,
+  };
+  return <svg aria-hidden="true" viewBox="0 0 24 24" className={className} {...common}>{paths[name] ?? paths.sparkles}</svg>;
+}
+\nexport default function AboutPage() {
   const featuredWorks = facades.filter((item) => item.category === "work_facades").slice(0, 3);
 
   return (
@@ -117,9 +139,9 @@ export default function AboutPage() {
               Внимание к задаче, продуманные детали и решения, которые подстраиваются под ваш проект.
             </p>
           </div>
-          <div className="grid border-l border-t border-[#B8B9B4] sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {companyValues.map((item) => (
-              <article key={item.number} className="group min-h-[220px] border-b border-r border-[#B8B9B4] p-6 transition-colors duration-300 hover:bg-[#E9E8E3] sm:p-8 lg:min-h-[245px]">
+              <article key={item.number} className="group min-h-[220px] rounded-sm bg-[#E9E8E3]/65 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-[#E9E8E3] sm:p-8 lg:min-h-[245px]">
                 <div className="flex items-start justify-between gap-4">
                   <span className="flex h-11 w-11 items-center justify-center border border-[#C65D32]/50 text-xs font-semibold tracking-widest text-[#C65D32] transition-colors duration-300 group-hover:bg-[#C65D32] group-hover:text-white">
                     {item.mark}
@@ -131,15 +153,15 @@ export default function AboutPage() {
               </article>
             ))}
           </div>
-          <div className="mt-8 border-l-2 border-[#C65D32] bg-[#E9E8E3]/70 px-6 py-5 text-base leading-7 text-[#424640] sm:px-8 sm:py-6 sm:text-lg">
-            Наша задача — помочь воплотить вашу идею в изделии, где продуманы внешний вид, материалы и детали.
+          <div className="mt-8 flex items-start gap-4 rounded-sm bg-[#E9E8E3]/70 px-6 py-5 text-base leading-7 text-[#424640] sm:px-8 sm:py-6 sm:text-lg">
+            <AboutIcon name="sparkles" className="mt-1 h-6 w-6 shrink-0 text-[#C65D32]" />\n            <span>Наша задача — помочь воплотить вашу идею в изделии, где продуманы внешний вид, материалы и детали.</span>
           </div>
         </div>
       </section>
 
       <section className="bg-[#E9E8E3] py-14 sm:py-20">
         <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-12 lg:px-20">
-          <div className="mb-8 flex flex-col gap-4 border-b border-[#B8B9B4] pb-8 sm:flex-row sm:items-end sm:justify-between">
+          <div className="mb-8 flex flex-col gap-4 pb-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#C65D32]">Наши направления</p>
               <h2 className="max-w-2xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Что изготавливаем</h2>
@@ -150,8 +172,8 @@ export default function AboutPage() {
           </div>
           <div className="grid gap-6 md:grid-cols-3 md:gap-8">
             {directions.map((item) => (
-              <article key={item.number} className="border-t border-[#B8B9B4] pt-5">
-                <span className="text-xs font-medium tracking-[0.2em] text-[#C65D32]">{item.number}</span>
+              <article key={item.number} className="rounded-sm bg-white/45 p-6 transition-colors duration-300 hover:bg-white/75">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#C65D32]/10 text-[#C65D32]"><AboutIcon name={item.number === "01" ? "layers" : item.number === "02" ? "sofa" : "ruler"} /></span>
                 <h3 className="mt-5 text-xl font-medium sm:text-2xl">{item.title}</h3>
                 <p className="mt-4 max-w-md text-base leading-7 text-[#656963]">{item.text}</p>
               </article>
@@ -174,10 +196,10 @@ export default function AboutPage() {
               Обсудить свой проект <span aria-hidden="true" className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
             </Link>
           </div>
-          <div className="border-t border-white/20">
+          <div className="grid gap-4 sm:gap-5">
             {approach.map(([number, title, text]) => (
-              <article key={number} className="grid gap-3 border-b border-white/20 py-6 sm:grid-cols-[64px_1fr] sm:gap-6 sm:py-8">
-                <span className="text-xs font-medium tracking-[0.2em] text-[#E16A3A]">{number}</span>
+              <article key={number} className="grid gap-3 rounded-sm bg-white/[0.045] p-5 transition-colors duration-300 hover:bg-white/[0.08] sm:grid-cols-[52px_1fr] sm:gap-6 sm:p-7">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#E16A3A]/15 text-[#E16A3A]"><AboutIcon name={number === "01" ? "message" : number === "02" ? "palette" : "sparkles"} /></span>
                 <div>
                   <h3 className="text-xl font-medium">{title}</h3>
                   <p className="mt-3 max-w-2xl text-base leading-7 text-white/65">{text}</p>
@@ -190,7 +212,7 @@ export default function AboutPage() {
 
       <section className="bg-[#E9E8E3] py-14 text-[#202322] sm:py-20">
         <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-12 lg:px-20">
-          <div className="mb-7 flex flex-col gap-4 border-b border-[#B8B9B4] pb-7 sm:flex-row sm:items-end sm:justify-between">
+          <div className="mb-7 flex flex-col gap-4 pb-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#C65D32]">Наши работы</p>
               <h2 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">Готовые проекты</h2>
@@ -224,7 +246,7 @@ export default function AboutPage() {
               </Link>
             ))}
           </div>
-          <div className="mt-7 flex flex-col gap-4 border-t border-[#B8B9B4] pt-7 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-7 flex flex-col gap-4 rounded-sm bg-white/45 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
             <p className="max-w-xl text-sm leading-7 text-[#656963]">
               Есть идея или задача? Обсудим материалы, размеры и подходящую отделку.
             </p>
