@@ -32,13 +32,19 @@ export default function CatalogClient({
     <main className="w-full bg-white pt-24 min-h-screen">
       {/* Уменьшили отступы */}
       <div className="w-full px-5 py-8 sm:px-8 lg:px-12 xl:px-16">
-        
-        <button 
-          onClick={handleBack}
-          className="text-xs uppercase tracking-[0.25em] text-gray-400 hover:text-gray-900 mb-8 inline-block cursor-pointer"
-        >
-          ← Назад в каталог
-        </button>
+        <nav aria-label="Хлебные крошки" className="mb-8 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs uppercase tracking-[0.16em] text-gray-500">
+          <Link href="/" className="transition-colors hover:text-gray-900">Главная</Link>
+          <span aria-hidden="true">/</span>
+          <Link href="/catalog" className="transition-colors hover:text-gray-900">Каталог</Link>
+          {item.category === "milled" && (
+            <>
+              <span aria-hidden="true">/</span>
+              <Link href="/catalog/milled" className="transition-colors hover:text-gray-900">Фрезерованные фасады</Link>
+            </>
+          )}
+          <span aria-hidden="true">/</span>
+          <span aria-current="page" className="text-gray-900">{item.name}</span>
+        </nav>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="space-y-4">
