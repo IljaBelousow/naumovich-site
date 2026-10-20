@@ -39,21 +39,21 @@ export default function Breadcrumbs() {
   }));
 
   return (
-    <div className="w-full bg-[#F1EEE7] px-5 pt-20 sm:px-8 lg:px-12 xl:px-16">
+    <div className="pointer-events-none absolute inset-x-0 top-[5.5rem] z-40 px-5 sm:px-8 lg:px-12 xl:px-16">
       <nav
         aria-label="Хлебные крошки"
-        className="flex flex-wrap items-center gap-2 py-4 text-sm font-normal text-[#82745F]"
+        className="pointer-events-auto inline-flex flex-wrap items-center gap-2 rounded-sm bg-black/25 px-3 py-2 text-sm font-medium text-white shadow-sm backdrop-blur-[2px] sm:px-4"
       >
-        <Link href="/" className="transition-colors hover:text-[#82745F]">
+        <Link href="/" className="text-white/80 transition-colors hover:text-white">
           Главная
         </Link>
         {crumbs.map((crumb, i) => (
           <span key={crumb.href} className="flex items-center gap-2">
-            <span className="text-[#BEB5A6]">/</span>
+            <span className="text-white/60">/</span>
             {i === crumbs.length - 1 ? (
-              <span className="text-gray-900">{crumb.name}</span>
+              <span className="text-white">{crumb.name}</span>
             ) : (
-              <Link href={crumb.href} className="transition-colors hover:text-[#82745F]">
+              <Link href={crumb.href} className="text-white/80 transition-colors hover:text-white">
                 {crumb.name}
               </Link>
             )}
