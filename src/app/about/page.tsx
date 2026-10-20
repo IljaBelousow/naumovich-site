@@ -167,7 +167,7 @@ export default function AboutPage() {
                 Связаться с нами <span aria-hidden="true">↗</span>
               </Link>
             </div>
-          </div>          </div>
+          </div>
         </div>
       </section>
     </main>
