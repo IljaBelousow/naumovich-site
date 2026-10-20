@@ -14,11 +14,17 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <main className="w-full bg-[#F1EEE7] pt-20 min-h-screen">
-      <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-16">
-        <h1 className="text-4xl font-light tracking-tight text-gray-900 mb-12">
-          Наши работы
-        </h1>
+    <main className="w-full bg-[#F1EEE7] min-h-screen">
+      <section className="relative isolate flex min-h-[420px] items-end overflow-hidden bg-[#202322] text-white sm:min-h-[500px]">
+        <Image src="/images/hero/hero-main.jpg" alt="Примеры мебели и фасадов из МДФ" fill priority sizes="100vw" className="object-cover object-center opacity-45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#141716]/85 via-[#141716]/45 to-[#141716]/20" />
+        <div className="relative mx-auto w-full max-w-[1500px] px-6 pb-12 pt-32 sm:px-12 sm:pb-16 lg:px-20">
+          <p className="mb-5 text-xs font-medium uppercase tracking-[0.32em] text-[#E16A3A]">ИП Наумович · Наш опыт</p>
+          <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl">Наши работы</h1>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">Фасады и мебель, созданные с вниманием к форме, материалам и отделке.</p>
+        </div>
+      </section>
+      <div className="w-full px-5 py-12 sm:px-8 sm:py-16 lg:px-12 xl:px-16">
 
         <div className="border-t border-[#D8D0C3]">
           {sections.map((section) => {
