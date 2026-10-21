@@ -21,13 +21,6 @@ export default function PortfolioFacadesPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#141716]/80 via-[#141716]/40 to-[#141716]/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#141716]/65 via-transparent to-transparent" />
         <div className="relative mx-auto w-full max-w-[1500px] px-6 pb-8 pt-24 sm:px-12 sm:pb-10 lg:px-20">
-          <nav aria-label="Хлебные крошки" className="mb-7 flex flex-wrap items-center gap-2 text-xs text-white/70">
-            <Link href="/" className="transition-colors hover:text-white">Главная</Link>
-            <span aria-hidden="true">/</span>
-            <Link href="/portfolio" className="transition-colors hover:text-white">Портфолио</Link>
-            <span aria-hidden="true">/</span>
-            <span aria-current="page" className="text-white">Фасады</span>
-          </nav>
           <p className="about-intro mb-6 flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.32em] text-[#E16A3A]">
             <span className="h-px w-9 bg-[#E16A3A]" /> Портфолио · ИП Наумович
           </p>
