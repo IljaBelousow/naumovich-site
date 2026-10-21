@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ImageGallery from "@/components/ImageGallery";
 import { useRouter } from "next/navigation";
 import type { Facade } from "@/data/facades";
 
@@ -13,7 +14,6 @@ export default function CatalogClient({
   item: Facade; 
   allFacades: Facade[];
 }) {
-  const [activeImage, setActiveImage] = useState(item.image);
   const [showEdgeProfile, setShowEdgeProfile] = useState(false);
   const router = useRouter();
   
@@ -33,62 +33,43 @@ export default function CatalogClient({
     <main className="w-full bg-white pt-24 min-h-screen">
       {/* Уменьшили отступы */}
       <div className="w-full px-5 py-8 sm:px-8 lg:px-12 xl:px-16">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
+        <Link href="/catalog" className="inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 mb-8">← Назад в каталог</Link>
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="space-y-4">
-            <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
-              <Image src={activeImage} alt={item.name} fill className="object-cover" priority />
-            </div>
-            
-            {item.gallery && item.gallery.length > 1 && (
-              <div className="flex gap-2 overflow-x-auto pb-2">
-                {item.gallery.map((img, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActiveImage(img)}
-                    className={`relative h-20 w-16 shrink-0 overflow-hidden border-2 cursor-pointer ${
-                      activeImage === img ? "border-gray-900" : "border-transparent opacity-60"
-                    }`}
-                  >
-                    <Image src={img} alt="" fill className="object-cover" />
-                  </button>
-                ))}
-              </div>
-            )}
+            <ImageGallery images={item.gallery?.length ? item.gallery : [item.image]} title={item.name} />
 
-            {item.slug === "f1" && (
-              <div className="pt-1">
-                <button
-                  type="button"
-                  onClick={() => setShowEdgeProfile((shown) => !shown)}
-                  aria-expanded={showEdgeProfile}
-                  className="group flex w-full items-center justify-between bg-gray-900 px-5 py-4 text-left text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+            <div className="pt-1">
+              <button
+                type="button"
+                onClick={() => setShowEdgeProfile((shown) => !shown)}
+                aria-expanded={showEdgeProfile}
+                className="group flex w-full items-center justify-between bg-gray-900 px-5 py-4 text-left text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+              >
+                <span>{showEdgeProfile ? "Скрыть профиль края" : "Просмотреть профиль края"}</span>
+                <span
+                  aria-hidden="true"
+                  className={`text-2xl font-light leading-none transition-transform duration-200 group-hover:translate-y-0.5 ${showEdgeProfile ? "rotate-180" : ""}`}
                 >
-                  <span>{showEdgeProfile ? "Скрыть профиль края" : "Просмотреть профиль края"}</span>
-                  <span
-                    aria-hidden="true"
-                    className={`text-2xl font-light leading-none transition-transform duration-200 group-hover:translate-y-0.5 ${showEdgeProfile ? "rotate-180" : ""}`}
-                  >
-                    ⌄
-                  </span>
-                </button>
+                  ⌄
+                </span>
+              </button>
 
-                {showEdgeProfile && (
-                  <div className="mt-4 border border-gray-200 bg-gray-50 p-3 sm:p-5">
-                    <Image
-                      src="/images/profil_kraya.jpg"
-                      alt="Варианты профиля края фасада"
-                      width={1200}
-                      height={900}
-                      sizes="(max-width: 768px) 100vw, 768px"
-                      className="h-auto w-full object-contain"
-                    />
-                  </div>
-                )}
-              </div>
-            )}
+              {showEdgeProfile && (
+                <div className="mt-4 border border-gray-200 bg-gray-50 p-3 sm:p-5">
+                  <Image
+                    src="/images/profil_kraya.jpg"
+                    alt="Варианты профиля края фасада"
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    className="h-auto w-full object-contain"
+                  />
+                </div>
+              )}
+            </div>
           </div>
 
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-start self-start">
             <p className="text-xs font-medium uppercase tracking-[0.35em] text-gray-500">
               {item.category === "milled" ? "Фрезерованный фасад" : "Деталь"}
             </p>
@@ -116,14 +97,14 @@ export default function CatalogClient({
           </div>
         </div>
 
-        {similar.length > 0 && (
-          <div className="mt-24 border-t border-gray-100 pt-14">
-             <div className="flex items-center justify-between mb-8">
-                <h2 className="text-2xl font-extralight tracking-tight text-gray-900 sm:text-3xl">Похожее в каталоге</h2>
-                <button onClick={handleBack} className="inline-flex items-center bg-gray-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2">
-                   Весь каталог →
-                </button>
-             </div>
+        <div className="mt-24 border-t border-gray-100 pt-14">
+          <div className="flex items-center justify-between mb-8 gap-4">
+            <h2 className="text-2xl font-extralight tracking-tight text-gray-900 sm:text-3xl">Похожее в каталоге</h2>
+            <Link href="/catalog" className="inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 shrink-0">
+              Весь каталог →
+            </Link>
+          </div>
+          {similar.length > 0 && (
             <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
               {similar.map((f) => (
                 <Link key={f.slug} href={`/catalog/${f.slug}`} className="group block cursor-pointer">
@@ -134,8 +115,8 @@ export default function CatalogClient({
                 </Link>
               ))}
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </main>
   );
