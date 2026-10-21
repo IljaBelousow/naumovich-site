@@ -72,7 +72,7 @@ export default function Home() {
             </div>
             <Link 
               href="/catalog" 
-              className="hidden sm:inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+              className="hidden sm:inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-medium uppercase tracking-[0.25em] text-white transition-all duration-300 hover:bg-gray-800 active:scale-[0.98] shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
             >
               Весь каталог →
             </Link>
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
           
           <div className="mt-12 text-center sm:hidden">
-             <Link href="/catalog" className="inline-flex items-center justify-center bg-gray-900 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2">
+             <Link href="/catalog" className="inline-flex items-center justify-center bg-gray-900 px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-white transition-all duration-300 hover:bg-gray-800 active:scale-[0.98] shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2">
                Смотреть все
              </Link>
           </div>
