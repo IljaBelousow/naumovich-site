@@ -72,7 +72,7 @@ export default function Home() {
             </div>
             <Link 
               href="/catalog" 
-              className="hidden sm:inline-block text-xs font-medium uppercase tracking-[0.2em] text-gray-400 hover:text-gray-900 transition-colors border-b border-transparent hover:border-gray-900 pb-1"
+              className="hidden sm:inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
             >
               Весь каталог →
             </Link>
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
           
           <div className="mt-12 text-center sm:hidden">
-             <Link href="/catalog" className="inline-block border border-gray-900 px-8 py-3 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 active:bg-gray-900 active:text-white transition-colors">
+             <Link href="/catalog" className="inline-flex items-center justify-center bg-gray-900 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2">
                Смотреть все
              </Link>
           </div>
