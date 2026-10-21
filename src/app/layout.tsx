@@ -24,11 +24,6 @@ export const metadata: Metadata = {
   title: "Изготовление мебели и крашеных фасадов из МДФ | Наумович",
   description:
     "Изготовление мебели на заказ и крашеных фасадов из МДФ. Индивидуальные размеры, цвета и фрезеровка в Минске.",
-  icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
-  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
