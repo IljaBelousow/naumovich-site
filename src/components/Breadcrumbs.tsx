@@ -41,10 +41,10 @@ export default function Breadcrumbs() {
     ? facades.find((f) => f.slug === segments[1] && f.category.startsWith("work_"))
     : undefined;
 
-  const isProductPage = Boolean(product);
-  const textColor = isProductPage ? "text-[#202322]" : "text-white";
-  const mutedColor = isProductPage ? "text-[#202322]/55" : "text-white/60";
-  const linkColor = isProductPage ? "text-[#202322]/75 hover:text-[#202322]" : "text-white/80 hover:text-white";
+  const isLightPage = Boolean(product || portfolioItem);
+  const textColor = isLightPage ? "text-[#202322]" : "text-white";
+  const mutedColor = isLightPage ? "text-[#202322]/55" : "text-white/60";
+  const linkColor = isLightPage ? "text-[#202322]/75 hover:text-[#202322]" : "text-white/80 hover:text-white";
 
   const crumbs = product?.category === "milled"
     ? [
