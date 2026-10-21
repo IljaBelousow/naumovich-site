@@ -21,7 +21,7 @@ const categories = [
   },
   {
     title: "Мебель под заказ",
-    href: "/portfolio",
+    href: "/portfolio/furniture",
     image: "/images/catalog2/photo1/5195250767357484499.jpg",
     imageAlt: "Мебельный проект на заказ",
   },
@@ -66,7 +66,7 @@ export default function CatalogPage() {
                 src={category.image}
                 alt={category.imageAlt}
                 fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                sizes="100vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#141716]/90 via-[#141716]/25 to-transparent transition-colors duration-300 group-hover:from-[#141716]/95" />
