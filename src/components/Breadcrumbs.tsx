@@ -38,7 +38,7 @@ export default function Breadcrumbs() {
     ? facades.find((f) => f.slug === segments[1])
     : undefined;
   const portfolioItem = segments.length === 2 && segments[0] === "portfolio"
-    ? facades.find((f) => f.slug === segments[1] && f.category.startsWith("work_"))
+    ? facades.find((f) => f.slug === segments[1] && (f.category === "work_facades" || f.category === "work_furniture"))
     : undefined;
 
   // На странице отдельной работы портфолио крошки отображаются внутри PortfolioClient.
