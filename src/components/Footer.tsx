@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.15fr_0.9fr_1.15fr_0.9fr] lg:gap-12">
           <div>
             <Link href="/" className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center overflow-hidden" aria-hidden="true"><img src="/icon.svg" alt="" className="h-full w-full object-contain" /></span>
+              <span className="flex h-10 w-10 items-center justify-center overflow-hidden" aria-hidden="true"><img src="/logo-ipn.png" alt="" className="h-full w-full object-contain" /></span>
               <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#E9E8E3]">Наумович</span>
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-7 text-[#C5C6C1]">
