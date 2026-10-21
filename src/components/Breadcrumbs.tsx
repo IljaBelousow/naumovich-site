@@ -41,6 +41,10 @@ export default function Breadcrumbs() {
     ? facades.find((f) => f.slug === segments[1] && f.category.startsWith("work_"))
     : undefined;
 
+  // На странице отдельной работы портфолио крошки отображаются внутри PortfolioClient.
+  // Не показываем глобальный вариант второй раз.
+  if (portfolioItem) return null;
+
   const isLightPage = Boolean(product || portfolioItem);
   const textColor = isLightPage ? "text-[#202322]" : "text-white";
   const mutedColor = isLightPage ? "text-[#202322]/55" : "text-white/60";
