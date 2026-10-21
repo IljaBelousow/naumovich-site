@@ -36,6 +36,17 @@ export default function PortfolioClient({
     <main className="w-full bg-white pt-24 min-h-screen">
       {/* Уменьшили py-16 до py-8, чтобы поднять контент */}
       <div className="w-full px-5 py-8 sm:px-8 lg:px-12 xl:px-16">
+        <nav aria-label="Хлебные крошки" className="mb-7 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-[#82745F]">
+          <Link href="/" className="transition-colors hover:text-[#292821]">Главная</Link>
+          <span aria-hidden="true" className="text-[#B5AA98]">/</span>
+          <Link href="/portfolio" className="transition-colors hover:text-[#292821]">Портфолио</Link>
+          <span aria-hidden="true" className="text-[#B5AA98]">/</span>
+          <Link href={categoryHref} className="transition-colors hover:text-[#292821]">
+            {item.category === "work_facades" ? "Фасады" : "Мебель"}
+          </Link>
+          <span aria-hidden="true" className="text-[#B5AA98]">/</span>
+          <span aria-current="page" className="font-medium text-[#292821]">{item.name}</span>
+        </nav>
         
         <button 
           onClick={handleBack}
