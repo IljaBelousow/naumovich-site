@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ImageGallery from "@/components/ImageGallery";
 import { useRouter } from "next/navigation";
 import type { Facade } from "@/data/facades";
 
@@ -13,7 +13,6 @@ export default function PortfolioClient({
   item: Facade; 
   allFacades: Facade[];
 }) {
-  const [activeImage, setActiveImage] = useState(item.image);
   const router = useRouter();
   
   const similar = allFacades
@@ -40,46 +39,20 @@ export default function PortfolioClient({
         
         <button 
           onClick={handleBack}
-          className="inline-flex items-center text-xs uppercase tracking-[0.25em] text-gray-400 hover:text-gray-900 transition-colors mb-8 cursor-pointer"
+          className="inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 mb-8"
         >
           <span className="mr-2">←</span> Назад к работам
         </button>
 
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
           
           {/* Фото */}
           <div className="space-y-4">
-            <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100 border border-gray-100">
-              <Image
-                src={activeImage}
-                alt={item.name}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-
-            {item.gallery && item.gallery.length > 1 && (
-              <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-                {item.gallery.map((img, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveImage(img)}
-                    className={`relative h-24 w-20 shrink-0 overflow-hidden border-2 transition-all duration-200 cursor-pointer ${
-                      activeImage === img 
-                        ? "border-gray-900 opacity-100" 
-                        : "border-transparent opacity-60 hover:opacity-100"
-                    }`}
-                  >
-                    <Image src={img} alt={`${item.name} view ${index + 1}`} fill className="object-cover" />
-                  </button>
-                ))}
-              </div>
-            )}
+            <ImageGallery images={item.gallery?.length ? item.gallery : [item.image]} title={item.name} />
           </div>
 
           {/* Описание */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-start self-start">
             <p className="text-xs font-medium uppercase tracking-[0.35em] text-gray-500">
               Наши работы
             </p>
@@ -109,7 +82,7 @@ export default function PortfolioClient({
             <div className="mt-12">
               <Link
                 href="/contacts"
-                className="inline-block w-full sm:w-auto text-center border border-gray-900 px-10 py-4 text-xs font-medium uppercase tracking-[0.25em] text-gray-900 transition-colors duration-300 hover:bg-gray-900 hover:text-white cursor-pointer"
+                className="inline-flex items-center justify-center bg-gray-900 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 w-full sm:w-auto"
               >
                 Заказать такой же
               </Link>
@@ -118,14 +91,14 @@ export default function PortfolioClient({
         </div>
 
         {/* Похожие */}
-        {similar.length > 0 && (
-          <div className="mt-24 border-t border-gray-100 pt-16">
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-2xl font-extralight tracking-tight text-gray-900">Другие работы</h2>
-              <button onClick={handleBack} className="text-xs uppercase tracking-[0.2em] text-gray-400 hover:text-gray-900 transition-colors cursor-pointer">
-                Все работы →
-              </button>
-            </div>
+        <div className="mt-24 border-t border-gray-100 pt-16">
+          <div className="flex items-center justify-between mb-8 gap-4">
+            <h2 className="text-2xl font-extralight tracking-tight text-gray-900">Другие работы</h2>
+            <Link href="/portfolio" className="inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 shrink-0">
+              Все работы →
+            </Link>
+          </div>
+          {similar.length > 0 && (
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {similar.map((work) => (
                 <Link key={work.slug} href={`/portfolio/${work.slug}`} className="group block cursor-pointer">
@@ -136,8 +109,8 @@ export default function PortfolioClient({
                 </Link>
               ))}
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </main>
   );
