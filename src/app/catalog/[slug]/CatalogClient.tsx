@@ -33,7 +33,7 @@ export default function CatalogClient({
     <main className="w-full bg-white pt-24 min-h-screen">
       {/* Уменьшили отступы */}
       <div className="w-full px-5 py-8 sm:px-8 lg:px-12 xl:px-16">
-        <Link href="/catalog" className="site-button mb-8">← Назад в каталог</Link>
+        <Link href={item.category === "milled" ? "/catalog/milled" : "/catalog"} className="site-button mb-8">← Назад в каталог</Link>
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="space-y-4">
             <ImageGallery images={item.gallery?.length ? item.gallery : [item.image]} title={item.name} />
