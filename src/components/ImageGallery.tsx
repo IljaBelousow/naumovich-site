@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import type { TouchEvent } from "react";
 import Image from "next/image";
 
 export default function ImageGallery({
@@ -22,7 +23,7 @@ export default function ImageGallery({
     setActiveIndex((index) => (index + 1) % images.length);
   };
 
-  const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchEnd = (event: TouchEvent<HTMLDivElement>) => {
     if (touchStartX.current === null || images.length < 2) return;
     const distance = event.changedTouches[0].clientX - touchStartX.current;
     if (Math.abs(distance) > 45) {
