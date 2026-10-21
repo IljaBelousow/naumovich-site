@@ -45,7 +45,7 @@ export default function Breadcrumbs() {
   // Не показываем глобальный вариант второй раз.
   if (portfolioItem) return null;
 
-  const isLightPage = Boolean(product || portfolioItem);
+  const isLightPage = Boolean(product);
   const textColor = isLightPage ? "text-[#202322]" : "text-white";
   const mutedColor = isLightPage ? "text-[#202322]/55" : "text-white/60";
   const linkColor = isLightPage ? "text-[#202322]/75 hover:text-[#202322]" : "text-white/80 hover:text-white";
@@ -56,19 +56,10 @@ export default function Breadcrumbs() {
         { name: "Фрезерованные фасады", href: "/catalog/milled" },
         { name: product.name, href: pathname },
       ]
-    : portfolioItem
-      ? [
-          { name: "Портфолио", href: "/portfolio" },
-          {
-            name: portfolioItem.category === "work_furniture" ? "Мебель" : "Фасады",
-            href: portfolioItem.category === "work_furniture" ? "/portfolio/furniture" : "/portfolio/facades",
-          },
-          { name: portfolioItem.name, href: pathname },
-        ]
-      : segments.map((segment, i) => ({
-          name: segmentName(segment, segments[i - 1]),
-          href: "/" + segments.slice(0, i + 1).join("/"),
-        }));
+    : segments.map((segment, i) => ({
+        name: segmentName(segment, segments[i - 1]),
+        href: "/" + segments.slice(0, i + 1).join("/"),
+      }));
 
   return (
     <div className="pointer-events-none absolute inset-x-0 top-[5.5rem] z-40 px-5 sm:px-8 lg:px-12 xl:px-16">
