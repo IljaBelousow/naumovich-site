@@ -84,7 +84,7 @@ export default function PortfolioClient({
                 href="/contacts"
                 className="inline-flex items-center justify-center bg-gray-900 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 w-full sm:w-auto"
               >
-                Заказать такой же
+                Запросить расчёт
               </Link>
             </div>
           </div>
