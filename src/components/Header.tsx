@@ -69,7 +69,7 @@ export default function Header() {
                 onClick={(event) => {
                   const currentPath = pathname.replace(/\/$/, "") || "/";
                   const targetPath = item.href.replace(/\/$/, "") || "/";
-                  const isCurrentPage = currentPath === targetPath || currentPath.startsWith(`${targetPath}/`);
+                  const isCurrentPage = currentPath === targetPath;
                   if (isCurrentPage) {
                     event.preventDefault();
                     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
