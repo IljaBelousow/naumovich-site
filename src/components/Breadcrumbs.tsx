@@ -8,6 +8,7 @@ const names: Record<string, string> = {
   catalog: "Каталог",
   frezerovki: "Фрезеровки",
   portfolio: "Портфолио",
+  facades: "Фасады",
   production: "Как мы работаем",
   about: "О компании",
   contacts: "Контакты",
@@ -36,6 +37,9 @@ export default function Breadcrumbs() {
   const product = segments.length === 2 && segments[0] === "catalog"
     ? facades.find((f) => f.slug === segments[1])
     : undefined;
+  const portfolioItem = segments.length === 2 && segments[0] === "portfolio"
+    ? facades.find((f) => f.slug === segments[1] && f.category.startsWith("work_"))
+    : undefined;
 
   const isProductPage = Boolean(product);
   const textColor = isProductPage ? "text-[#202322]" : "text-white";
@@ -48,10 +52,19 @@ export default function Breadcrumbs() {
         { name: "Фрезерованные фасады", href: "/catalog/milled" },
         { name: product.name, href: pathname },
       ]
-    : segments.map((segment, i) => ({
-        name: segmentName(segment, segments[i - 1]),
-        href: "/" + segments.slice(0, i + 1).join("/"),
-      }));
+    : portfolioItem
+      ? [
+          { name: "Портфолио", href: "/portfolio" },
+          {
+            name: portfolioItem.category === "work_furniture" ? "Мебель" : "Фасады",
+            href: portfolioItem.category === "work_furniture" ? "/portfolio/furniture" : "/portfolio/facades",
+          },
+          { name: portfolioItem.name, href: pathname },
+        ]
+      : segments.map((segment, i) => ({
+          name: segmentName(segment, segments[i - 1]),
+          href: "/" + segments.slice(0, i + 1).join("/"),
+        }));
 
   return (
     <div className="pointer-events-none absolute inset-x-0 top-[5.5rem] z-40 px-5 sm:px-8 lg:px-12 xl:px-16">
