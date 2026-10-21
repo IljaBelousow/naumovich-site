@@ -39,7 +39,7 @@ export default function PortfolioClient({
         
         <button 
           onClick={handleBack}
-          className="inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 mb-8"
+          className="inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-medium uppercase tracking-[0.25em] text-white transition-all duration-300 hover:bg-gray-800 active:scale-[0.98] shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 mb-8"
         >
           <span className="mr-2">←</span> Назад к работам
         </button>
@@ -82,7 +82,7 @@ export default function PortfolioClient({
             <div className="mt-12">
               <Link
                 href="/contacts"
-                className="inline-flex items-center justify-center bg-gray-900 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 w-full sm:w-auto"
+                className="inline-flex items-center justify-center bg-gray-900 px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-white transition-all duration-300 hover:bg-gray-800 active:scale-[0.98] shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 w-full sm:w-auto"
               >
                 Запросить расчёт
               </Link>
@@ -94,7 +94,7 @@ export default function PortfolioClient({
         <div className="mt-24 border-t border-gray-100 pt-16">
           <div className="flex items-center justify-between mb-8 gap-4">
             <h2 className="text-2xl font-extralight tracking-tight text-gray-900">Другие работы</h2>
-            <Link href="/portfolio" className="inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 shrink-0">
+            <Link href="/portfolio" className="inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-medium uppercase tracking-[0.25em] text-white transition-all duration-300 hover:bg-gray-800 active:scale-[0.98] shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 shrink-0">
               Все работы →
             </Link>
           </div>
