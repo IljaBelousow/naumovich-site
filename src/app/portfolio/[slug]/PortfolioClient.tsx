@@ -83,7 +83,7 @@ export default function PortfolioClient({
                 href="/contacts"
                 className="site-button w-full sm:w-auto"
               >
-                Запросить расчёт
+                Связаться с нами
               </Link>
             </div>
           </div>
