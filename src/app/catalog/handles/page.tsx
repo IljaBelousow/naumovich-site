@@ -19,7 +19,7 @@ export default function HandlesPage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-65"
+          className="object-cover object-center opacity-90"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#141716]/80 via-[#141716]/40 to-[#141716]/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#141716]/65 via-transparent to-transparent" />
