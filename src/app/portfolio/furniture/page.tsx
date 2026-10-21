@@ -37,9 +37,9 @@ export default function PortfolioFurniturePage() {
       </section>
 
       <div className="mx-auto w-full max-w-[1600px] px-5 py-10 sm:px-8 sm:py-14 lg:px-12 xl:px-16">
-        <div className="mb-8">
-          <Link href="/catalog" className="site-button">Весь каталог →</Link>
-        </div>
+        <Link href="/catalog" className="mb-8 inline-block text-xs uppercase tracking-[0.25em] text-gray-500 hover:text-gray-900">
+          ← Весь каталог
+        </Link>
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
           {items.length === 0 ? <p className="text-gray-500">В этом разделе пока нет работ.</p> : items.map((item) => (
             <Link key={item.slug} href={`/portfolio/${item.slug}`} className="group block">
