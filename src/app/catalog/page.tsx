@@ -21,7 +21,7 @@ const categories = [
   },
   {
     title: "Мебель под заказ",
-    href: "/portfolio/furniture",
+    href: "/catalog/furniture",
     image: "/images/catalog2/photo1/5195250767357484499.jpg",
     imageAlt: "Мебельный проект на заказ",
   },
