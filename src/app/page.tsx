@@ -96,7 +96,7 @@ export default function Home() {
             </div>
             <Link 
               href="/catalog" 
-              className="hidden sm:inline-block text-xs font-medium uppercase tracking-[0.2em] text-[#C65D32] hover:text-[#C65D32] transition-colors border-b border-transparent hover:border-[#C65D32] pb-1"
+              className="site-button hidden sm:inline-flex"
             >
               Весь каталог →
             </Link>
