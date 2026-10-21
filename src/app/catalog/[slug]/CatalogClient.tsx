@@ -36,7 +36,7 @@ export default function CatalogClient({
         
         <button 
           onClick={handleBack}
-          className="inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 mb-8"
+          className="inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-medium uppercase tracking-[0.25em] text-white transition-all duration-300 hover:bg-gray-800 active:scale-[0.98] shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 mb-8"
         >
           ← Назад в каталог
         </button>
@@ -50,7 +50,7 @@ export default function CatalogClient({
                 type="button"
                 onClick={() => setShowEdgeProfile((shown) => !shown)}
                 aria-expanded={showEdgeProfile}
-                className="group flex w-full items-center justify-between bg-gray-900 px-5 py-4 text-left text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
+                className="group flex w-full items-center justify-between bg-gray-900 px-5 py-4 text-left text-xs font-medium uppercase tracking-[0.25em] text-white transition-all duration-300 hover:bg-gray-800 active:scale-[0.98] shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2"
               >
                 <span>{showEdgeProfile ? "Скрыть профиль края" : "Просмотреть профиль края"}</span>
                 <span
@@ -97,7 +97,7 @@ export default function CatalogClient({
             </div>
 
             <div className="mt-12">
-              <Link href="/contacts" className="inline-flex items-center justify-center bg-gray-900 px-8 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2">
+              <Link href="/contacts" className="inline-flex items-center justify-center bg-gray-900 px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-white transition-all duration-300 hover:bg-gray-800 active:scale-[0.98] shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2">
                 Запросить расчёт
               </Link>
             </div>
@@ -107,7 +107,7 @@ export default function CatalogClient({
         <div className="mt-24 border-t border-gray-100 pt-14">
           <div className="flex items-center justify-between mb-8 gap-4">
             <h2 className="text-2xl font-extralight tracking-tight text-gray-900 sm:text-3xl">Похожее в каталоге</h2>
-            <Link href="/catalog" className="inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors duration-200 hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 shrink-0">
+            <Link href="/catalog" className="inline-flex items-center justify-center bg-gray-900 px-5 py-3 text-xs font-medium uppercase tracking-[0.25em] text-white transition-all duration-300 hover:bg-gray-800 active:scale-[0.98] shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 shrink-0">
               Весь каталог →
             </Link>
           </div>
