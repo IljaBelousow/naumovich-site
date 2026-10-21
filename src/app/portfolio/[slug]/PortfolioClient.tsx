@@ -28,35 +28,14 @@ export default function PortfolioClient({
   };
 
   // Ссылка для категории
-  const categoryHref = item.category === 'work_facades' 
-    ? "/portfolio?tab=work_facades" 
-    : "/portfolio?tab=work_furniture";
+  const categoryHref = item.category === "work_facades"
+    ? "/portfolio/facades"
+    : "/portfolio/furniture";
 
   return (
     <main className="w-full bg-white pt-24 min-h-screen">
       {/* Уменьшили py-16 до py-8, чтобы поднять контент */}
       <div className="w-full px-5 py-8 sm:px-8 lg:px-12 xl:px-16">
-        <nav
-          aria-label="Хлебные крошки"
-          className="relative z-10 mb-8 flex w-fit max-w-full flex-wrap items-center gap-x-2 gap-y-2 border border-[#D8D0C2] bg-[#F7F5F0] px-4 py-3 text-sm leading-relaxed text-[#514638] shadow-sm"
-        >
-          <Link href="/" className="font-medium underline-offset-4 transition-colors hover:text-[#C65D32] hover:underline">
-            Главная
-          </Link>
-          <span aria-hidden="true" className="text-[#A79A86]">/</span>
-          <Link href="/portfolio" className="font-medium underline-offset-4 transition-colors hover:text-[#C65D32] hover:underline">
-            Портфолио
-          </Link>
-          <span aria-hidden="true" className="text-[#A79A86]">/</span>
-          <Link href={categoryHref} className="font-medium underline-offset-4 transition-colors hover:text-[#C65D32] hover:underline">
-            {item.category === "work_facades" ? "Фасады" : "Мебель"}
-          </Link>
-          <span aria-hidden="true" className="text-[#A79A86]">/</span>
-          <span aria-current="page" className="break-words font-semibold text-[#202322]">
-            {item.name}
-          </span>
-        </nav>
-        
         <button 
           onClick={handleBack}
           className="site-button mb-8"
