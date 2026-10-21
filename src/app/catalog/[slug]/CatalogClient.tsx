@@ -91,7 +91,7 @@ export default function CatalogClient({
 
             <div className="mt-12">
               <Link href="/contacts" className="site-button">
-                Запросить расчёт
+                Связаться с нами
               </Link>
             </div>
           </div>
